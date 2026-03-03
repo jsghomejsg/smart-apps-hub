@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Sleep Cycle Calculator | Wake Up Refreshed</title>
+    <meta name="description" content="Free 2026 Sleep Calculator. Find the perfect time to go to bed or wake up based on 90-minute sleep cycles. Scientific sleep tool for 2026.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #818cf8; --bg: #020617; --card: #0f172a; --text: #f8fafc; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 1.2rem; text-align: center; border-bottom: 1px solid #1e293b; }
+        .logo { font-weight: 800; font-size: 1.3rem; color: var(--primary); letter-spacing: 1px; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; border: 1px solid #1e293b; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .input-group { margin-bottom: 1.5rem; text-align: center; }
+        label { display: block; font-size: 0.8rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.8rem; text-transform: uppercase; }
+        input { background: #1e293b; border: 2px solid #334155; padding: 15px; border-radius: 12px; color: #fff; font-size: 1.5rem; text-align: center; outline: none; transition: 0.3s; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 15px rgba(129, 140, 248, 0.3); }
+
+        .btn-calc { background: var(--primary); color: #fff; border: none; padding: 15px 40px; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; margin-top: 1rem; }
+
+        .results { margin-top: 2.5rem; display: none; }
+        .cycle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .cycle-card { background: #1e293b; padding: 1.5rem; border-radius: 16px; text-align: center; border: 1px solid #334155; }
+        .cycle-time { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
+        .cycle-desc { font-size: 0.7rem; color: #94a3b8; margin-top: 5px; }
+
+        /* Hub Network Actualizado */
+        .internal-net { margin-top: 3rem; border-top: 1px solid #1e293b; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: #94a3b8; text-decoration: none; padding: 7px 15px; background: #1e293b; border-radius: 10px; border: 1px solid transparent; }
+        .n-link:hover { border-color: var(--primary); color: #fff; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-sleep { background: linear-gradient(135deg, #4338ca 0%, #1e1b4b 100%); color: #fff; padding: 2rem; border-radius: 24px; text-align: center; text-decoration: none; display: block; border: 1px solid #4338ca; }
+        .btn-action { display: block; background: var(--primary); color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; margin-top: 1.5rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">LUCID SLEEP // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0; text-align: center;">Sleep Cycle Calculator</h2>
+            <p style="color: #94a3b8; text-align: center; margin-bottom: 2rem;">If I want to wake up at...</p>
+            
+            <div class="input-group">
+                <input type="time" id="wakeTime" value="07:00">
+                <button class="btn-calc" onclick="calcSleep()">CALCULATE BEDTIME</button>
+            </div>
+
+            <div class="results" id="results">
+                <p style="font-size: 0.9rem; font-weight: 600; text-align: center;">You should try to fall asleep at one of these times:</p>
+                <div class="cycle-grid" id="cycleGrid"></div>
+                <p style="font-size: 0.7rem; color: #64748b; margin-top: 1.5rem; text-align: center;">*Includes 15 minutes to fall asleep. 90-minute cycles are scientifically optimal.</p>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #475569; text-transform: uppercase;">Smart Hub Health</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/water-intake-calculator/" class="n-link">Water Intake</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/pet-age-calculator/" class="n-link">Pet Age</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/love-calculator/" class="n-link">Love Test</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-sleep">
+            <h4 style="margin:0">DEEP SLEEP GUIDE 2026</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0; font-weight: 300; opacity: 0.8;">Tired of waking up exhausted? Download the 2026 Biohacking Sleep Protocol for free.</p>
+            <span class="btn-action">DOWNLOAD GUIDE</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calcSleep() {
+        const time = document.getElementById('wakeTime').value;
+        if(!time) return;
+        
+        const [hours, minutes] = time.split(':').map(Number);
+        const wakeDate = new Date();
+        wakeDate.setHours(hours, minutes, 0);
+        
+        const grid = document.getElementById('cycleGrid');
+        grid.innerHTML = '';
+        
+        const cycles = [6, 5, 4, 3];
+        
+        cycles.forEach(c => {
+            const sleepDate = new Date(wakeDate.getTime() - (c * 90 * 60 * 1000) - (15 * 60 * 1000));
+            const timeStr = sleepDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+            
+            grid.innerHTML += `
+                <div class="cycle-card">
+                    <div class="cycle-time">${timeStr}</div>
+                    <div class="cycle-desc">${c} Cycles<br>${c*1.5}h Sleep</div>
+                </div>
+            `;
+        });
+        
+        document.getElementById('results').style.display = 'block';
+    }
+</script>
+</body>
+</html>
