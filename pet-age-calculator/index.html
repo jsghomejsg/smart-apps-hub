@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Pet Age & Health Calculator | Dog & Cat Years</title>
+    <meta name="description" content="Free 2026 Pet Age Calculator. Convert your dog or cat's age into human years and get health tips for 2026. Keep your best friend healthy.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #10b981; --secondary: #f0fdf4; --accent: #f59e0b; --text: #064e3b; }
+        body { font-family: 'Varela Round', sans-serif; background: #fafaf9; color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 4px solid var(--primary); }
+        .logo { font-weight: 700; font-size: 1.4rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: #fff; border-radius: 25px; padding: 2.5rem; border: 1px solid #d1fae5; box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1); text-align: center; }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .input-wrap { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        select, input { padding: 12px 20px; border-radius: 12px; border: 2px solid #d1fae5; outline: none; font-family: inherit; font-size: 1rem; background: var(--secondary); color: var(--text); }
+
+        .calc-btn { background: var(--primary); color: #fff; border: none; padding: 15px 40px; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: 0.3s; width: 100%; max-width: 350px; }
+        .calc-btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+        .res-display { margin-top: 2rem; padding: 2rem; background: #ecfdf5; border-radius: 20px; border: 2px dashed var(--primary); display: none; }
+        .age-val { font-size: 3.5rem; font-weight: 700; color: var(--primary); margin: 0; }
+        .tips { font-size: 0.9rem; color: #065f46; margin-top: 15px; line-height: 1.5; }
+
+        /* Hub Network Actualizado */
+        .internal-net { margin-top: 3rem; border-top: 1px solid #d1fae5; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: #059669; text-decoration: none; padding: 7px 15px; background: #fff; border: 1px solid #d1fae5; border-radius: 12px; font-weight: 600; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-pet { background: var(--accent); color: #fff; padding: 2rem; border-radius: 25px; text-align: center; text-decoration: none; display: block; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2); }
+        .btn-pet { display: block; background: #fff; color: var(--accent); padding: 12px; border-radius: 12px; font-weight: 700; margin-top: 1.5rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">🐾 PET HEALTH // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0">Pet Age Converter</h2>
+            <p style="color: #059669; margin-bottom: 2rem;">How old is your furry friend in human years? Let's find out.</p>
+            
+            <div class="input-wrap">
+                <select id="type">
+                    <option value="7">Dog (Medium)</option>
+                    <option value="6">Cat</option>
+                    <option value="9">Dog (Large Breed)</option>
+                </select>
+                <input type="number" id="age" placeholder="Pet's Age (Years)" min="1" max="25">
+            </div>
+
+            <button class="calc-btn" onclick="calcPet()">CALCULATE HUMAN YEARS</button>
+
+            <div class="res-display" id="result">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Equivalent Human Age:</div>
+                <p class="age-val" id="humanAge">49</p>
+                <p class="tips" id="healthTip"></p>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Smart Hub Lifestyle</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/baby-name-generator/" class="n-link">Baby Names</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/water-intake-calculator/" class="n-link">Hydration</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/love-calculator/" class="n-link">Love Test</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-pet">
+            <h4 style="margin:0">2026 PET CARE GUIDE</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0; font-weight: 400; opacity: 0.9;">Is your pet eating the right food? Download the 2026 Nutrition & Longevity Guide for free.</p>
+            <span class="btn-pet">GET GUIDE NOW</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calcPet() {
+        const type = parseFloat(document.getElementById('type').value);
+        const age = parseFloat(document.getElementById('age').value);
+        
+        if(age) {
+            const humanYears = age * type;
+            document.getElementById('humanAge').innerText = humanYears + " Years";
+            document.getElementById('result').style.display = 'block';
+            
+            let tip = "";
+            if(humanYears < 20) tip = "Your pet is in their prime! Focus on high-protein diet and active play.";
+            else if(humanYears < 50) tip = "Adulthood reached. Time for regular 2026 vet checkups and dental care.";
+            else tip = "Senior years. Consider joint supplements and a comfortable, warm resting area.";
+            
+            document.getElementById('healthTip').innerText = tip;
+        }
+    }
+</script>
+</body>
+</html>
