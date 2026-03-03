@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Smart Tip & Bill Splitter | Quick Dining Calculator</title>
+    <meta name="description" content="Free 2026 Tip Calculator and Bill Splitter. Calculate tips and divide the restaurant bill easily among friends. Fast, simple, and accurate.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #d4af37; --bg: #ffffff; --dark: #1a1a1a; --gray: #f4f4f4; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--dark); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: var(--dark); padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .logo { font-weight: 900; font-size: 1.2rem; color: var(--primary); letter-spacing: 2px; text-transform: uppercase; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--bg); border-radius: 20px; padding: 2.5rem; border: 1px solid #eee; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        
+        .ad-top { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; color: #888; }
+        input { width: 100%; padding: 15px; border: 2px solid var(--gray); border-radius: 12px; font-size: 1.2rem; outline: none; box-sizing: border-box; font-weight: 700; transition: 0.3s; }
+        input:focus { border-color: var(--primary); background: #fffcf0; }
+
+        .result-panel { background: var(--dark); color: #fff; padding: 2rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; position: relative; }
+        .res-row { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .res-label { font-size: 0.8rem; color: #aaa; }
+        .res-total { font-size: 2.5rem; font-weight: 900; color: var(--primary); margin-top: 10px; }
+
+        /* SEO Interlinking - ACTUALIZADO AL HUB */
+        .internal-net { margin-top: 2.5rem; border-top: 1px solid #eee; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: #666; text-decoration: none; padding: 7px 15px; background: var(--gray); border-radius: 8px; font-weight: 700; border: 1px solid transparent; }
+        .n-link:hover { border-color: var(--primary); }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-dining { background: var(--primary); color: #000; padding: 2rem; border-radius: 20px; text-align: center; text-decoration: none; display: block; }
+        .btn-black { display: block; background: #000; color: #fff; padding: 14px; border-radius: 10px; font-weight: 700; margin-top: 1.5rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">DINING LOGIC // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-top">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0">Tip & Bill Splitter</h2>
+            
+            <div class="form-group">
+                <label>Total Bill ($)</label>
+                <input type="number" id="bill" value="120.00" oninput="calculate()">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label>Tip (%)</label>
+                    <input type="number" id="tip" value="15" oninput="calculate()">
+                </div>
+                <div class="form-group">
+                    <label>People</label>
+                    <input type="number" id="people" value="4" oninput="calculate()">
+                </div>
+            </div>
+
+            <div class="result-panel">
+                <div class="res-row">
+                    <span class="res-label">Tip Amount:</span>
+                    <span id="tipAmt">$18.00</span>
+                </div>
+                <div class="res-label" style="margin-top: 10px;">EACH PERSON PAYS:</div>
+                <div class="res-total" id="totalPerPerson">$34.50</div>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #999;">SMART HUB LIFESTYLE</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/fuel-cost-calculator/" class="n-link">Fuel Costs</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/love-calculator/" class="n-link">Love Test</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/ai-prompt-generator/" class="n-link">AI Prompts</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" rel="nofollow noopener noreferrer" class="cta-dining">
+            <h4 style="margin:0">FREE DINING VOUCHERS</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0; font-weight: 500;">Download the 2026 Dining Guide & get up to 50% off in top restaurants.</p>
+            <span class="btn-black">GET VOUCHERS NOW</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calculate() {
+        const b = parseFloat(document.getElementById('bill').value) || 0;
+        const t = parseFloat(document.getElementById('tip').value) || 0;
+        const p = parseFloat(document.getElementById('people').value) || 1;
+        
+        const tipTotal = b * (t / 100);
+        const fullTotal = b + tipTotal;
+        const perPerson = fullTotal / p;
+        
+        document.getElementById('tipAmt').innerText = "$" + tipTotal.toFixed(2);
+        document.getElementById('totalPerPerson').innerText = "$" + perPerson.toFixed(2);
+    }
+    calculate();
+</script>
+</body>
+</html>
