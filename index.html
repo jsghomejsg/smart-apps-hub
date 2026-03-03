@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Crypto Tax & Profit Tracker | Calculate Your Gains</title>
+    <meta name="description" content="Free 2026 Crypto Tax Calculator. Track your Bitcoin and Altcoin profits and estimate your 2026 tax liability. Secure and fast.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #00ffcc; --bg: #0a0a0b; --card: #141416; --text: #ffffff; }
+        body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #000; padding: 1.2rem; text-align: center; border-bottom: 1px solid #222; }
+        .logo { font-weight: 700; font-size: 1.4rem; color: var(--primary); letter-spacing: 2px; text-transform: uppercase; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; border: 1px solid #222; position: relative; overflow: hidden; }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2.5rem; display: flex; justify-content: center; }
+
+        .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 700; }
+        input { width: 100%; background: #1c1c1e; border: 1px solid #333; padding: 15px; border-radius: 12px; color: #fff; font-size: 1rem; outline: none; transition: 0.3s; box-sizing: border-box; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(0, 255, 204, 0.2); }
+
+        .result-panel { background: linear-gradient(145deg, #141416 0%, #000 100%); padding: 2rem; border-radius: 20px; text-align: center; margin-top: 1rem; border: 1px solid #333; }
+        .res-label { font-size: 0.8rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
+        .res-val { font-size: 3rem; font-weight: 700; text-shadow: 0 0 20px rgba(0, 255, 204, 0.4); }
+
+        /* Interlinking - ACTUALIZADO AL HUB */
+        .internal-net { margin-top: 3rem; border-top: 1px solid #222; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 12px; }
+        .n-link { font-size: 0.75rem; color: #666; text-decoration: none; padding: 6px 14px; border: 1px solid #333; border-radius: 8px; transition: 0.3s; }
+        .n-link:hover { color: var(--primary); border-color: var(--primary); }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-crypto { background: #00ffcc; color: #000; padding: 2rem; border-radius: 24px; text-align: center; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2); }
+        .btn-action { display: block; background: #000; color: #fff; padding: 15px; border-radius: 12px; margin-top: 1.5rem; font-size: 0.9rem; letter-spacing: 1px; }
+
+        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } .input-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">CRYPTO TAX // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0">2026 Profit & Tax Estimator</h2>
+            <p style="color:#888; margin-bottom:2rem; font-size: 0.9rem;">Calculate your crypto net gains and estimated tax liability for the current fiscal year.</p>
+            
+            <div class="input-row">
+                <div><label>Invested Amount ($)</label><input type="number" id="invested" value="1000" oninput="calculate()"></div>
+                <div><label>Current Value ($)</label><input type="number" id="current" value="2500" oninput="calculate()"></div>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label>Tax Rate 2026 (%)</label>
+                <input type="number" id="taxRate" value="15" oninput="calculate()">
+            </div>
+
+            <div class="result-panel">
+                <div class="res-label">ESTIMATED TAX TO PAY</div>
+                <div class="res-val" id="taxOut">$225.00</div>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #666;">Net Profit: <span id="profitOut" style="color: #fff;">$1500.00</span></div>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #444;">FINANCIAL ECOSYSTEM 2026</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/crypto-tax-calculator/" class="n-link">Crypto Tax</a>
+                    <a href="https://jsghomejsg.github.io/mis-apps-2026/fuel-cost-calculator/" class="n-link">Fuel Calc</a>
+                    <a href="https://jsghomejsg.github.io/mis-apps-2026/business-name-generator/" class="n-link">Brand Gen</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-crypto">
+            <div style="font-size: 1.2rem;">GENERATE OFFICIAL REPORT</div>
+            <p style="font-size: 0.8rem; margin: 10px 0; font-weight: 400; opacity: 0.9;">Download your 2026 Tax Compliant PDF Report for local authorities.</p>
+            <span class="btn-action">DOWNLOAD REPORT</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calculate() {
+        const inv = parseFloat(document.getElementById('invested').value) || 0;
+        const cur = parseFloat(document.getElementById('current').value) || 0;
+        const rate = parseFloat(document.getElementById('taxRate').value) || 0;
+        
+        const profit = cur - inv;
+        const tax = profit > 0 ? (profit * (rate / 100)) : 0;
+        
+        document.getElementById('profitOut').innerText = "$" + (profit > 0 ? profit.toFixed(2) : "0.00");
+        document.getElementById('taxOut').innerText = "$" + tax.toFixed(2);
+    }
+</script>
+</body>
+</html>
