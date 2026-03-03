@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Smart Water Tracker | Daily Hydration Calculator</title>
+    <meta name="description" content="Free 2026 Water Intake Calculator. Calculate exactly how much water you need per day based on your weight and activity level. Fast and healthy.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0ea5e9; --secondary: #e0f2fe; --bg: #f8fafc; --text: #0f172a; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); letter-spacing: -0.5px; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: #fff; border-radius: 24px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1); }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 0.6rem; text-transform: uppercase; }
+        input, select { width: 100%; padding: 14px; background: #f1f5f9; border: 2px solid transparent; border-radius: 12px; font-size: 1.1rem; outline: none; box-sizing: border-box; transition: 0.3s; }
+        input:focus, select:focus { border-color: var(--primary); background: #fff; }
+
+        .hydration-card { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: #fff; padding: 2rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; position: relative; overflow: hidden; }
+        .res-label { font-size: 0.9rem; font-weight: 600; opacity: 0.9; text-transform: uppercase; }
+        .res-val { font-size: 3.5rem; font-weight: 800; margin: 5px 0; }
+        .res-unit { font-size: 1.2rem; font-weight: 300; }
+
+        /* Links del Hub - Actualizados */
+        .internal-net { margin-top: 2.5rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: var(--primary); text-decoration: none; padding: 7px 15px; background: var(--secondary); border-radius: 10px; font-weight: 600; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-health { background: #0f172a; color: #fff; padding: 2rem; border-radius: 24px; text-align: center; text-decoration: none; display: block; }
+        .btn-health { display: block; background: var(--primary); color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; margin-top: 1.5rem; text-decoration: none; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">HYDRO PRO // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0">Daily Water Intake</h2>
+            <p style="color: #64748b; margin-bottom: 2rem;">Scientific calculation for your 2026 health goals.</p>
+            
+            <div class="form-group">
+                <label>Your Weight (kg)</label>
+                <input type="number" id="weight" value="70" oninput="calc()">
+            </div>
+            <div class="form-group">
+                <label>Daily Activity Level</label>
+                <select id="activity" onchange="calc()">
+                    <option value="0">Sedentary (Low)</option>
+                    <option value="0.5">Moderate (30m Exercise)</option>
+                    <option value="1">Intense (1h+ Exercise)</option>
+                </select>
+            </div>
+
+            <div class="hydration-card">
+                <div class="res-label">Target Daily Intake:</div>
+                <div class="res-val" id="res">2.5</div>
+                <div class="res-unit">LITERS PER DAY</div>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 600; color: #94a3b8; text-transform: uppercase;">Smart Hub Network</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/love-calculator/" class="n-link">Love Test</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/ai-prompt-generator/" class="n-link">AI Prompts</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/crypto-tax-calculator/" class="n-link">Crypto Tax</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-health">
+            <h4 style="margin:0">2026 DETOX PLAN</h4>
+            <p style="font-size: 0.8rem; margin: 12px 0; font-weight: 300; opacity: 0.8;">Download the 2026 Hydration & Weight Loss Guide for free (PDF).</p>
+            <span class="btn-health">DOWNLOAD PDF</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calc() {
+        const w = parseFloat(document.getElementById('weight').value);
+        const a = parseFloat(document.getElementById('activity').value);
+        if(w) {
+            const total = (w * 0.033) + a;
+            document.getElementById('res').innerText = total.toFixed(1);
+        }
+    }
+    calc();
+</script>
+</body>
+</html>
