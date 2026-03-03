@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Rent vs Buy Calculator | Real Estate Decision Tool</title>
+    <meta name="description" content="Free 2026 Rent vs Buy Calculator. Compare the cost of renting a home versus buying a property in 2026. Make the right financial choice today.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e40af; --secondary: #f1f5f9; --accent: #3b82f6; --text: #1e293b; }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #fff; padding: 1.5rem; text-align: center; border-bottom: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); letter-spacing: -0.5px; text-transform: uppercase; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: #fff; border-radius: 12px; padding: 2.5rem; border: 1px solid #e2e8f0; }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: #64748b; margin-bottom: 0.5rem; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        input:focus { border-color: var(--accent); background: #fff; }
+
+        .analysis-card { background: var(--secondary); padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid #cbd5e1; }
+        .res-label { font-size: 0.8rem; font-weight: 700; color: #475569; }
+        .res-val { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 10px 0; }
+
+        /* Red de Enlaces del Hub */
+        .internal-net { margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: var(--primary); text-decoration: none; padding: 6px 12px; background: var(--secondary); border-radius: 6px; font-weight: 600; border: 1px solid transparent; }
+        .n-link:hover { border-color: var(--primary); }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-mortgage { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 12px; text-align: center; text-decoration: none; display: block; }
+        .btn-blue { display: block; background: #fff; color: var(--primary); padding: 12px; border-radius: 8px; font-weight: 700; margin-top: 1rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">REALTY CALC // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0">Rent vs Buy Analysis</h2>
+            <p style="color: #64748b; margin-bottom: 2rem; font-size: 0.9rem;">Compare the financial outcome of renting vs. buying over 10 years.</p>
+            
+            <div class="form-grid">
+                <div><label>Monthly Rent ($)</label><input type="number" id="rent" value="1500" oninput="compare()"></div>
+                <div><label>Home Price ($)</label><input type="number" id="price" value="300000" oninput="compare()"></div>
+                <div><label>Interest Rate (%)</label><input type="number" id="rate" value="5.5" oninput="compare()"></div>
+                <div><label>Down Payment ($)</label><input type="number" id="down" value="60000" oninput="compare()"></div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="res-label">10-YEAR ESTIMATED SAVINGS BY BUYING:</div>
+                <div class="res-val" id="savings">$42,500</div>
+                <p style="font-size: 0.75rem; color: #64748b; margin: 0;">*Estimates include property appreciation and rent increases.</p>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #94a3b8;">SMART HUB UTILITIES</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/crypto-tax-calculator/" class="n-link">Crypto Tax</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/retirement-countdown/" class="n-link">Retirement Plan</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/water-intake-calculator/" class="n-link">Water Tracker</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-mortgage">
+            <h4 style="margin:0">MORTGAGE SECRETS 2026</h4>
+            <p style="font-size: 0.8rem; margin: 12px 0; font-weight: 400; opacity: 0.9;">Stop overpaying. Download the 2026 Guide on how to get 3% rates even in today's market.</p>
+            <span class="btn-blue">DOWNLOAD GUIDE</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function compare() {
+        const rent = parseFloat(document.getElementById('rent').value) || 0;
+        const price = parseFloat(document.getElementById('price').value) || 0;
+        const down = parseFloat(document.getElementById('down').value) || 0;
+        
+        const rentCost = rent * 12 * 10 * 1.03; 
+        const buyCost = (price - down) * 0.05 + (price * 0.02 * 10); 
+        const equity = price * 0.15; 
+        
+        const savings = rentCost - buyCost + equity;
+        document.getElementById('savings').innerText = "$" + Math.round(savings).toLocaleString();
+    }
+    compare();
+</script>
+</body>
+</html>
