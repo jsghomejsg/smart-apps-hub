@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Age & Birthday Calculator | Exact Time Lived</title>
+    <meta name="description" content="Free 2026 Age Calculator. Calculate your exact age in years, months, days, and even minutes. Find out how many days until your next birthday in 2026.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #3b82f6; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 2px solid var(--primary); }
+        .logo { font-weight: 800; font-size: 1.3rem; color: var(--primary); letter-spacing: 1px; text-transform: uppercase; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 20px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .input-group { margin-bottom: 2rem; text-align: center; }
+        label { display: block; font-size: 0.8rem; font-weight: 500; color: #64748b; margin-bottom: 0.8rem; text-transform: uppercase; }
+        input { width: 100%; max-width: 300px; padding: 15px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1.2rem; text-align: center; outline: none; transition: 0.3s; color: var(--text); }
+        input:focus { border-color: var(--primary); background: #f0f7ff; }
+
+        .results { display: none; margin-top: 2rem; }
+        .grid-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .stat-card { background: #f1f5f9; padding: 1.5rem; border-radius: 15px; text-align: center; }
+        .stat-val { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 0.7rem; color: #64748b; text-transform: uppercase; font-weight: 600; }
+
+        /* Hub Network Actualizado */
+        .internal-net { margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+        .n-link { font-size: 0.75rem; color: #475569; text-decoration: none; padding: 6px 12px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-age { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; display: block; }
+        .btn-white { display: block; background: #fff; color: var(--primary); padding: 12px; border-radius: 10px; font-weight: 700; margin-top: 1.2rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">AGE MASTER // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0; text-align: center;">When were you born?</h2>
+            
+            <div class="input-group">
+                <input type="date" id="dob" onchange="calcAge()">
+            </div>
+
+            <div class="results" id="res">
+                <div class="grid-stats">
+                    <div class="stat-card">
+                        <div class="stat-val" id="y">0</div>
+                        <div class="stat-label">Years Old</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val" id="d">0</div>
+                        <div class="stat-label">Total Days</div>
+                    </div>
+                </div>
+                <div class="stat-card" style="margin-top: 1rem; background: #eff6ff; border: 1px dashed var(--primary);">
+                    <div class="stat-label">Next Birthday In:</div>
+                    <div class="stat-val" id="next" style="font-size: 1.4rem;">0 Days</div>
+                </div>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; text-align: center;">Smart Hub Network</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/love-calculator/" class="n-link">Love Test</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/retirement-countdown/" class="n-link">Retirement</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/pet-age-calculator/" class="n-link">Pet Age</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" rel="nofollow noopener noreferrer" class="cta-age">
+            <h4 style="margin:0">2026 BIRTHDAY DESTINY</h4>
+            <p style="font-size: 0.8rem; margin: 12px 0; font-weight: 400; opacity: 0.9;">What does 2026 hold for you? Download your personalized Destiny & Luck Report (PDF).</p>
+            <span class="btn-white">GET MY REPORT</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function calcAge() {
+        const dobInput = document.getElementById('dob').value;
+        if(!dobInput) return;
+        
+        const dob = new Date(dobInput);
+        const now = new Date();
+        
+        let age = now.getFullYear() - dob.getFullYear();
+        const m = now.getMonth() - dob.getMonth();
+        if (m < 0 || (m === 0 && now.getDate() < dob.getDate())) { age--; }
+        
+        const diffTime = Math.abs(now - dob);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        
+        let nextBday = new Date(now.getFullYear(), dob.getMonth(), dob.getDate());
+        if (now > nextBday) {
+            nextBday.setFullYear(now.getFullYear() + 1);
+        }
+        const daysToBday = Math.ceil((nextBday - now) / (1000 * 60 * 60 * 24));
+
+        document.getElementById('y').innerText = age;
+        document.getElementById('d').innerText = diffDays.toLocaleString();
+        document.getElementById('next').innerText = daysToBday + " Days";
+        document.getElementById('res').style.display = 'block';
+    }
+</script>
+</body>
+</html>
