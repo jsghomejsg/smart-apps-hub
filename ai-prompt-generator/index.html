@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 AI Image Prompt Generator | Best Midjourney & DALL-E Prompts</title>
+    <meta name="description" content="Generate high-quality 2026 AI prompts for Midjourney, DALL-E, and Stable Diffusion. Free AI prompt builder for creators.">
+    
+    <meta name="google-site-verification" content="434e69572ce15af6" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #a855f7; --bg: #030712; --card: #111827; --text: #f3f4f6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background: #000; padding: 1.5rem; text-align: center; border-bottom: 2px solid var(--primary); box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+        .logo { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--primary); text-transform: uppercase; letter-spacing: 3px; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 20px; padding: 2.5rem; border: 1px solid #374151; position: relative; }
+        
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; overflow: hidden; }
+
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        select, input { width: 100%; padding: 14px; background: #1f2937; border: 1px solid #4b5563; border-radius: 10px; color: #fff; font-size: 1rem; outline: none; box-sizing: border-box; }
+        select:focus, input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(168, 85, 247, 0.2); }
+
+        .prompt-box { background: #000; padding: 1.5rem; border-radius: 15px; border: 1px dashed var(--primary); margin-top: 1.5rem; position: relative; }
+        .prompt-text { font-family: monospace; color: #d1d5db; font-size: 0.95rem; line-height: 1.6; }
+        .copy-tag { position: absolute; top: -10px; right: 15px; background: var(--primary); color: #000; font-size: 0.6rem; font-weight: 900; padding: 2px 8px; border-radius: 4px; }
+
+        /* Links del Hub - ACTUALIZADO */
+        .internal-net { margin-top: 2.5rem; border-top: 1px solid #374151; padding-top: 1.5rem; }
+        .n-links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 10px; }
+        .n-link { font-size: 0.7rem; color: #9ca3af; text-decoration: none; padding: 6px 12px; background: #1f2937; border-radius: 8px; border: 1px solid transparent; }
+        .n-link:hover { border-color: var(--primary); color: #fff; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-ai { background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; display: block; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .btn-ai { display: block; background: #000; color: #fff; padding: 12px; border-radius: 10px; font-weight: 700; margin-top: 1.2rem; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">PROMPT GEN // 2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '318ba4e4eb97e5a697d43fb713f5456e',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <div class="form-group">
+                <label>Image Subject</label>
+                <input type="text" id="subject" placeholder="e.g. A futuristic cyberpunk city" oninput="gen()">
+            </div>
+            <div class="form-group">
+                <label>Style Preset (2026 Trends)</label>
+                <select id="style" onchange="gen()">
+                    <option value="ultra-realistic, 8k, cinematic lighting, photorealistic">Photorealistic 8K</option>
+                    <option value="cyberpunk aesthetic, neon lights, synthwave colors">Cyberpunk Neón</option>
+                    <option value="minimalist vector art, clean lines, flat design">Minimalist Vector</option>
+                    <option value="oil painting style, thick brushstrokes, classical">Classic Oil Painting</option>
+                    <option value="3D render, unreal engine 5, isometric view">3D Isometric Render</option>
+                </select>
+            </div>
+
+            <div class="prompt-box">
+                <span class="copy-tag">AI GENERATED</span>
+                <div class="prompt-text" id="out">A futuristic cyberpunk city, ultra-realistic, 8k, cinematic lighting, photorealistic --ar 16:9 --v 6.0</div>
+            </div>
+
+            <div class="internal-net">
+                <div style="font-size: 0.7rem; font-weight: 700; color: #6b7280; text-transform: uppercase;">2026 Creator Tools</div>
+                <div class="n-links">
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/retirement-countdown/" class="n-link">Retirement Countdown</a>
+                    <a href="https://jsghomejsg.github.io/smart-apps-hub/crypto-tax-calculator/" class="n-link">Crypto Taxes</a>
+                    <a href="https://jsghomejsg.github.io/mis-apps-2026/business-name-generator/" class="n-link">Brand Names</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-ai">
+            <h4 style="margin:0">PREMIUM PROMPTS</h4>
+            <p style="font-size: 0.8rem; margin: 12px 0; font-weight: 300;">Download the "2026 Master Prompt Collection" (1000+ keywords) to generate impossible images.</p>
+            <span class="btn-ai">FREE DOWNLOAD</span>
+        </a>
+    </aside>
+</div>
+
+<script>
+    function gen() {
+        const s = document.getElementById('subject').value || "A futuristic cyberpunk city";
+        const st = document.getElementById('style').value;
+        document.getElementById('out').innerText = s + ", " + st + " --ar 16:9 --v 6.0";
+    }
+</script>
+</body>
+</html>
