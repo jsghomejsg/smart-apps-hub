@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Standard Deviation Calculator | Variance & Stats Tool</title>
+    <meta name="description" content="Free 2026 Standard Deviation Calculator. Calculate mean, variance, and deviation for any data set instantly with our professional stats tool.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Standard Deviation Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "EducationApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e293b; --accent: #8b5cf6; --bg: #f5f3ff; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(139, 92, 246, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        textarea { width: 100%; height: 100px; padding: 15px; border: 2px solid #ddd6fe; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; resize: none; margin-bottom: 1rem; }
+        .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1rem; }
+        .res-item { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: 15px; text-align: center; border-bottom: 4px solid var(--accent); }
+        .res-val { font-size: 1.5rem; font-weight: 800; color: #a78bfa; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd6fe; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #4c1d95; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; font-weight: 700; }
+        .related { margin-top: 2rem; font-size: 0.8rem; font-weight: bold; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">STATS_PRO_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Standard Deviation Calculator</h2>
+            <p style="font-size: 0.85rem; color: #6d28d9; margin-bottom: 1rem;">Enter numbers separated by commas (e.g., 10, 2, 38, 23).</p>
+            <textarea id="data" placeholder="10, 20, 30, 40..." oninput="calc()"></textarea>
+            <div class="res-grid">
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">MEAN</div>
+                    <div id="mean" class="res-val">0</div>
+                </div>
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">ST. DEVIATION</div>
+                    <div id="sd" class="res-val">0</div>
+                </div>
+                <div class="res-item" style="grid-column: span 2;">
+                    <div style="font-size:0.7rem; font-weight:700;">VARIANCE</div>
+                    <div id="var" class="res-val">0</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Understanding Data Dispersion in 2026</h3>
+                <p>Standard deviation measures how spread out numbers are from the average. Our <strong>2026 Standard Deviation Tool</strong> is designed for researchers and students who need instant <strong>variance and mean</strong> calculations. In data science and finance, knowing the <strong>standard deviation</strong> of a data set is crucial for assessing risk and volatility. This calculator provides fast, professional results directly in your browser.</p>
+            </div>
+            <div class="related">
+                LINKS: <a href="../app67-gpa-calculator-tool/" style="color:var(--accent)">GPA Calc</a> | <a href="../app66-percentage-change-calculator/" style="color:var(--accent)">% Change</a>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 DATA ANALYST</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Master the art of statistics and boost your career in the era of Big Data (Free PDF).</p>
+            <div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const input = document.getElementById('data').value;
+        const arr = input.split(',').map(n => parseFloat(n.trim())).filter(n => !isNaN(n));
+        if (arr.length > 1) {
+            const mean = arr.reduce((a, b) => a + b) / arr.length;
+            const variance = arr.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / arr.length;
+            const sd = Math.sqrt(variance);
+            document.getElementById('mean').innerText = mean.toFixed(2);
+            document.getElementById('var').innerText = variance.toFixed(2);
+            document.getElementById('sd').innerText = sd.toFixed(2);
+        }
+    }
+</script>
+</body>
+</html>
