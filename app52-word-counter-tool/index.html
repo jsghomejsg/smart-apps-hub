@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Word Counter | Character & Sentence Tracker</title>
+    <meta name="description" content="Free 2026 Word Counter. Count words, characters, and sentences instantly. Perfect for essays, social media, and professional writing.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1); border: 1px solid #e2e8f0; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        textarea { width: 100%; height: 200px; padding: 15px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; resize: none; transition: 0.3s; }
+        textarea:focus { border-color: var(--primary); }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .stat-item { background: #f1f5f9; padding: 1rem; border-radius: 12px; text-align: center; }
+        .stat-val { font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #475569; font-size: 0.9rem; line-height: 1.6; }
+        .seo-box h3 { color: var(--text); }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-write { background: #1e293b; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--primary); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--primary)">WRITE_PRO_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Word & Character Counter</h2>
+            <textarea id="textInput" placeholder="Type or paste your text here..." oninput="count()"></textarea>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-val" id="words">0</div>
+                    <div style="font-size: 0.7rem; font-weight: 700;">WORDS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="chars">0</div>
+                    <div style="font-size: 0.7rem; font-weight: 700;">CHARACTERS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="sentences">0</div>
+                    <div style="font-size: 0.7rem; font-weight: 700;">SENTENCES</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Improve your writing efficiency in 2026</h3>
+                <p>A professional <strong>Word Counter Tool</strong> is essential for content creators and students. Our 2026 tracker provides real-time data to help you meet strict character limits on social media platforms like X (Twitter) or LinkedIn.</p>
+                <h3>Why use a Character Counter?</h3>
+                <p>Precision in writing saves time. Whether you are drafting an essay or a marketing copy, knowing your <strong>word count and sentence structure</strong> helps in improving readability and SEO performance this year.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-write">
+            <h4 style="margin:0">2026 CONTENT GUIDE</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Master the art of viral writing and SEO copywriting (Free PDF).</p>
+            <div style="background:var(--primary); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">GET FREE ACCESS</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function count() {
+        const t = document.getElementById('textInput').value.trim();
+        document.getElementById('words').innerText = t ? t.split(/\s+/).length : 0;
+        document.getElementById('chars').innerText = t.length;
+        document.getElementById('sentences').innerText = t ? t.split(/[.!?]+/).filter(Boolean).length : 0;
+    }
+</script>
+</body>
+</html>
