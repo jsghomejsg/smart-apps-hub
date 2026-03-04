@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Percentage Change Calculator | Increase & Decrease Tracker</title>
+    <meta name="description" content="Free 2026 Percentage Change Calculator. Calculate the percent increase or decrease between two values instantly with our professional tool.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #3b82f6; --bg: #f1f5f9; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(59, 130, 246, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        input:focus { border-color: var(--accent); }
+        .res-card { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; border-bottom: 5px solid var(--accent); }
+        .res-val { font-size: 2.2rem; font-weight: 800; color: #60a5fa; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #475569; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">DATA_CALC_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Percentage Change Calculator</h2>
+            <div class="input-group"><label>Initial Value</label><input type="number" id="v1" value="100" oninput="calc()"></div>
+            <div class="input-group"><label>Final Value</label><input type="number" id="v2" value="150" oninput="calc()"></div>
+            <div class="res-card">
+                <div style="font-size:0.7rem; font-weight:700;">PERCENTAGE CHANGE</div>
+                <div id="res" class="res-val">50.00%</div>
+                <div id="status" style="font-size:0.8rem; font-weight:700; margin-top:5px; color:#60a5fa;">INCREASE</div>
+            </div>
+            <div class="seo-box">
+                <h3>How to calculate Percentage Increase or Decrease in 2026?</h3>
+                <p>Tracking growth and decline is fundamental in business and personal finance. Our <strong>2026 Percentage Change Tool</strong> uses the standard formula: ((Final - Initial) / Initial) * 100. Whether you are analyzing stock market variations, salary raises, or budget cuts, getting an instant <strong>percent change</strong> result helps you understand the scale of the variation accurately.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar"><a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box"><h4>2026 ANALYTICS PRO</h4><p style="font-size:0.8rem; margin:15px 0;">Master data analysis and financial reporting with our expert 2026 guide (Free PDF).</p><div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div></a></aside>
+</div>
+<script>
+    function calc() {
+        const v1 = parseFloat(document.getElementById('v1').value);
+        const v2 = parseFloat(document.getElementById('v2').value);
+        if(v1 !== 0 && !isNaN(v1) && !isNaN(v2)) {
+            const change = ((v2 - v1) / Math.abs(v1)) * 100;
+            document.getElementById('res').innerText = change.toFixed(2) + "%";
+            const s = document.getElementById('status');
+            if(change >= 0) { s.innerText = "INCREASE"; s.style.color = "#60a5fa"; }
+            else { s.innerText = "DECREASE"; s.style.color = "#ef4444"; }
+        }
+    }
+</script>
+</body>
+</html>
