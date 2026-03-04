@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Professional Meta Tag Generator | SEO & Social Preview Tool</title>
+    <meta name="description" content="Boost your website ranking with the 2026 Ultimate Meta Tag Generator. Create SEO-friendly tags for Google, Facebook, and Twitter with real-time preview.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 SEO Meta Tag Generator",
+      "operatingSystem": "Web",
+      "applicationCategory": "DeveloperApplication",
+      "offers": { "@type": "Offer", "price": "0" },
+      "featureList": "Google Snippet Preview, OpenGraph Generation, Twitter Card Creator"
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --dark: #0f172a; --gray: #f8fafc; --border: #e2e8f0; --success: #10b981; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray); color: var(--dark); margin: 0; line-height: 1.6; }
+        header { background: #fff; padding: 1.5rem; border-bottom: 1px solid var(--border); text-align: center; }
+        .badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 800; vertical-align: middle; }
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .editor-box { background: #fff; border-radius: 24px; padding: 2.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .field { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.8rem; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+        input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: 12px; font-family: inherit; transition: 0.3s; box-sizing: border-box; }
+        input:focus, textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
+        .preview-pane { position: sticky; top: 2rem; }
+        .google-card { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid #dfe1e5; margin-bottom: 2rem; box-shadow: 0 1px 6px rgba(32,33,36,0.1); }
+        .google-url { color: #202124; font-size: 0.9rem; margin-bottom: 4px; }
+        .google-title { color: #1a0dab; font-size: 1.2rem; cursor: pointer; text-decoration: none; display: block; margin-bottom: 4px; }
+        .google-desc { color: #4d5156; font-size: 0.85rem; }
+        .code-output { background: #1e293b; color: #f1f5f9; padding: 1.5rem; border-radius: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto; position: relative; }
+        .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--primary); color: white; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.7rem; }
+        .seo-text { grid-column: span 2; margin-top: 4rem; padding: 3rem; background: #fff; border-radius: 24px; border: 1px solid var(--border); }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight: 800; font-size: 1.4rem;">SEO_MASTER <span class="badge">2026 PRO</span></div></header>
+<div class="container">
+    <main class="editor-box">
+        <h2 style="margin-top: 0;">Tag Generator</h2>
+        <div class="field"><label>Site Title</label><input type="text" id="title" placeholder="e.g. My Amazing Website" oninput="update()"></div>
+        <div class="field"><label>Meta Description</label><textarea id="desc" rows="3" placeholder="e.g. Best tools..." oninput="update()"></textarea></div>
+        <div class="field"><label>Site URL</label><input type="text" id="url" value="https://mysite.com" oninput="update()"></div>
+        <div style="margin-top: 2rem;"><label>Generated Code</label>
+            <div class="code-output"><button class="copy-btn" onclick="copy()">COPY</button><code id="code"></code></div>
+        </div>
+    </main>
+    <aside class="preview-pane">
+        <label>Google Search Preview</label>
+        <div class="google-card">
+            <div class="google-url" id="p-url">https://mysite.com</div>
+            <div class="google-title" id="p-title">Your Site Title</div>
+            <div class="google-desc" id="p-desc">Your site description will appear here...</div>
+        </div>
+    </aside>
+</div>
+<script>
+    function update() {
+        const t = document.getElementById('title').value || "Your Site Title";
+        const d = document.getElementById('desc').value || "Your description...";
+        const u = document.getElementById('url').value;
+        document.getElementById('p-title').innerText = t;
+        document.getElementById('p-desc').innerText = d;
+        document.getElementById('p-url').innerText = u;
+        let code = `&lt;title&gt;${t}&lt;/title&gt;\n&lt;meta name="description" content="${d}"&gt;`;
+        document.getElementById('code').innerHTML = code;
+    }
+    function copy() { navigator.clipboard.writeText(document.getElementById('code').innerText); alert("Copied!"); }
+    update();
+</script>
+</body>
+</html>
