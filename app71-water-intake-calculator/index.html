@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Daily Water Intake Calculator | Stay Hydrated & Healthy</title>
+    <meta name="description" content="Calculate your recommended daily water intake with our free 2026 health tool. Personalized hydration goals based on weight and activity level.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Daily Water Intake Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "HealthApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #075985; --accent: #0ea5e9; --bg: #f0f9ff; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(14, 165, 233, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
+        input, select { width: 100%; padding: 12px; border: 2px solid #bae6fd; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        .res-card { background: var(--accent); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; }
+        .res-val { font-size: 2.8rem; font-weight: 800; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #bae6fd; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #0369a1; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        .related-links { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #bae6fd; font-size: 0.8rem; font-weight: bold; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">HYDRO_CALC_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Daily Water Intake Calculator</h2>
+            <p style="font-size: 0.85rem; margin-bottom: 1.5rem; color: #0c4a6e;">Calculate how much water you should drink for optimal health.</p>
+            <div class="input-group"><label>Weight (kg)</label><input type="number" id="w" value="70" oninput="calc()"></div>
+            <div class="input-group">
+                <label>Daily Activity Level</label>
+                <select id="act" onchange="calc()">
+                    <option value="0">Sedentary (No Exercise)</option>
+                    <option value="0.5">Moderate (30m Exercise)</option>
+                    <option value="1">Intense (1h+ Exercise)</option>
+                </select>
+            </div>
+            <div class="res-card">
+                <div style="font-size:0.7rem; font-weight:700;">RECOMMENDED DAILY INTAKE</div>
+                <div id="res" class="res-val">2.3 Liters</div>
+                <div style="font-size:0.8rem; font-weight:700; opacity:0.9;">Approximately 9 glasses</div>
+            </div>
+            <div class="seo-box">
+                <h3>How much water should I drink in 2026?</h3>
+                <p>Hydration is the foundation of energy and health. Our <strong>2026 Water Intake Tool</strong> provides a personalized estimate based on your body weight and exercise habits. Science suggests drinking approximately 30-35ml of water per kilo of body weight, but our <strong>hydration calculator</strong> adds extra for active lifestyles. Proper water intake improves skin health, brain function, and metabolism.</p>
+            </div>
+            <div class="related-links">
+                TOOLS: <a href="../app70-pregnancy-due-date-calculator/" style="color:var(--accent)">Pregnancy Calc</a> | <a href="../app54-sports-stopwatch-timer/" style="color:var(--accent)">Sports Timer</a>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 HYDRATION GUIDE</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Unlock the secrets to metabolic health and detox (Free PDF).</p>
+            <div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">GET FREE ACCESS</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const w = parseFloat(document.getElementById('w').value) || 0;
+        const act = parseFloat(document.getElementById('act').value) || 0;
+        if(w > 0) {
+            const base = w * 0.033;
+            const extra = act * 0.7;
+            const total = (base + extra).toFixed(1);
+            document.getElementById('res').innerText = total + " Liters";
+        }
+    }
+</script>
+</body>
+</html>
