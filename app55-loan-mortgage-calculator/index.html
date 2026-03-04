@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Loan Calculator | Monthly Payment & Interest Tracker</title>
+    <meta name="description" content="Free 2026 Mortgage and Loan Calculator. Calculate your monthly payments, total interest, and plan your finances with our professional tool.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #059669; --bg: #f0fdf4; --card: #ffffff; --text: #064e3b; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 4px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border: 1px solid #dcfce7; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-transform: uppercase; }
+        input { width: 100%; padding: 14px; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        input:focus { border-color: var(--primary); }
+        .result-card { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; }
+        .res-val { font-size: 2.5rem; font-weight: 800; }
+        .seo-content { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #dcfce7; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+        .seo-content h3 { color: var(--text); margin-bottom: 10px; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-finance { background: #064e3b; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; font-weight: 700; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:800; color:var(--primary)">FINANCE_PRO_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Loan Payment Calculator</h2>
+            <div class="input-group">
+                <label>Loan Amount ($)</label>
+                <input type="number" id="amount" value="10000" oninput="calc()">
+            </div>
+            <div class="input-group">
+                <label>Interest Rate (%)</label>
+                <input type="number" id="rate" value="5" step="0.1" oninput="calc()">
+            </div>
+            <div class="input-group">
+                <label>Loan Term (Years)</label>
+                <input type="number" id="years" value="5" oninput="calc()">
+            </div>
+            <div class="result-card">
+                <div style="font-size: 0.8rem; font-weight: 700;">MONTHLY PAYMENT</div>
+                <div class="res-val" id="monthly">$188.71</div>
+            </div>
+            <div class="seo-content">
+                <h3>Plan your mortgage and loans in 2026</h3>
+                <p>Understanding your <strong>monthly loan payments</strong> is essential for a healthy financial life. Our <strong>2026 Loan Calculator</strong> uses the standard amortization formula to give you precise results. Whether it's a personal loan or a new home mortgage, tracking your interest is the first step to saving money.</p>
+                <h3>Why use a professional interest tracker?</h3>
+                <p>Interest rates fluctuate constantly. A <strong>Mortgage Calculation Tool</strong> helps you compare different scenarios and choose the term that fits your budget. This 100% free financial tool is designed for speed and accuracy in 2026.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-finance">
+            <h4 style="margin:0">2026 WEALTH STRATEGY</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0; font-weight: 400;">Discover the debt-free roadmap and investment secrets (Free PDF).</p>
+            <div style="background:var(--primary); padding:10px; border-radius:10px;">GET FREE ACCESS</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const p = parseFloat(document.getElementById('amount').value);
+        const r = parseFloat(document.getElementById('rate').value) / 100 / 12;
+        const n = parseFloat(document.getElementById('years').value) * 12;
+        if(p && r && n) {
+            const m = (p * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
+            document.getElementById('monthly').innerText = "$" + m.toFixed(2);
+        }
+    }
+</script>
+</body>
+</html>
