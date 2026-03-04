@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Inflation Calculator | Future Purchasing Power Tool</title>
+    <meta name="description" content="Free 2026 Inflation Calculator. Calculate the future value of your money and understand purchasing power with our professional financial tool.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Inflation Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #f59e0b; --bg: #fefce8; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(245, 158, 11, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: #b45309; margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #fef08a; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        .res-card { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; border-left: 5px solid var(--accent); }
+        .res-val { font-size: 2.2rem; font-weight: 800; color: var(--accent); }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #fef08a; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #713f12; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        .formula-box { background: #fffbeb; padding: 15px; border-radius: 12px; font-size: 0.8rem; margin: 15px 0; border: 1px solid #fef3c7; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">ECONOMY_CORE_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Inflation & Purchasing Power</h2>
+            <p style="font-size: 0.85rem; color: #b45309; margin-bottom: 1.5rem;">Calculate the future impact of inflation on your savings.</p>
+            <div class="input-group"><label>Current Amount ($)</label><input type="number" id="amt" value="1000" oninput="calc()"></div>
+            <div class="input-group"><label>Annual Inflation Rate (%)</label><input type="number" id="rate" value="3.5" step="0.1" oninput="calc()"></div>
+            <div class="input-group"><label>Periods (Years)</label><input type="number" id="yrs" value="10" oninput="calc()"></div>
+            
+            <div class="res-card">
+                <div style="font-size:0.7rem; font-weight:700;">FUTURE PURCHASING POWER</div>
+                <div id="res" class="res-val">$708.92</div>
+                <div id="loss" style="font-size:0.8rem; font-weight:700; opacity:0.8;">Value Loss: 29.11%</div>
+            </div>
+
+            <div class="formula-box">
+                <strong>Calculation logic:</strong> To find the future value considering inflation, we use the inverse compound formula:
+                $$V_{future} = \frac{V_{present}}{(1 + r)^n}$$
+            </div>
+
+            <div class="seo-box">
+                <h3>Understanding Inflation in 2026</h3>
+                <p>Inflation is the rate at which the general level of prices for goods and services is rising. Our <strong>2026 Inflation Calculator</strong> helps you visualize how the <strong>purchasing power</strong> of your money decreases over time. If you keep $1,000 under your mattress for 10 years with a 3.5% inflation rate, its real value in today's terms will be significantly lower. Use this <strong>financial planning tool</strong> to better understand why investing is crucial to beat the rising cost of living.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 WEALTH PROTECTION</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Learn how to hedge against inflation and grow your portfolio in 2026 (Free PDF).</p>
+            <div style="background:var(--accent); color:#000; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const amt = parseFloat(document.getElementById('amt').value) || 0;
+        const rate = (parseFloat(document.getElementById('rate').value) || 0) / 100;
+        const yrs = parseFloat(document.getElementById('yrs').value) || 0;
+        
+        if(amt > 0 && yrs >= 0) {
+            const futureVal = amt / Math.pow(1 + rate, yrs);
+            const loss = ((amt - futureVal) / amt) * 100;
+            document.getElementById('res').innerText = "$" + futureVal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('loss').innerText = "Value Loss: " + loss.toFixed(2) + "%";
+        }
+    }
+    calc();
+</script>
+</body>
+</html>
