@@ -3,16 +3,11 @@
   "name": "Leo por ti - Lector Inteligente",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0a0c10",
+  "background_color": "#05070a",
   "theme_color": "#d4af37",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192/d4af37/000000?text=Leo",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "https://via.placeholder.com/512/d4af37/000000?text=Leo_por_ti",
+      "src": "logo-leo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
