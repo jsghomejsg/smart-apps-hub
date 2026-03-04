@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Reading Speed Test | Calculate Your WPM Online</title>
+    <meta name="description" content="Free online reading speed test. Calculate your words per minute (WPM) and improve your reading efficiency in 2026.">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --bg: #f8fafc; --text: #1e293b; }
+        body { font-family: 'Merriweather', serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        header { background: #fff; padding: 1rem; text-align: center; border-bottom: 2px solid var(--primary); font-family: 'Roboto', sans-serif; }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; }
+        .main-tool { background: #fff; padding: 2rem; border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 1.5rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        .test-area { background: #f1f5f9; padding: 20px; border-radius: 10px; margin: 20px 0; font-size: 1.1rem; user-select: none; }
+        .btn-speed { background: var(--primary); color: #fff; border: none; padding: 15px 30px; border-radius: 10px; font-weight: 900; font-family: 'Roboto', sans-serif; cursor: pointer; width: 100%; font-size: 1.1rem; }
+        #results { display: none; margin-top: 20px; padding: 20px; background: #e0e7ff; border-radius: 10px; text-align: center; }
+        /* SEO Content Section */
+        .seo-content { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; font-family: 'Roboto', sans-serif; color: #64748b; font-size: 0.95rem; }
+        .seo-content h3 { color: var(--text); }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; font-family: 'Roboto', sans-serif; }
+        .cta-box { background: #1e293b; color: #fff; padding: 1.5rem; border-radius: 15px; text-decoration: none; text-align: center; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header><div style="font-weight:900; color:var(--primary)">FAST_READ_2026</div></header>
+
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+
+        <div class="main-tool">
+            <h2 style="margin-top:0; font-family: 'Roboto', sans-serif;">Reading Speed Test</h2>
+            <p>Click "START" and read the text below as fast as you can. Click "FINISH" when you are done.</p>
+            
+            <button id="actionBtn" class="btn-speed" onclick="toggleTest()">START TEST</button>
+
+            <div class="test-area" id="textBlock">
+                Artificial intelligence and machine learning are transforming how we interact with technology in 2026. Speed reading has become an essential skill for professionals who need to process vast amounts of data every day. By training your brain to recognize groups of words rather than individual letters, you can significantly increase your words per minute without sacrificing comprehension. (Total: 62 words)
+            </div>
+
+            <div id="results">
+                <div style="font-size: 0.9rem; font-weight: 700;">YOUR SPEED:</div>
+                <div style="font-size: 2.5rem; font-weight: 900; color: var(--primary);" id="wpmDisplay">0</div>
+                <div style="font-size: 0.8rem;">WORDS PER MINUTE (WPM)</div>
+            </div>
+
+            <div class="seo-content">
+                <h3>How to improve your reading speed in 2026?</h3>
+                <p>Average reading speeds typically range from 200 to 250 words per minute (WPM). Using our <strong>2026 Reading Speed Test</strong>, you can track your progress daily. To read faster, try to avoid "subvocalization" (saying the words in your head) and practice scanning techniques.</p>
+                <h3>Why should you use a WPM Calculator?</h3>
+                <p>Tracking your WPM is essential for students and researchers. High reading efficiency allows you to save hours of study time every week. Our free tool provides instant results without registration.</p>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>BOOST PRODUCTIVITY</h4>
+            <p style="font-size: 0.8rem; margin: 10px 0;">Download the 2026 Focus & Speed Reading Guide (PDF).</p>
+            <div style="background:var(--primary); padding:10px; border-radius:5px; font-weight:bold;">GET FREE GUIDE</div>
+        </a>
+    </aside>
+</div>
+
+<script>
+    let startTime, endTime;
+    const wordCount = 62;
+
+    function toggleTest() {
+        const btn = document.getElementById('actionBtn');
+        const res = document.getElementById('results');
+        
+        if (btn.innerText === "START TEST") {
+            startTime = new Date();
+            btn.innerText = "FINISH TEST";
+            btn.style.background = "#ef4444";
+            res.style.display = "none";
+        } else {
+            endTime = new Date();
+            const timeDiff = (endTime - startTime) / 1000 / 60; // in minutes
+            const wpm = Math.round(wordCount / timeDiff);
+            
+            document.getElementById('wpmDisplay').innerText = wpm;
+            res.style.display = "block";
+            btn.innerText = "START TEST";
+            btn.style.background = "#6366f1";
+        }
+    }
+</script>
+</body>
+</html>
