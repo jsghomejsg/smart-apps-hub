@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Profit Margin Calculator | Business Growth Tool</title>
+    <meta name="description" content="Calculate your business profit margins and markups instantly with our free 2026 tool. Essential for e-commerce and retail pricing strategy.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Profit Margin Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #10b981; --bg: #f8fafc; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(16, 185, 129, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: #059669; margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #d1fae5; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .res-item { background: var(--accent); color: #fff; padding: 1.2rem; border-radius: 15px; text-align: center; }
+        .res-val { font-size: 1.8rem; font-weight: 900; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d1fae5; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #065f46; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        .related-tools { margin-top: 2rem; font-size: 0.8rem; font-weight: bold; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">PROFIT_CORE_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Profit Margin Calculator</h2>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Determine your sales prices and profit ratios instantly.</p>
+            <div class="input-group"><label>Cost of Item ($)</label><input type="number" id="cost" value="50" oninput="calc()"></div>
+            <div class="input-group"><label>Selling Price ($)</label><input type="number" id="sale" value="80" oninput="calc()"></div>
+            <div class="res-grid">
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">PROFIT MARGIN</div>
+                    <div id="margin" class="res-val">37.5%</div>
+                </div>
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">GROSS PROFIT</div>
+                    <div id="profit" class="res-val">$30.00</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Master Your Business Pricing in 2026</h3>
+                <p>Understanding the difference between <strong>margin and markup</strong> is vital for any successful business. Our <strong>2026 Profit Margin Tool</strong> helps you calculate exactly how much you earn from every sale. Whether you are running an e-commerce store or a physical retail shop, optimizing your <strong>gross profit</strong> ensures long-term sustainability and growth in the competitive 2026 market.</p>
+            </div>
+            <div class="related-tools">
+                TOOLS: <a href="../app64-sales-tax-calculator/" style="color:var(--accent)">Sales Tax</a> | <a href="../app65-discount-calculator-tool/" style="color:var(--accent)">Discount Calc</a>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 E-COMMERCE SECRETS</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">The blueprint to scaling your online business to 6 figures (Free PDF).</p>
+            <div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const cost = parseFloat(document.getElementById('cost').value) || 0;
+        const sale = parseFloat(document.getElementById('sale').value) || 0;
+        if(sale > 0) {
+            const profit = sale - cost;
+            const margin = (profit / sale) * 100;
+            document.getElementById('margin').innerText = margin.toFixed(1) + "%";
+            document.getElementById('profit').innerText = "$" + profit.toFixed(2);
+        }
+    }
+</script>
+</body>
+</html>
