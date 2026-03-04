@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Salary Converter | Hourly to Yearly Income Tracker</title>
+    <meta name="description" content="Free 2026 Salary Converter. Calculate your annual, monthly, and weekly income from an hourly wage instantly with our professional finance tool.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #064e3b; --accent: #10b981; --bg: #f0fdf4; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(6, 78, 59, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; }
+        .input-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #d1fae5; border-radius: 12px; font-size: 1.1rem; outline: none; box-sizing: border-box; }
+        .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .res-item { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: 15px; text-align: center; border-bottom: 4px solid var(--accent); }
+        .res-val { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d1fae5; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #065f46; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } .res-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">WAGE_PRO_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Salary & Wage Converter</h2>
+            <div class="input-group">
+                <label>Hourly Wage ($)</label>
+                <input type="number" id="hourly" value="25" oninput="calc()">
+            </div>
+            <div class="res-grid">
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">WEEKLY</div>
+                    <div id="weekly" class="res-val">$1,000</div>
+                </div>
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">MONTHLY</div>
+                    <div id="monthly" class="res-val">$4,333</div>
+                </div>
+                <div class="res-item" style="grid-column: span 2;">
+                    <div style="font-size:0.7rem; font-weight:700;">ANNUAL SALARY</div>
+                    <div id="yearly" class="res-val" style="font-size:2.2rem;">$52,000</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Calculate Your Real Income in 2026</h3>
+                <p>Understanding your <strong>annual salary vs hourly wage</strong> is the first step toward financial freedom. Our <strong>2026 Salary Converter</strong> assumes a standard 40-hour work week to provide accurate estimates for your budget. Whether you are negotiating a new job offer or planning your savings, getting an instant breakdown of your <strong>monthly and weekly income</strong> helps you make better career decisions.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar"><a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box"><h4>2026 CAREER BOOST</h4><p style="font-size:0.8rem; margin:15px 0;">Learn the top negotiation secrets to increase your salary by 20% this year (Free PDF).</p><div style="background:var(--accent); color:#000; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div></a></aside>
+</div>
+<script>
+    function calc() {
+        const h = parseFloat(document.getElementById('hourly').value) || 0;
+        const w = h * 40;
+        const y = w * 52;
+        const m = y / 12;
+        const fmt = (v) => "$" + v.toLocaleString(undefined, {maximumFractionDigits: 0});
+        document.getElementById('weekly').innerText = fmt(w);
+        document.getElementById('monthly').innerText = fmt(m);
+        document.getElementById('yearly').innerText = fmt(y);
+    }
+</script>
+</body>
+</html>
