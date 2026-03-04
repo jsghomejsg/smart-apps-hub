@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Secure Password Generator | Create Strong Random Passwords</title>
+    <meta name="description" content="Generate high-security random passwords instantly with our free 2026 online tool. Customizable length and characters for maximum protection.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Secure Password Generator",
+      "operatingSystem": "Web",
+      "applicationCategory": "SecurityApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e293b; --accent: #6366f1; --bg: #f8fafc; --card: #ffffff; }
+        body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        .pass-display { background: #f1f5f9; padding: 20px; border-radius: 15px; font-size: 1.5rem; font-weight: 700; word-break: break-all; margin: 20px 0; border: 2px dashed var(--accent); color: var(--accent); position: relative; }
+        input[type="range"] { width: 100%; margin: 15px 0; cursor: pointer; }
+        button { background: var(--accent); color: #fff; border: none; padding: 18px 40px; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%; text-transform: uppercase; font-size: 1rem; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #475569; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        .related-tools { margin-top: 1.5rem; font-size: 0.8rem; font-weight: bold; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">SECURITY_GEN_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Secure Password Generator</h2>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem;">Protect your online accounts with a strong, random password.</p>
+            <div class="pass-display" id="pass">P@ssw0rd123!</div>
+            <label style="font-size: 0.8rem; font-weight: 700;">Password Length: <span id="lenVal">16</span></label>
+            <input type="range" id="len" min="8" max="50" value="16" oninput="updateLen()">
+            <button onclick="gen()">GENERATE PASSWORD</button>
+            
+            <div class="seo-box">
+                <h3>Why use a Random Password Generator in 2026?</h3>
+                <p>Digital security has never been more critical. Our <strong>2026 Random Password Tool</strong> helps you create complex strings that are impossible for hackers to guess. Using a <strong>strong password</strong> with a mix of uppercase letters, numbers, and special symbols significantly reduces the risk of data breaches. This tool is client-side, meaning your passwords are never sent to a server.</p>
+            </div>
+            <div class="related-tools">
+                MORE: <a href="../app53-qr-code-generator/" style="color:var(--accent)">QR Generator</a> | <a href="../app60-random-number-generator/" style="color:var(--accent)">Random Number</a>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 CYBER SURVIVAL</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">The complete guide to protecting your digital identity and crypto assets (Free PDF).</p>
+            <div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function updateLen() { document.getElementById('lenVal').innerText = document.getElementById('len').value; }
+    function gen() {
+        const len = document.getElementById('len').value;
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+        let retVal = "";
+        for (let i = 0, n = charset.length; i < len; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        document.getElementById('pass').innerText = retVal;
+    }
+    gen();
+</script>
+</body>
+</html>
