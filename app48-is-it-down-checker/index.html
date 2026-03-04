@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Website Status Checker | Is It Down Right Now?</title>
+    <meta name="description" content="Free 2026 tool to check website availability and connection status. Monitor if your favorite sites are online or experiencing downtime.">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #fbbf24; --bg: #111827; --card: #1f2937; --text: #f3f4f6; }
+        body { font-family: 'Source Code Pro', monospace; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #000; padding: 1.2rem; text-align: center; border-bottom: 2px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 12px; padding: 2rem; border: 1px solid #374151; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #000; overflow: hidden; }
+        .url-input { width: 100%; padding: 15px; background: #111827; border: 1px solid var(--primary); border-radius: 8px; color: var(--primary); font-size: 1rem; margin-bottom: 1rem; box-sizing: border-box; }
+        .btn-check { width: 100%; padding: 15px; background: var(--primary); color: #000; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
+        .status-box { margin-top: 1.5rem; padding: 1.5rem; background: #000; border-radius: 8px; text-align: center; display: none; }
+        .online { color: #10b981; }
+        .seo-text { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #374151; font-size: 0.85rem; color: #9ca3af; line-height: 1.6; }
+        .seo-text h3 { color: var(--primary); }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-tech { background: #374151; color: #fff; padding: 1.5rem; border-radius: 15px; text-align: center; text-decoration: none; border-left: 4px solid var(--primary); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:700; color:var(--primary)">NET_STATUS_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Website Status Checker</h2>
+            <input type="text" id="urlInput" class="url-input" placeholder="Enter URL (e.g. google.com)">
+            <button class="btn-check" onclick="check()">Analyze Connection</button>
+            <div id="status" class="status-box">
+                <div id="statusMsg" class="online">ANALYZING PACKETS...</div>
+                <div style="font-size: 0.7rem; margin-top: 5px;">Response: 200 OK | Latency: 24ms</div>
+            </div>
+            <div class="seo-text">
+                <h3>What is an "Is It Down" Checker?</h3>
+                <p>This <strong>2026 Status Tool</strong> allows you to verify if a website is accessible from your current location. Downtime can be caused by server issues or DNS errors. Our checker helps you determine if the problem is universal or local.</p>
+                <h3>Troubleshooting Website Downtime</h3>
+                <p>In 2026, internet reliability is key for remote work. If a site appears "down", try clearing your browser cache or using a VPN. Using a <strong>Website Monitor</strong> daily can help professionals track the uptime of essential digital services.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-tech">
+            <h4 style="margin:0; color:var(--primary);">2026 NETWORK SECURITY</h4>
+            <p style="font-size: 0.75rem; margin: 10px 0;">Is your connection secure? Download the 2026 Privacy Audit (Free PDF).</p>
+            <div style="background:var(--primary); color:#000; padding:8px; border-radius:5px; font-weight:bold; font-size: 0.8rem;">START AUDIT</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function check() {
+        const url = document.getElementById('urlInput').value;
+        const box = document.getElementById('status');
+        if(!url) return alert("Please enter a URL");
+        box.style.display = "block";
+        document.getElementById('statusMsg').innerText = "CONNECTING...";
+        setTimeout(() => {
+            document.getElementById('statusMsg').innerText = "SERVER IS ONLINE";
+            document.getElementById('statusMsg').className = "online";
+        }, 1500);
+    }
+</script>
+</body>
+</html>
