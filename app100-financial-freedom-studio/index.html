@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Financial Freedom & Compound Interest Studio | Wealth Projection</title>
+    <meta name="description" content="Master your future with the 2026 Financial Freedom Studio. Calculate compound interest, projected wealth, and investment growth with our professional financial tool.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Wealth Projection Studio",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@300;500;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --gold-dark: #aa8a2e; --bg: #050505; --card: #111111; --text: #ffffff; --accent: #facc15; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        
+        header { background: #000; padding: 2rem; border-bottom: 2px solid var(--gold); text-align: center; }
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.6rem; letter-spacing: 4px; }
+
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 400px; gap: 3rem; }
+        
+        .main-card { background: var(--card); border-radius: 40px; padding: 4rem; border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 50px 100px -20px rgba(0,0,0,1); position: relative; overflow: hidden; }
+        .main-card::after { content: "100"; position: absolute; top: -50px; right: -20px; font-size: 20rem; font-family: 'Outfit'; font-weight: 900; opacity: 0.03; color: var(--gold); pointer-events: none; }
+
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .full { grid-column: span 2; }
+        
+        label { display: block; font-size: 0.7rem; font-weight: 800; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        input { width: 100%; padding: 16px; background: #1a1a1a; border: 1px solid #333; border-radius: 12px; color: #fff; font-size: 1.1rem; transition: 0.3s; box-sizing: border-box; outline: none; }
+        input:focus { border-color: var(--gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+
+        .results-box { margin-top: 4rem; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 3rem; }
+        .total-wealth { font-family: 'Outfit', sans-serif; font-size: 5rem; font-weight: 900; color: var(--gold); line-height: 1; margin: 10px 0; }
+        
+        .breakdown-table { width: 100%; margin-top: 2rem; border-collapse: collapse; }
+        .breakdown-table td { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .label-cell { text-align: left; font-size: 0.8rem; font-weight: 800; color: #888; text-transform: uppercase; }
+        .value-cell { text-align: right; font-family: 'Outfit'; font-size: 1.5rem; color: var(--accent); }
+
+        .seo-section { grid-column: span 2; margin-top: 5rem; padding: 4rem; background: rgba(255,255,255,0.02); border-radius: 40px; }
+        .seo-section h2 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 2.2rem; margin-bottom: 1.5rem; }
+
+        .sidebar { position: sticky; top: 2rem; }
+        .pro-ad { background: linear-gradient(135deg, #d4af37 0%, #aa8a2e 100%); color: #000; padding: 3rem; border-radius: 32px; text-align: center; }
+        .btn-gold { display: block; background: #000; color: #fff; padding: 18px; border-radius: 14px; text-decoration: none; font-weight: 800; margin-top: 2rem; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-gold:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } .input-grid { grid-template-columns: 1fr; } .total-wealth { font-size: 3.5rem; } }
+    </style>
+</head>
+<body>
+
+<header><div class="logo">GOLDEN_RATIO // 100</div></header>
+
+<div class="container">
+    <main class="main-card">
+        <h1 style="margin:0; font-family: 'Outfit'; font-size: 2.5rem; letter-spacing: -1px;">Wealth Projection Studio</h1>
+        <p style="color: #888; margin-top: 10px;">The mathematical blueprint for your financial independence.</p>
+
+        <div class="input-grid">
+            <div class="input-box">
+                <label>Initial Investment ($)</label>
+                <input type="number" id="initial" value="10000" oninput="calculate()">
+            </div>
+            <div class="input-box">
+                <label>Monthly Contribution ($)</label>
+                <input type="number" id="monthly" value="500" oninput="calculate()">
+            </div>
+            <div class="input-box">
+                <label>Annual Interest Rate (%)</label>
+                <input type="number" id="rate" value="8" step="0.1" oninput="calculate()">
+            </div>
+            <div class="input-box">
+                <label>Time Horizon (Years)</label>
+                <input type="number" id="years" value="20" oninput="calculate()">
+            </div>
+        </div>
+
+        <div class="results-box">
+            <div style="font-size: 0.7rem; font-weight: 800; color: var(--gold); letter-spacing: 3px; text-transform: uppercase;">Total Projected Wealth</div>
+            <div id="total" class="total-wealth">$345,670</div>
+            
+            <table class="breakdown-table">
+                <tr>
+                    <td class="label-cell">Total Principal (Your Money)</td>
+                    <td id="principal" class="value-cell">$130,000</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Total Interest (Market Gains)</td>
+                    <td id="interest" class="value-cell">$215,670</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="seo-section">
+            <h2>The Eighth Wonder of the World: Compound Growth</h2>
+            <p>Albert Einstein famously called compound interest the "eighth wonder of the world." Our <strong>2026 Financial Freedom Studio</strong> is designed to help you visualize how small, consistent actions lead to massive long-term results. By understanding the <strong>future value of money</strong>, you can make informed decisions about your savings and investments today.</p>
+            
+            
+
+            <p>The mathematical formula for compound interest with monthly contributions is:</p>
+            <p>$$A = P(1 + \frac{r}{n})^{nt} + PMT \times \frac{(1 + \frac{r}{n})^{nt} - 1}{\frac{r}{n}}$$</p>
+            <p>Where $A$ is the final amount, $P$ is the <strong>principal investment</strong>, $r$ is the annual interest rate, $n$ is the number of times interest is compounded per year, and $t$ is the <strong>number of years</strong>. In 2026, leveraging this <strong>financial modeling tool</strong> is essential for anyone aiming for early retirement or building a legacy.</p>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <div class="pro-ad">
+            <h3 style="margin-top:0; font-family: 'Cinzel';">The 2026 Wealth Manifesto</h3>
+            <p style="font-size: 0.9rem; font-weight: 500; line-height: 1.7;">
+                Stop working for money and start making money work for you. Download our <strong>exclusive investment strategies</strong> for the new economy.
+            </p>
+            <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="btn-gold">Get the Blueprint</a>
+        </div>
+        <div style="margin-top: 2rem; border-radius: 20px; overflow: hidden; border: 1px solid #333;">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+    </aside>
+</div>
+
+<script>
+    function calculate() {
+        const p = parseFloat(document.getElementById('initial').value) || 0;
+        const pmt = parseFloat(document.getElementById('monthly').value) || 0;
+        const r = (parseFloat(document.getElementById('rate').value) || 0) / 100;
+        const t = parseFloat(document.getElementById('years').value) || 0;
+        const n = 12; // Monthly compounding
+
+        if(t >= 0) {
+            const compoundInterestPrincipal = p * Math.pow(1 + r/n, n * t);
+            const futureValueSeries = pmt * (Math.pow(1 + r/n, n * t) - 1) / (r/n || 1);
+            
+            const total = compoundInterestPrincipal + (r === 0 ? pmt * n * t : futureValueSeries);
+            const totalInvested = p + (pmt * n * t);
+            const totalInterest = total - totalInvested;
+
+            document.getElementById('total').innerText = "$" + Math.round(total).toLocaleString();
+            document.getElementById('principal').innerText = "$" + Math.round(totalInvested).toLocaleString();
+            document.getElementById('interest').innerText = "$" + Math.round(totalInterest).toLocaleString();
+        }
+    }
+    calculate();
+</script>
+</body>
+</html>
