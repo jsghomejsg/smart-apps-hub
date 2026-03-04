@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Professional Meta Tag Generator | SEO & Social Preview Tool</title>
+    <meta name="description" content="Boost your website ranking with the 2026 Ultimate Meta Tag Generator. Create SEO-friendly tags for Google, Facebook, and Twitter with real-time preview.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 SEO Meta Tag Generator",
+      "operatingSystem": "Web",
+      "applicationCategory": "DeveloperApplication",
+      "offers": { "@type": "Offer", "price": "0" },
+      "featureList": "Google Snippet Preview, OpenGraph Generation, Twitter Card Creator"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --dark: #0f172a; --gray: #f8fafc; --border: #e2e8f0; --success: #10b981; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray); color: var(--dark); margin: 0; line-height: 1.6; }
+        
+        header { background: #fff; padding: 1.5rem; border-bottom: 1px solid var(--border); text-align: center; }
+        .badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 800; vertical-align: middle; }
+        
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        
+        /* Editor Style */
+        .editor-box { background: #fff; border-radius: 24px; padding: 2.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .field { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.8rem; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+        input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: 12px; font-family: inherit; transition: 0.3s; box-sizing: border-box; }
+        input:focus, textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
+        
+        /* Preview Style */
+        .preview-pane { position: sticky; top: 2rem; }
+        .google-card { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid #dfe1e5; margin-bottom: 2rem; box-shadow: 0 1px 6px rgba(32,33,36,0.1); }
+        .google-url { color: #202124; font-size: 0.9rem; margin-bottom: 4px; }
+        .google-title { color: #1a0dab; font-size: 1.2rem; cursor: pointer; text-decoration: none; display: block; margin-bottom: 4px; }
+        .google-desc { color: #4d5156; font-size: 0.85rem; }
+        
+        .code-output { background: #1e293b; color: #f1f5f9; padding: 1.5rem; border-radius: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto; position: relative; }
+        .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--primary); color: white; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.7rem; }
+
+        .seo-text { grid-column: span 2; margin-top: 4rem; padding: 3rem; background: #fff; border-radius: 24px; border: 1px solid var(--border); }
+        .seo-text h2 { color: var(--primary); font-weight: 800; }
+
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } .seo-text { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="font-weight: 800; font-size: 1.4rem;">SEO_MASTER <span class="badge">2026 PRO</span></div>
+</header>
+
+<div class="container">
+    <main class="editor-box">
+        <h2 style="margin-top: 0;">Tag Generator</h2>
+        <div class="field">
+            <label>Site Title (Max 60 chars)</label>
+            <input type="text" id="title" placeholder="e.g. My Amazing Website" oninput="update()">
+        </div>
+        <div class="field">
+            <label>Meta Description (Max 160 chars)</label>
+            <textarea id="desc" rows="3" placeholder="e.g. We provide the best tools for your business..." oninput="update()"></textarea>
+        </div>
+        <div class="field">
+            <label>Keywords (Comma separated)</label>
+            <input type="text" id="keys" placeholder="seo, tools, 2026" oninput="update()">
+        </div>
+        <div class="field">
+            <label>Site URL</label>
+            <input type="text" id="url" value="https://mysite.com" oninput="update()">
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <label>Generated Code</label>
+            <div class="code-output">
+                <button class="copy-btn" onclick="copy()">COPY CODE</button>
+                <code id="code"></code>
+            </div>
+        </div>
+    </main>
+
+    <aside class="preview-pane">
+        <label>Google Search Preview</label>
+        <div class="google-card">
+            <div class="google-url" id="p-url">https://mysite.com</div>
+            <div class="google-title" id="p-title">Your Site Title Appears Here</div>
+            <div class="google-desc" id="p-desc">Your site description will appear here as the snippet that users see on search results...</div>
+        </div>
+
+        <div style="background: var(--dark); color: white; padding: 2rem; border-radius: 24px;">
+            <h4>Why use Meta Tags in 2026?</h4>
+            <p style="font-size: 0.85rem; opacity: 0.8;">Meta tags tell search engines what your page is about. Our professional tool ensures your <strong>Click-Through Rate (CTR)</strong> is maximized by showing you exactly what users will see.</p>
+            <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" style="background: var(--primary); color: white; padding: 12px; display: block; text-align: center; border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 1rem;">DOWNLOAD 2026 SEO GUIDE</a>
+        </div>
+    </aside>
+
+    <section class="seo-text">
+        <h2>Professional SEO Management in 2026</h2>
+        <p>In 2026, the digital landscape is more competitive than ever. Utilizing a <strong>Professional Meta Tag Generator</strong> is no longer optional—it's a necessity for any webmaster. This tool helps you create the essential <strong>HTML meta tags</strong> that influence how Google indexes your content and how social platforms like Facebook and Twitter display your links. By optimizing your <strong>Open Graph (OG) tags</strong> and description snippets, you ensure that your website stands out, driving more organic traffic and improving your search engine authority.</p>
+    </section>
+</div>
+
+<script>
+    function update() {
+        const t = document.getElementById('title').value || "Your Site Title";
+        const d = document.getElementById('desc').value || "Your site description will appear here...";
+        const u = document.getElementById('url').value;
+        const k = document.getElementById('keys').value;
+
+        // Update Preview
+        document.getElementById('p-title').innerText = t;
+        document.getElementById('p-desc').innerText = d;
+        document.getElementById('p-url').innerText = u;
+
+        // Generate Code
+        let code = `&lt;!-- Primary Meta Tags --&gt;\n`;
+        code += `&lt;title&gt;${t}&lt;/title&gt;\n`;
+        code += `&lt;meta name="title" content="${t}"&gt;\n`;
+        code += `&lt;meta name="description" content="${d}"&gt;\n`;
+        if(k) code += `&lt;meta name="keywords" content="${k}"&gt;\n`;
+        code += `\n&lt;!-- Open Graph / Facebook --&gt;\n`;
+        code += `&lt;meta property="og:type" content="website"&gt;\n`;
+        code += `&lt;meta property="og:url" content="${u}"&gt;\n`;
+        code += `&lt;meta property="og:title" content="${t}"&gt;\n`;
+        code += `&lt;meta property="og:description" content="${d}"&gt;`;
+
+        document.getElementById('code').innerHTML = code;
+    }
+
+    function copy() {
+        const codeText = document.getElementById('code').innerText;
+        navigator.clipboard.writeText(codeText);
+        alert("Code copied to clipboard!");
+    }
+
+    update();
+</script>
+</body>
+</html>
