@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 QR Code Generator | Create Free Custom QR Codes</title>
+    <meta name="description" content="Generate high-quality QR codes for websites, WiFi, and business cards in 2026. Free, fast, and no registration required.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #000000; --bg: #ffffff; --accent: #2563eb; --text: #1f2937; }
+        body { font-family: 'Outfit', sans-serif; background: #f3f4f6; color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: #fff; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        .input-area { margin-bottom: 1.5rem; }
+        input { width: 100%; padding: 15px; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; outline: none; transition: 0.3s; }
+        input:focus { border-color: var(--accent); }
+        .qr-result { margin: 2rem auto; width: 200px; height: 200px; background: #f9fafb; border: 2px dashed #d1d5db; display: flex; align-items: center; justify-content: center; position: relative; }
+        .qr-placeholder { font-size: 0.8rem; color: #9ca3af; }
+        button { background: var(--accent); color: #fff; border: none; padding: 15px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%; text-transform: uppercase; }
+        .seo-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; text-align: left; line-height: 1.8; color: #4b5563; }
+        .seo-section h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-blue { background: var(--accent); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; font-weight: 700; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">QR_GEN_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Free QR Code Generator</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Enter your URL or text to generate a custom QR code instantly.</p>
+            <div class="input-area">
+                <input type="text" id="qrText" placeholder="https://yourwebsite.com" oninput="updateQR()">
+            </div>
+            <div class="qr-result" id="qrContainer">
+                <div class="qr-placeholder">QR Preview will appear here</div>
+            </div>
+            <button onclick="window.print()">Download QR Code</button>
+            
+            <div class="seo-section">
+                <h3>Why use a QR Code in 2026?</h3>
+                <p>QR codes are the ultimate bridge between physical and digital marketing. Our <strong>2026 QR Generator</strong> allows businesses and creators to share links, WiFi passwords, and contact information effortlessly. High-speed scanning technology in modern smartphones makes QR codes more relevant than ever.</p>
+                <h3>How to create a custom QR Code for free?</h3>
+                <p>Simply type your destination URL in our tool and watch the code generate in real-time. This <strong>Free QR Tool</strong> is optimized for mobile responsiveness and fast loading, ensuring your customers have a seamless experience when scanning your codes in 2026.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-blue">
+            <h4>QR MARKETING SECRETS</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0; font-weight: 400;">Boost your business traffic by 300% using these 2026 QR strategies.</p>
+            <div style="background:#fff; color:var(--accent); padding:10px; border-radius:10px;">GET FREE EBOOK</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function updateQR() {
+        const val = document.getElementById('qrText').value;
+        const container = document.getElementById('qrContainer');
+        if(val.length > 0) {
+            container.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(val)}" alt="QR Code">`;
+        } else {
+            container.innerHTML = `<div class="qr-placeholder">QR Preview will appear here</div>`;
+        }
+    }
+</script>
+</body>
+</html>
