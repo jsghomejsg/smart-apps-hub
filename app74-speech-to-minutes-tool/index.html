@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Speech to Minutes Calculator | Estimate Presentation Time</title>
+    <meta name="description" content="Free 2026 tool to calculate speech length. Convert your word count to speaking time for presentations, YouTube scripts, and public speaking.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Speech to Minutes Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "ProductivityApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #4338ca; --accent: #818cf8; --bg: #eef2ff; --card: #ffffff; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: #1e1b4b; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(67, 56, 202, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        textarea { width: 100%; height: 150px; padding: 15px; border: 2px solid #e0e7ff; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; resize: none; }
+        .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+        select { width: 100%; padding: 12px; border: 2px solid #e0e7ff; border-radius: 12px; }
+        .res-card { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1rem; }
+        .res-val { font-size: 2.2rem; font-weight: 900; color: #c7d2fe; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e7ff; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #4338ca; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: #1e1b4b; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--primary); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--primary)">SPEECH_TIME_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Speech & Presentation Timer</h2>
+            <p style="font-size: 0.85rem; color: #6366f1; margin-bottom: 1rem;">Paste your script below to estimate speaking time.</p>
+            <textarea id="text" placeholder="Paste your speech here..." oninput="calc()"></textarea>
+            <div class="controls">
+                <div><label style="font-size:0.7rem; font-weight:700;">SPEED</label>
+                <select id="speed" onchange="calc()">
+                    <option value="130">Slow (130 wpm)</option>
+                    <option value="150" selected>Normal (150 wpm)</option>
+                    <option value="170">Fast (170 wpm)</option>
+                </select></div>
+                <div><label style="font-size:0.7rem; font-weight:700;">WORDS</label>
+                <div id="wCount" style="padding:12px; font-weight:bold; color:var(--primary)">0 words</div></div>
+            </div>
+            <div class="res-card">
+                <div style="font-size:0.7rem; font-weight:700;">ESTIMATED TIME</div>
+                <div id="res" class="res-val">0:00</div>
+                <div style="font-size:0.8rem; font-weight:700; opacity:0.8;">Minutes : Seconds</div>
+            </div>
+            <div class="seo-box">
+                <h3>How to estimate speech length in 2026?</h3>
+                <p>Public speaking requires perfect timing. Our <strong>2026 Speech to Minutes Tool</strong> helps you convert your word count into a precise time estimate. Most speakers average 150 words per minute. By pasting your script here, you can ensure your <strong>presentation, YouTube video, or podcast</strong> fits perfectly within your time slot.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 PUBLIC SPEAKING</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Master the stage and influence your audience with these pro tips (Free PDF).</p>
+            <div style="background:var(--primary); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const text = document.getElementById('text').value.trim();
+        const wpm = parseInt(document.getElementById('speed').value);
+        const words = text.length > 0 ? text.split(/\s+/).length : 0;
+        document.getElementById('wCount').innerText = words + " words";
+        
+        const totalSecs = Math.floor((words / wpm) * 60);
+        const mins = Math.floor(totalSecs / 60);
+        const secs = totalSecs % 60;
+        document.getElementById('res').innerText = mins + ":" + (secs < 10 ? "0" : "") + secs;
+    }
+</script>
+</body>
+</html>
