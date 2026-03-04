@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Tip Calculator | Easy Bill Splitter for Restaurants</title>
+    <meta name="description" content="Free 2026 Tip Calculator. Split bills and calculate gratuity instantly with our professional and fast dining tool.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #10b981; --bg: #f0fdf4; --card: #ffffff; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(16, 185, 129, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: #047857; margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #d1fae5; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .res-item { background: var(--accent); color: #fff; padding: 1rem; border-radius: 15px; text-align: center; }
+        .res-val { font-size: 1.8rem; font-weight: 900; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d1fae5; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #065f46; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">DINE_SMART_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Tip & Bill Splitter</h2>
+            <div class="input-group"><label>Total Bill ($)</label><input type="number" id="bill" value="50" oninput="calc()"></div>
+            <div class="input-group"><label>Tip Percentage (%)</label><input type="number" id="tip" value="15" oninput="calc()"></div>
+            <div class="input-group"><label>Number of People</label><input type="number" id="people" value="2" oninput="calc()"></div>
+            <div class="res-grid">
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">TOTAL TIP</div>
+                    <div id="totalTip" class="res-val">$7.50</div>
+                </div>
+                <div class="res-item">
+                    <div style="font-size:0.7rem; font-weight:700;">EACH PAYS</div>
+                    <div id="each" class="res-val">$28.75</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Calculate Gratuity Fast in 2026</h3>
+                <p>Never struggle with math at the table again. Our <strong>2026 Tip Calculator</strong> helps you split the bill and calculate the perfect gratuity in seconds. Whether you are dining with friends or handling a business lunch, having an <strong>accurate bill splitter</strong> ensures a seamless experience. Optimized for 2026 smartphones for instant access during your outings.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar"><a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box"><h4>2026 DINING SECRETS</h4><p style="font-size:0.8rem; margin:15px 0;">Get the list of the best-rated restaurants and saving tips for foodies in 2026 (Free PDF).</p><div style="background:var(--accent); color:#000; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div></a></aside>
+</div>
+<script>
+    function calc() {
+        const b = parseFloat(document.getElementById('bill').value) || 0;
+        const t = parseFloat(document.getElementById('tip').value) || 0;
+        const p = parseFloat(document.getElementById('people').value) || 1;
+        const totalTip = b * (t / 100);
+        const total = b + totalTip;
+        document.getElementById('totalTip').innerText = "$" + totalTip.toFixed(2);
+        document.getElementById('each').innerText = "$" + (total / p).toFixed(2);
+    }
+</script>
+</body>
+</html>
