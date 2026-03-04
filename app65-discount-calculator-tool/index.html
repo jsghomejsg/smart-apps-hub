@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Discount Calculator | Calculate Your Savings Instantly</title>
+    <meta name="description" content="Free 2026 Discount Calculator. Find the final price after sales, coupons, and percentage discounts with our fast shopping tool.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #020617; --accent: #ef4444; --bg: #fef2f2; --card: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(239, 68, 68, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 2px solid #fecaca; border-radius: 12px; font-size: 1rem; outline: none; box-sizing: border-box; }
+        .res-card { background: var(--accent); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .res-val { font-size: 1.8rem; font-weight: 800; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #fecaca; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #7f1d1d; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--accent); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--accent)">SAVE_SMART_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Discount & Savings Calculator</h2>
+            <div class="input-group"><label>Original Price ($)</label><input type="number" id="price" value="100" oninput="calc()"></div>
+            <div class="input-group"><label>Discount Percentage (%)</label><input type="number" id="disc" value="20" oninput="calc()"></div>
+            <div class="res-card">
+                <div><div style="font-size:0.7rem; font-weight:700;">YOU SAVE</div><div id="saveAmt" class="res-val">$20.00</div></div>
+                <div><div style="font-size:0.7rem; font-weight:700;">FINAL PRICE</div><div id="final" class="res-val">$80.00</div></div>
+            </div>
+            <div class="seo-box">
+                <h3>Master Your Shopping with our 2026 Discount Tool</h3>
+                <p>Never guess a sale price again. Our <strong>2026 Discount Calculator</strong> helps you find exactly how much you are saving on your favorite products. Perfect for Black Friday, seasonal clearances, and coupon stacking. Knowing the <strong>final price and total savings</strong> instantly allows you to make smarter financial decisions while shopping online or in-store.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar"><a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box"><h4>2026 COUPON SECRETS</h4><p style="font-size:0.8rem; margin:15px 0;">Get the ultimate list of hidden promo codes and saving hacks for 2026 (Free PDF).</p><div style="background:var(--accent); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">GET FREE ACCESS</div></a></aside>
+</div>
+<script>
+    function calc() {
+        const p = parseFloat(document.getElementById('price').value) || 0;
+        const d = parseFloat(document.getElementById('disc').value) || 0;
+        const saveAmt = p * (d / 100);
+        document.getElementById('saveAmt').innerText = "$" + saveAmt.toFixed(2);
+        document.getElementById('final').innerText = "$" + (p - saveAmt).toFixed(2);
+    }
+</script>
+</body>
+</html>
