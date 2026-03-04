@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Pregnancy Due Date Calculator | Instant Baby Tracker</title>
+    <meta name="description" content="Calculate your baby's due date with our free 2026 pregnancy tool. Fast, accurate and easy to use for expecting parents.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Pregnancy Due Date Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "HealthApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #be185d; --accent: #f472b6; --bg: #fff1f2; --card: #ffffff; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: #831843; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 15px rgba(190, 24, 93, 0.05); }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; border-radius: 12px; overflow: hidden; }
+        .input-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 14px; border: 2px solid #fecdd3; border-radius: 12px; font-size: 1.1rem; outline: none; box-sizing: border-box; }
+        .res-card { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-top: 1.5rem; box-shadow: 0 10px 20px rgba(190, 24, 93, 0.2); }
+        .res-val { font-size: 1.8rem; font-weight: 900; margin: 10px 0; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #fecdd3; text-align: left; font-size: 0.9rem; line-height: 1.7; color: #9d174d; }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-box { background: #831843; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--primary); }
+        .related { margin-top: 2rem; font-size: 0.8rem; font-weight: bold; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:900; color:var(--primary)">BABY_TRACK_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">atOptions = {'key':'318ba4e4eb97e5a697d43fb713f5456e','format':'iframe','height':90,'width':728,'params':{}};</script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin:0">Pregnancy Due Date Calculator</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: #be185d;">Find out your estimated delivery date in seconds.</p>
+            <div class="input-group">
+                <label>First day of last period</label>
+                <input type="date" id="lmp" oninput="calc()">
+            </div>
+            <div class="res-card">
+                <div style="font-size:0.7rem; font-weight:700;">ESTIMATED DUE DATE</div>
+                <div id="res" class="res-val">Select a Date</div>
+                <div id="count" style="font-size:0.8rem; font-weight:700; opacity:0.9;">Waiting for input...</div>
+            </div>
+            <div class="seo-box">
+                <h3>How to calculate your due date in 2026?</h3>
+                <p>Planning for a new family member is an exciting journey. Our <strong>2026 Pregnancy Calculator</strong> uses the standard 280-day rule from your <strong>last menstrual period (LMP)</strong> to estimate your delivery date. While only a small percentage of babies are born on their exact due date, having an estimated <strong>baby arrival date</strong> helps you prepare your home and schedule for the big day.</p>
+            </div>
+            <div class="related">
+                <p>EXPLORE TOOLS: <a href="../app59-age-birthday-calculator/" style="color:var(--primary)">Age Calculator</a> | <a href="../app71-water-intake-tool/" style="color:var(--primary)">Water Intake (Soon)</a></p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-box">
+            <h4>2026 PREGNANCY GUIDE</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Everything you need to know about your baby's development month by month (Free PDF).</p>
+            <div style="background:var(--primary); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const lmp = new Date(document.getElementById('lmp').value);
+        if(!isNaN(lmp)) {
+            const due = new Date(lmp);
+            due.setDate(due.getDate() + 280);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('res').innerText = due.toLocaleDateString('en-US', options);
+            
+            const diff = due.getTime() - new Date().getTime();
+            const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('count').innerText = days > 0 ? days + " days to go!" : "Congratulations!";
+        }
+    }
+</script>
+</body>
+</html>
