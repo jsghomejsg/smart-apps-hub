@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Tip Calculator | Split Bill Easily Online</title>
+    <meta name="description" content="Free 2026 Tip Calculator. Split the bill among friends and calculate the perfect tip percentage instantly.">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2dd4bf; --bg: #f0fdfa; --card: #ffffff; --text: #134e4a; }
+        body { font-family: 'Karla', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 4px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 25px rgba(45, 212, 191, 0.1); border: 1px solid #ccfbf1; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.8rem; font-weight: 700; color: #0d9488; margin-bottom: 0.5rem; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; background: #f0fdfa; border: 2px solid #ccfbf1; border-radius: 10px; font-size: 1.1rem; color: var(--text); outline: none; box-sizing: border-box; }
+        input:focus { border-color: var(--primary); }
+        .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .res-item { background: var(--primary); color: #fff; padding: 1rem; border-radius: 15px; text-align: center; }
+        .res-val { font-size: 1.8rem; font-weight: 800; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ccfbf1; color: #115e59; font-size: 0.9rem; line-height: 1.6; }
+        .seo-box h3 { color: var(--text); }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-pay { background: #134e4a; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; border-bottom: 5px solid var(--primary); }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div style="font-weight:800; color:var(--primary); font-size: 1.4rem;">TIP_SPLIT_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Split Your Bill</h2>
+            <div class="form-group">
+                <label>Total Bill ($)</label>
+                <input type="number" id="bill" value="100" oninput="calc()">
+            </div>
+            <div class="form-group">
+                <label>Tip Percentage (%)</label>
+                <input type="number" id="tip" value="15" oninput="calc()">
+            </div>
+            <div class="form-group">
+                <label>Number of People</label>
+                <input type="number" id="people" value="2" oninput="calc()">
+            </div>
+            <div class="res-grid">
+                <div class="res-item">
+                    <div style="font-size: 0.7rem; font-weight: 700;">TIP PER PERSON</div>
+                    <div class="res-val" id="tipEach">$7.50</div>
+                </div>
+                <div class="res-item">
+                    <div style="font-size: 0.7rem; font-weight: 700;">TOTAL PER PERSON</div>
+                    <div class="res-val" id="totalEach">$57.50</div>
+                </div>
+            </div>
+            <div class="seo-box">
+                <h3>Fair Tipping Guide 2026</h3>
+                <p>Calculating the right tip can be stressful. Our <strong>2026 Tip Calculator</strong> allows you to split the cost among friends instantly. Whether it's a 15% or 20% tip, precision ensures everyone pays their fair share at restaurants and cafes.</p>
+                <h3>How to use the Bill Splitter?</h3>
+                <p>Simply enter the total amount of your check, choose the percentage you want to leave for the service, and indicate how many people are in your group. This <strong>Digital Tipping Tool</strong> is optimized for mobile use in 2026.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-pay">
+            <h4 style="margin:0">SAVINGS HACK 2026</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Learn how to save $500/month with our smart spending guide (Free PDF).</p>
+            <div style="background:var(--primary); color:#000; padding:10px; border-radius:10px; font-weight:bold;">DOWNLOAD NOW</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function calc() {
+        const b = parseFloat(document.getElementById('bill').value) || 0;
+        const t = parseFloat(document.getElementById('tip').value) || 0;
+        const p = parseFloat(document.getElementById('people').value) || 1;
+        const totalTip = b * (t / 100);
+        const total = b + totalTip;
+        document.getElementById('tipEach').innerText = "$" + (totalTip / p).toFixed(2);
+        document.getElementById('totalEach').innerText = "$" + (total / p).toFixed(2);
+    }
+</script>
+</body>
+</html>
