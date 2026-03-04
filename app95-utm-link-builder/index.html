@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Professional UTM Link Builder | Campaign Tracking Tool</title>
+    <meta name="description" content="Generate professional UTM tracking links for your marketing campaigns with the 2026 Ultimate Link Builder. High-precision tool for Google Analytics.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Professional UTM Builder",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #4f46e5; --secondary: #7c3aed; --dark: #0f172a; --gray: #f8fafc; --border: #e2e8f0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray); color: var(--dark); margin: 0; line-height: 1.6; }
+        
+        header { background: #fff; padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .logo-text { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: -1px; }
+        .pro-badge { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 2px 10px; border-radius: 6px; font-size: 0.65rem; font-weight: 800; }
+
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 400px; gap: 3rem; }
+        
+        .main-card { background: #fff; border-radius: 24px; padding: 3rem; border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.03); }
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .full-width { grid-column: span 2; }
+        
+        .field { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 800; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        input { width: 100%; padding: 14px; border: 2px solid var(--border); border-radius: 12px; transition: 0.3s; box-sizing: border-box; font-family: inherit; }
+        input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+
+        .result-box { margin-top: 2.5rem; background: var(--dark); border-radius: 20px; padding: 2rem; color: #fff; position: relative; }
+        .result-url { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; word-break: break-all; color: #a5b4fc; margin-bottom: 1.5rem; line-height: 1.5; }
+        .btn-copy { background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 10px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; }
+        .btn-copy:hover { background: var(--secondary); transform: translateY(-2px); }
+
+        .seo-section { grid-column: span 2; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border); }
+        .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .seo-content h2 { font-size: 2.2rem; font-weight: 800; margin-top: 0; color: var(--dark); }
+        .seo-content p { color: #475569; font-size: 1.1rem; }
+
+        .sidebar-widget { background: var(--dark); color: white; padding: 2.5rem; border-radius: 30px; position: sticky; top: 2rem; }
+        
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } .input-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-text">MARKET_TRACK <span class="pro-badge">2026 ELITE</span></div>
+    <div style="font-size: 0.8rem; font-weight: 600; color: #64748b;">UTM_BUILDER_V4.0</div>
+</header>
+
+<div class="container">
+    <main class="main-card">
+        <h1 style="margin:0; font-size: 2rem; font-weight: 800;">Campaign Link Builder</h1>
+        <p style="color: #64748b; margin-top: 10px;">Fill in the parameters below to generate a tracking-ready URL.</p>
+
+        <div class="input-grid">
+            <div class="field full-width">
+                <label>Website URL *</label>
+                <input type="text" id="url" placeholder="https://www.example.com" oninput="generate()">
+            </div>
+            <div class="field">
+                <label>Campaign Source *</label>
+                <input type="text" id="source" placeholder="e.g. google, newsletter, facebook" oninput="generate()">
+            </div>
+            <div class="field">
+                <label>Campaign Medium *</label>
+                <input type="text" id="medium" placeholder="e.g. cpc, email, social" oninput="generate()">
+            </div>
+            <div class="field">
+                <label>Campaign Name *</label>
+                <input type="text" id="name" placeholder="e.g. summer_sale" oninput="generate()">
+            </div>
+            <div class="field">
+                <label>Campaign Term</label>
+                <input type="text" id="term" placeholder="e.g. running_shoes" oninput="generate()">
+            </div>
+        </div>
+
+        <div class="result-box">
+            <label style="color: #94a3b8;">Generated Campaign URL</label>
+            <div id="result" class="result-url">https://www.example.com/?utm_source=...</div>
+            <button class="btn-copy" onclick="copy()">COPY TO CLIPBOARD</button>
+        </div>
+    </main>
+
+    <aside>
+        <div class="sidebar-widget">
+            <h3 style="margin-top: 0;">2026 Marketing Insights</h3>
+            <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.8;">
+                In 2026, data attribution is the key to scaling your business. Using <strong>UTM parameters</strong> allows you to identify exactly which ad or email generated a sale.
+            </p>
+            <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 2rem 0;"></div>
+            <p style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">PRO TIP:</p>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Always use lowercase for your UTM tags to avoid data fragmentation in Google Analytics 4.</p>
+            
+            <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" style="display: block; background: #fff; color: var(--dark); text-align: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 800; margin-top: 2rem;">DOWNLOAD SEO BLUEPRINT</a>
+        </div>
+    </aside>
+
+    <section class="seo-section">
+        <div class="seo-grid">
+            <div class="seo-content">
+                <h2>The Importance of UTM Tracking in 2026</h2>
+                <p>As the digital advertising landscape becomes more automated, <strong>manual tracking</strong> remains the most reliable way to verify your traffic sources. Our <strong>2026 Professional UTM Builder</strong> is designed for precision. By appending query parameters to your URLs, you can track the performance of every <strong>marketing campaign</strong> across different platforms.</p>
+                
+                <p>Whether you are managing <strong>Google Ads, Facebook campaigns, or internal email blasts</strong>, having an accurate <strong>link builder</strong> ensures that your data in GA4 or other analytics platforms is clean and actionable. This tool is client-side, fast, and optimized for professional marketing workflows.</p>
+            </div>
+            <div class="seo-content" style="background: #fff; padding: 2rem; border-radius: 24px; border: 1px solid var(--border);">
+                <h4 style="margin-top:0;">Parameter Definitions</h4>
+                <ul style="font-size: 0.9rem; color: #475569; padding-left: 1.2rem;">
+                    <li style="margin-bottom: 10px;"><strong>Source:</strong> The platform where the traffic originates (e.g., Google).</li>
+                    <li style="margin-bottom: 10px;"><strong>Medium:</strong> The type of link (e.g., CPC, Banner).</li>
+                    <li style="margin-bottom: 10px;"><strong>Name:</strong> Your specific campaign identifier.</li>
+                    <li><strong>Term:</strong> Used mainly for paid search keywords.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function generate() {
+        const url = document.getElementById('url').value.trim();
+        const source = document.getElementById('source').value.trim();
+        const medium = document.getElementById('medium').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const term = document.getElementById('term').value.trim();
+
+        if(!url) {
+            document.getElementById('result').innerText = "Please enter a Website URL...";
+            return;
+        }
+
+        let finalUrl = url;
+        finalUrl += (url.includes('?') ? '&' : '?') + 'utm_source=' + encodeURIComponent(source || 'source');
+        finalUrl += '&utm_medium=' + encodeURIComponent(medium || 'medium');
+        finalUrl += '&utm_campaign=' + encodeURIComponent(name || 'campaign');
+        if(term) finalUrl += '&utm_term=' + encodeURIComponent(term);
+
+        document.getElementById('result').innerText = finalUrl;
+    }
+
+    function copy() {
+        const text = document.getElementById('result').innerText;
+        if(text.includes('Please enter')) return;
+        navigator.clipboard.writeText(text);
+        alert("Campaign URL copied!");
+    }
+
+    generate();
+</script>
+</body>
+</html>
