@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Kitchen Converter | Free Cooking Unit Tool</title>
+    <meta name="description" content="Free 2026 Kitchen Unit Converter. Convert cups to ml, grams to oz, and more instantly for your international recipes.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #f59e0b; --bg: #fffbeb; --card: #ffffff; --text: #78350f; }
+        body { font-family: 'Lato', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #fff; padding: 1.2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; flex: 1; }
+        .main-tool { background: var(--card); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.1); border: 1px solid #fef3c7; }
+        .ad-banner { width: 100%; height: 90px; margin-bottom: 2rem; display: flex; justify-content: center; background: #eee; overflow: hidden; }
+        .input-group { margin-bottom: 1.2rem; }
+        label { display: block; font-size: 0.75rem; font-weight: 700; color: #b45309; margin-bottom: 0.5rem; text-transform: uppercase; }
+        input, select { width: 100%; padding: 12px; background: #fffcf0; border: 2px solid #fef3c7; border-radius: 10px; font-size: 1rem; color: var(--text); box-sizing: border-box; }
+        .res-display { background: var(--primary); color: #fff; padding: 1.5rem; border-radius: 15px; text-align: center; margin-top: 1.5rem; }
+        .res-val { font-size: 2.5rem; font-weight: 900; margin: 5px 0; }
+        .seo-box { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #fef3c7; color: #92400e; font-size: 0.9rem; line-height: 1.7; }
+        .seo-box h3 { color: var(--text); }
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+        .cta-chef { background: #78350f; color: #fff; padding: 1.5rem; border-radius: 20px; text-align: center; text-decoration: none; }
+        @media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<header><div class="logo">CHEF_TOOLS_2026</div></header>
+<div class="container">
+    <main>
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {'key' : '318ba4e4eb97e5a697d43fb713f5456e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/318ba4e4eb97e5a697d43fb713f5456e/invoke.js"></script>
+        </div>
+        <div class="main-tool">
+            <h2 style="margin-top:0">Kitchen Unit Converter</h2>
+            <div class="input-group">
+                <label>Amount</label>
+                <input type="number" id="amt" value="1" oninput="convert()">
+            </div>
+            <div class="input-group">
+                <label>From</label>
+                <select id="from" onchange="convert()">
+                    <option value="cup">Cups (US)</option>
+                    <option value="ml">Milliliters (ml)</option>
+                    <option value="gram">Grams (g)</option>
+                    <option value="oz">Ounces (oz)</option>
+                </select>
+            </div>
+            <div class="res-display">
+                <div id="resText" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Milliliters:</div>
+                <div class="res-val" id="result">236.6</div>
+            </div>
+            <div class="seo-box">
+                <h3>Accurate cooking measurements in 2026</h3>
+                <p>Using a <strong>Kitchen Converter</strong> is crucial for baking success. Whether you are converting cups to milliliters or grams to ounces, precision ensures your recipes turn out perfect every time. Our tool provides instant calculations for home chefs and professionals.</p>
+                <h3>Why use a Digital Kitchen Tool?</h3>
+                <p>International recipes often use different measurement systems. A <strong>Cooking Unit Tool</strong> helps you bridge the gap between US and Metric systems effortlessly. Save time in the kitchen and avoid measurement errors this 2026.</p>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="https://www.effectivegatecpm.com/x0sa89dj?key=45fee6aa631e7dbbb3c820358e72eb4e" target="_blank" class="cta-chef">
+            <h4 style="margin:0">2026 HEALTHY RECIPES</h4>
+            <p style="font-size: 0.8rem; margin: 15px 0;">Get the 2026 Diet Plan & 50 Quick Recipes (Free PDF).</p>
+            <div style="background:var(--primary); color:#fff; padding:10px; border-radius:10px; font-weight:bold;">GET FREE BOOK</div>
+        </a>
+    </aside>
+</div>
+<script>
+    function convert() {
+        const a = parseFloat(document.getElementById('amt').value) || 0;
+        const f = document.getElementById('from').value;
+        const res = document.getElementById('result');
+        const rT = document.getElementById('resText');
+        
+        if(f === "cup") { rT.innerText = "Milliliters:"; res.innerText = (a * 236.58).toFixed(1); }
+        else if(f === "ml") { rT.innerText = "Cups (US):"; res.innerText = (a / 236.58).toFixed(2); }
+        else if(f === "gram") { rT.innerText = "Ounces (oz):"; res.innerText = (a * 0.03527).toFixed(2); }
+        else if(f === "oz") { rT.innerText = "Grams (g):"; res.innerText = (a / 0.03527).toFixed(1); }
+    }
+</script>
+</body>
+</html>
