@@ -3,37 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro | Primaria</title>
+    <title>Evalúa Andalucía Pro | Herramienta Docente</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
+
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
         .header { text-align: center; margin-bottom: 20px; }
-        h1 { font-weight: 200; font-size: 2rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; position: sticky; top: 0; z-index: 10; background: var(--dark); padding: 10px 0; }
+        h1 { font-weight: 200; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
         .search-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
         .selectors { display: flex; gap: 8px; }
-        .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px; }
+        .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
         select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; }
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 15px; }
+
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; animation: fadeIn 0.3s ease; }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
-        .grade-section { margin-top: 10px; }
-        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; margin-right: 8px; }
-        .criterio-text { font-size: 0.9rem; line-height: 1.5; color: #f1f5f9; text-align: justify; margin-top: 5px; }
-        .saberes-container { background: rgba(0,0,0,0.4); border-radius: 12px; padding: 12px; margin-top: 15px; border-left: 3px solid var(--gold); }
+        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+        .criterio-text { font-size: 0.9rem; line-height: 1.6; color: #e2e8f0; text-align: justify; margin-bottom: 15px; }
+        
+        .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; border-left: 3px solid var(--gold); margin-top: 15px; }
         .saberes-title { font-size: 0.65rem; font-weight: 800; color: var(--gold); margin-bottom: 5px; text-transform: uppercase; }
         .saberes-text { font-size: 0.75rem; color: #94a3b8; line-height: 1.4; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">CURRÍCULO LITERAL 2023</div>
+    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DE DATOS LITERAL BOJA</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término (ej. 'fracciones')..." onkeyup="renderData()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Escribe 'fracciones', 'comprensión', etc..." onkeyup="renderData()">
     <div class="selectors">
         <div class="selector-box">
             <select id="cicloSelect" onchange="renderData()">
@@ -46,6 +52,7 @@
             <select id="subjectSelect" onchange="renderData()">
                 <option value="mates">📐 Matemáticas</option>
                 <option value="lengua">📚 Lengua</option>
+                <option value="medio">🌿 Conocimiento del Medio</option>
             </select>
         </div>
     </div>
@@ -61,26 +68,46 @@
                     id: "1.1",
                     tA: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.",
                     tB: "1.1.b. Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
-                    sab: "MAT.2.A.2.1, 2.3, 2.4, 2.5: Lectura, representación (recta numérica, materiales manipulativos), composición y descomposición. Fracciones propias (denominador hasta 12). Comprobación de resultados mediante pruebas de las operaciones."
+                    sab: "Lectura, representación, valor posicional, composición y descomposición. Estrategias de conteo y estimación. Fracciones propias con denominador hasta 12 en situaciones de la vida cotidiana."
                 },
                 {
-                    id: "1.2",
-                    tA: "1.2.a. Comprender y comenzar a producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas, que ayuden en la resolución de una situación problematizada.",
-                    tB: "1.2.b. Producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas, que ayuden en la resolución de una situación problematizada, individualmente y cooperando entre iguales.",
-                    sab: "MAT.2.A.3: Sentido de las operaciones. Cálculo mental con números naturales y fracciones hasta el 9999. Estrategias de suma, resta, multiplicación y división como reparto o partición."
+                    id: "2.1",
+                    tA: "2.1.a. Comenzar a comparar y a emplear diferentes estrategias para resolver un problema de forma pautada, implicándose en la resolución.",
+                    tB: "2.1.b. Comparar y emplear diferentes estrategias para resolver un problema de forma pautada, implicándose en la resolución y tomando decisiones.",
+                    sab: "Estrategias de cálculo mental. Sentido de las operaciones (suma, resta, multiplicación y división). Modelización de situaciones mediante expresiones numéricas."
                 }
             ],
             lengua: [
                 {
                     id: "2.1",
                     tA: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.",
-                    tB: "2.1.b. Comprender el sentido global, la información relevante y la intención del emisor en textos orales y multimodales sencillos, identificando las ideas principales.",
-                    sab: "LC.2.B.1.1, 1.2: Comprensión oral: sentido global, ideas principales, mensajes explícitos e implícitos."
+                    tB: "2.1.b. Comprender el sentido global, la información relevante y la intención del emisor en textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos e implícitos.",
+                    sab: "Comprensión oral: sentido global, ideas principales, mensajes explícitos e implícitos. Audición de textos literarios y no literarios."
                 }
             ]
         },
-        c1: { mates: [{ id: "1.1", tA: "Criterios de 1º Primaria según BOJA...", tB: "Criterios de 2º Primaria según BOJA...", sab: "MAT.1.A.1: Numeración y operaciones básicas." }], lengua: [] },
-        c3: { mates: [{ id: "1.1", tA: "Criterios de 5º Primaria según BOJA...", tB: "Criterios de 6º Primaria según BOJA...", sab: "MAT.3.A.1: Números grandes y decimales." }], lengua: [] }
+        c1: { // 1º y 2º
+            mates: [
+                {
+                    id: "1.1",
+                    tA: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares, comprendiendo las preguntas planteadas.",
+                    tB: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas.",
+                    sab: "Números naturales hasta el 999. Conteo y comparación de cantidades. Sumas y restas sin llevadas y con llevadas."
+                }
+            ],
+            lengua: []
+        },
+        c3: { // 5º y 6º
+            mates: [
+                {
+                    id: "1.1",
+                    tA: "1.1.a. Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas y modelizando situaciones.",
+                    tB: "1.1.b. Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado.",
+                    sab: "Números decimales y porcentajes. Operaciones complejas. Resolución de problemas con múltiples pasos."
+                }
+            ],
+            lengua: []
+        }
     };
 
     function renderData() {
@@ -96,7 +123,7 @@
         const filtered = items.filter(i => i.tA.toLowerCase().includes(query) || i.tB.toLowerCase().includes(query) || i.sab.toLowerCase().includes(query));
 
         if(filtered.length === 0) {
-            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay datos para esta selección o búsqueda.</div>';
+            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay datos para esta búsqueda o ciclo.</div>';
             return;
         }
 
@@ -108,12 +135,12 @@
                         <span class="grade-tag">${names[ciclo][0]}</span>
                         <div class="criterio-text">${item.tA}</div>
                     </div>
-                    <div class="grade-section" style="margin-top:15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top:10px;">
+                    <div class="grade-section" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top:15px;">
                         <span class="grade-tag">${names[ciclo][1]}</span>
                         <div class="criterio-text">${item.tB}</div>
                     </div>
-                    <div class="saberes-container">
-                        <div class="saberes-title">Contenidos (Saberes Básicos):</div>
+                    <div class="saberes">
+                        <div class="saberes-title">Contenidos Relacionados:</div>
                         <div class="saberes-text">${item.sab}</div>
                     </div>
                 </div>`;
