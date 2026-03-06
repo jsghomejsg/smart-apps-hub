@@ -1,0 +1,17 @@
+{
+  "short_name": "EvalúaAnd",
+  "name": "Evalúa Andalucía Pro",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05070a",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/512/d4af37/000000?text=Andalucía",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "description": "Criterios de evaluación oficiales de Andalucía (BOJA 2023).",
+  "orientation": "portrait"
+}
