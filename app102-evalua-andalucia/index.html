@@ -5,36 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evalúa Andalucía Pro | Primaria</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
-    <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
-
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
         .header { text-align: center; margin-bottom: 20px; }
         h1 { font-weight: 200; font-size: 2rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Buscador y Filtros */
         .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
         .search-box { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 12px 15px; color: #fff; width: 100%; box-sizing: border-box; outline: none; font-family: inherit; }
-        .search-box::placeholder { color: rgba(255,255,255,0.4); }
         .selectors { display: flex; gap: 8px; }
         .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 10px; }
         select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
-
-        /* Tarjetas con texto completo */
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 15px; transition: 0.3s; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 15px; }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.7rem; font-weight: 900; margin-bottom: 15px; display: inline-block; }
-        .competencia-title { font-size: 0.75rem; color: var(--gold); font-weight: 700; margin-bottom: 10px; opacity: 0.8; text-transform: uppercase; }
-        
         .grade-section { margin-top: 15px; }
-        .grade-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; }
+        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
         .criterio-text { font-size: 0.9rem; line-height: 1.6; color: #f1f5f9; text-align: justify; }
-        
         .saberes-container { background: rgba(0,0,0,0.4); border-radius: 12px; padding: 12px; margin-top: 15px; border-left: 3px solid var(--gold); }
-        .saberes-title { font-size: 0.65rem; font-weight: 800; color: var(--gold); margin-bottom: 5px; text-transform: uppercase; }
         .saberes-text { font-size: 0.75rem; color: #94a3b8; line-height: 1.4; }
-
         .share-btn { width: 100%; background: var(--gold); color: #000; border: none; padding: 15px; border-radius: 15px; font-weight: 800; margin-top: 10px; cursor: pointer; }
     </style>
 </head>
@@ -59,8 +46,6 @@
             <select id="subjectSelect" onchange="renderData()">
                 <option value="mates">📐 Matemáticas</option>
                 <option value="lengua">📚 Lengua Castellana</option>
-                <option value="medio">🌿 C. Medio</option>
-                <option value="ingles">🇬🇧 Inglés</option>
             </select>
         </div>
     </div>
@@ -72,34 +57,30 @@
 
 <script>
     const curriculum = {
-        c2: { // SEGUNDO CICLO (Extraído de tus imágenes)
+        c1: { // PRIMER CICLO
             mates: [
-                {
-                    comp: "Competencia 1: Interpretar situaciones de la vida cotidiana...",
-                    id: "1.1",
-                    t3: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.",
-                    t4: "1.1.b. Reconocer e Interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
-                    sab: "MAT.2.A.2.1, MAT.2.A.3.1, MAT.2.A.5.1, MAT.2.D.2.1 (Lectura, representación, valor posicional, composición y descomposición)."
-                },
-                {
-                    comp: "Competencia 2: Resolver situaciones problematizadas...",
-                    id: "2.1",
-                    t3: "2.1.a. Comenzar a comparar y a emplear diferentes estrategias para resolver un problema de forma pautada, implicándose en la resolución.",
-                    t4: "2.1.b. Comparar y emplear diferentes estrategias para resolver un problema de forma pautada, implicándose en la resolución y tomando decisiones.",
-                    sab: "MAT.2.A.3.2, MAT.2.A.3.5, MAT.2.C.4.1, MAT.2.C.4.2 (Sentido de las operaciones, estrategias de cálculo mental)."
-                }
+                { id: "1.1", tA: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares, comprendiendo las preguntas planteadas.", tB: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas.", sab: "MAT.1.A.1, MAT.1.A.2" }
             ],
             lengua: [
-                {
-                    comp: "Competencia 2: Comprender e interpretar textos orales...",
-                    id: "2.1",
-                    t3: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales sencillos, identificando las ideas principales.",
-                    t4: "2.1.b. Comprender el sentido global, la información relevante y la intención del emisor en textos orales y multimodales sencillos.",
-                    sab: "LC.2.B.1.1 (Comprensión oral), LC.2.B.1.2"
-                }
+                { id: "2.1", tA: "2.1.a. Comprender el sentido global de textos orales sencillos (instrucciones, relatos).", tB: "2.1.b. Interpretar información relevante en textos orales y multimodales sobre temas cotidianos.", sab: "LC.1.B.1" }
+            ]
+        },
+        c2: { // SEGUNDO CICLO (El que tenías antes)
+            mates: [
+                { id: "1.1", tA: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas...", tB: "1.1.b. Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana...", sab: "MAT.2.A.2.1, MAT.2.A.3.1" }
+            ],
+            lengua: [
+                { id: "2.1", tA: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales sencillos...", tB: "2.1.b. Comprender el sentido global e intención del emisor en textos orales y multimodales.", sab: "LC.2.B.1" }
+            ]
+        },
+        c3: { // TERCER CICLO (El que te salía vacío)
+            mates: [
+                { id: "1.1", tA: "1.1.a. Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas y modelizando situaciones.", tB: "1.1.b. Resolver situaciones problematizadas reales, interpretando los mensajes y utilizando herramientas matemáticas avanzadas.", sab: "MAT.3.A.1, MAT.3.B.1" }
+            ],
+            lengua: [
+                { id: "3.2", tA: "3.2.a. Producir textos escritos y multimodales coherentes, con una estructura clara y utilizando un vocabulario adecuado.", tB: "3.2.b. Producir textos con creatividad y juicio crítico, ajustándose a la intención comunicativa y aplicando normas gramaticales.", sab: "LC.3.C.1" }
             ]
         }
-        // El resto de ciclos se rellenarían con la misma estructura literal
     };
 
     function renderData() {
@@ -109,18 +90,13 @@
         const area = document.getElementById('contentArea');
         area.innerHTML = '';
 
-        const levels = { c1: ['1º Primaria', '2º Primaria'], c2: ['3º Primaria', '4º Primaria'], c3: ['5º Primaria', '6º Primaria'] };
-        const items = curriculum[ciclo]?.[subject] || [];
+        const names = { c1: ['1º Primaria', '2º Primaria'], c2: ['3º Primaria', '4º Primaria'], c3: ['5º Primaria', '6º Primaria'] };
+        const items = curriculum[ciclo][subject] || [];
 
-        const filtered = items.filter(item => 
-            item.t3.toLowerCase().includes(query) || 
-            item.t4.toLowerCase().includes(query) || 
-            item.comp.toLowerCase().includes(query) ||
-            item.sab.toLowerCase().includes(query)
-        );
+        const filtered = items.filter(i => i.tA.toLowerCase().includes(query) || i.tB.toLowerCase().includes(query));
 
         if(filtered.length === 0) {
-            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay resultados. Prueba con otra palabra o asignatura.</div>';
+            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay resultados en este ciclo.</div>';
             return;
         }
 
@@ -128,30 +104,20 @@
             area.innerHTML += `
                 <div class="criterio-card">
                     <span class="badge">CRITERIO ${item.id}</span>
-                    <div class="competencia-title">${item.comp}</div>
-                    
                     <div class="grade-section">
-                        <div class="grade-header"><span class="grade-tag">${levels[ciclo][0]}</span></div>
-                        <div class="criterio-text">${item.t3}</div>
+                        <span class="grade-tag">${names[ciclo][0]}</span>
+                        <div class="criterio-text">${item.tA}</div>
                     </div>
-                    
-                    <div class="grade-section" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
-                        <div class="grade-header"><span class="grade-tag">${levels[ciclo][1]}</span></div>
-                        <div class="criterio-text">${item.t4}</div>
+                    <div class="grade-section">
+                        <span class="grade-tag">${names[ciclo][1]}</span>
+                        <div class="criterio-text">${item.tB}</div>
                     </div>
-                    
-                    <div class="saberes-container">
-                        <div class="saberes-title">Saberes Básicos Relacionados:</div>
-                        <div class="saberes-text">${item.sab}</div>
-                    </div>
-                </div>
-            `;
+                    <div class="saberes-container"><div class="saberes-text"><strong>Saberes:</strong> ${item.sab}</div></div>
+                </div>`;
         });
     }
 
-    function shareApp() {
-        if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', text: 'Todos los criterios literales del BOJA.', url: window.location.href }); }
-    }
+    function shareApp() { if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', url: window.location.href }); } }
     renderData();
 </script>
 </body>
