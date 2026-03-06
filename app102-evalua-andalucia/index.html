@@ -3,177 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía | Guía Docente Premium</title>
-    
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#d4af37">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
+    <title>Evalúa Andalucía | Segundo Ciclo</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
-    
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
-
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark: #05070a;
-            --surface: rgba(25, 30, 40, 0.6);
-            --border: rgba(212, 175, 55, 0.2);
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--dark);
-            background-image: radial-gradient(circle at 0% 0%, #1a1c20 0%, transparent 50%),
-                              radial-gradient(circle at 100% 100%, #0c0e12 0%, transparent 50%);
-            color: #fff;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .header { text-align: center; margin-bottom: 30px; }
-        h1 { font-weight: 200; font-size: 2.2rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Selector de Asignaturas */
-        .selector-box {
-            background: var(--surface);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 15px;
-            margin-bottom: 25px;
-        }
-
-        select {
-            width: 100%;
-            background: transparent;
-            border: none;
-            color: var(--gold);
-            font-size: 1.1rem;
-            font-weight: 700;
-            outline: none;
-            cursor: pointer;
-        }
-
-        /* Tarjetas de Criterios */
-        .criterio-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 25px;
-            padding: 25px;
-            margin-bottom: 20px;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--gold);
-            color: #000;
-            padding: 4px 12px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .criterio-text { font-size: 1rem; line-height: 1.6; color: #e0e0e0; margin-bottom: 15px; }
-        
-        .saberes-box {
-            background: rgba(0,0,0,0.3);
-            border-radius: 15px;
-            padding: 15px;
-            font-size: 0.85rem;
-            border-left: 3px solid var(--gold);
-        }
-
-        .saberes-title { color: var(--gold); font-weight: 700; margin-bottom: 5px; font-size: 0.75rem; text-transform: uppercase; }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.6); --border: rgba(212, 175, 55, 0.2); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 20px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        h1 { font-weight: 200; font-size: 2rem; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .selector-box { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; padding: 15px; margin-bottom: 25px; }
+        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 1.1rem; font-weight: 700; outline: none; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 25px; padding: 20px; margin-bottom: 20px; }
+        .badge-row { display: flex; gap: 10px; margin-bottom: 10px; }
+        .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.7rem; font-weight: 800; }
+        .criterio-text { font-size: 0.95rem; line-height: 1.5; color: #e0e0e0; margin-bottom: 15px; }
+        .saberes-box { background: rgba(0,0,0,0.3); border-radius: 15px; padding: 12px; font-size: 0.8rem; border-left: 3px solid var(--gold); }
+        .saberes-title { color: var(--gold); font-weight: 700; margin-bottom: 5px; font-size: 0.7rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <p style="color: #64748b; font-size: 0.8rem;">Segundo Ciclo Primaria (3º y 4º)</p>
+    <p style="color: #64748b; font-size: 0.75rem;">Criterios de Evaluación Oficiales (BOJA)</p>
 </div>
 
 <div class="selector-box">
     <select id="subjectSelect" onchange="renderData()">
-        <option value="mates">Matemáticas</option>
-        <option value="lengua">Lengua Castellana</option>
-        <option value="ingles">Lengua Extranjera (Inglés)</option>
-        <option value="conoci">Conocimiento del Medio</option>
+        <option value="mates">Matemáticas (Segundo Ciclo)</option>
+        <option value="proximamente">Otras asignaturas (Cargando datos...)</option>
     </select>
 </div>
 
-<div id="contentArea">
-    </div>
+<div id="contentArea"></div>
 
 <script>
-    // BASE DE DATOS DE LA APP
     const data = {
         mates: [
             {
-                id: "1.1.a",
-                texto: "Interpretar situaciones sencillas de la vida cotidiana, proporcionando una representación matemática de las mismas...",
-                saberes: "MAT.2.A.1.1, MAT.2.A.2.1 (Números naturales y lectura)"
+                id3: "1.1.a",
+                id4: "1.1.b",
+                texto3: "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas...",
+                texto4: "Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas...",
+                saberes: "MAT.2.A.2.1, MAT.2.A.3.1, MAT.2.A.5.1, MAT.2.D.2.1"
             },
             {
-                id: "1.2.b",
-                texto: "Resolver problemas matemáticos sencillos de forma guiada en situaciones cotidianas...",
-                saberes: "MAT.2.B.1.2 (Estrategias de resolución)"
+                id3: "1.2.a",
+                id4: "1.2.b",
+                texto3: "Comprender y comenzar a producir representaciones matemáticas, con recursos manipulativos y esquemas o diagramas...",
+                texto4: "Producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas...",
+                saberes: "MAT.2.A.3.4, MAT.2.A.4.2"
+            },
+            {
+                id3: "2.1.a",
+                id4: "2.1.b",
+                texto3: "Comenzar a comparar y a emplear diferentes estrategias para resolver un problema de forma pautada...",
+                texto4: "Comparar y emplear diferentes estrategias para resolver un problema de forma pautada, implicándose en la resolución...",
+                saberes: "MAT.2.A.3.2, MAT.2.A.3.5, MAT.2.C.4.1, MAT.2.C.4.2"
             }
         ],
-        lengua: [
-            {
-                id: "2.1.a",
-                texto: "Comprender el sentido global de textos orales, escritos y multimodales sencillos...",
-                saberes: "LC.2.A.1 (Comprensión lectora)"
-            }
-        ],
-        ingles: [
-            {
-                id: "1.1",
-                texto: "Comprender palabras y frases cortas en mensajes orales sencillos sobre temas familiares...",
-                saberes: "LE.2.A.1 (Léxico básico)"
-            }
-        ],
-        conoci: [
-            {
-                id: "3.1.a",
-                texto: "Identificar las características y componentes principales de los ecosistemas del entorno...",
-                saberes: "CM.2.B.2 (La vida en la Tierra)"
-            }
-        ]
+        proximamente: [{ id3: "-", id4: "-", texto3: "Pásame las fotos de las demás asignaturas para rellenar esto.", texto4: "", saberes: "Cargando..." }]
     };
 
     function renderData() {
         const subject = document.getElementById('subjectSelect').value;
         const area = document.getElementById('contentArea');
         area.innerHTML = '';
-
         data[subject].forEach(item => {
             area.innerHTML += `
                 <div class="criterio-card">
-                    <span class="badge">CRITERIO ${item.id}</span>
-                    <div class="criterio-text">${item.texto}</div>
+                    <div class="badge-row">
+                        <span class="badge">3º: ${item.id3}</span>
+                        <span class="badge">4º: ${item.id4}</span>
+                    </div>
+                    <div class="criterio-text"><strong>En 3º:</strong> ${item.texto3}</div>
+                    ${item.texto4 ? `<div class="criterio-text" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top:10px;"><strong>En 4º:</strong> ${item.texto4}</div>` : ''}
                     <div class="saberes-box">
-                        <div class="saberes-title">Saberes Básicos Relacionados:</div>
+                        <div class="saberes-title">Saberes Básicos:</div>
                         <div style="color: #94a3b8">${item.saberes}</div>
                     </div>
                 </div>
             `;
         });
     }
-
-    // Carga inicial
     renderData();
-
-    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
 </script>
-
 </body>
 </html>
