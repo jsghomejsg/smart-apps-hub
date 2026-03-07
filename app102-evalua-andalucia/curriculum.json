@@ -1,32 +1,58 @@
 {
   "primaria": {
     "c1": {
-      "matemáticas": [{ "id": "1.1", "t1": "Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", "t2": "Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", "sab": "Estrategias de conteo, numeración hasta el 999 y valor posicional." }],
-      "lengua castellana": [{ "id": "2.1", "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos, identificando las ideas principales y los mensajes explícitos.", "t2": "Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales.", "sab": "Escucha activa y comprensión de mensajes orales cotidianos." }],
-      "inglés": [{ "id": "1.1", "t1": "Comprender palabras y frases muy breves en mensajes orales sobre temas familiares.", "t2": "Captar la idea global de mensajes sencillos sobre temas cotidianos en lengua extranjera.", "sab": "Léxico básico y expresiones de cortesía." }],
-      "conocimiento medio": [{ "id": "1.1", "t1": "Identificar las características, funciones y componentes básicos de los dispositivos digitales del entorno cercano.", "t2": "Utilizar recursos digitales de forma guiada para buscar información sencilla y realizar tareas de aprendizaje.", "sab": "Dispositivos digitales y seguridad básica." }],
-      "ed. física": [{ "id": "1.1", "t1": "Participar en juegos motores y actividades físicas respetando las reglas establecidas.", "t2": "Adaptar los esquemas motores básicos a diferentes situaciones lúdicas y deportivas cooperativas.", "sab": "Esquema corporal y juegos tradicionales." }],
-      "ed. artística": [{ "id": "1.1", "t1": "Iniciar el descubrimiento de propuestas artísticas de diferentes géneros, rasgos, estilos y épocas.", "t2": "Identificar propuestas artísticas de diferentes géneros, rasgos, estilos y épocas valorando su diversidad.", "sab": "Lenguaje plástico y visual básico." }],
-      "francés": [{ "id": "1.1", "t1": "Iniciación oral a sonidos propios de la lengua francesa.", "t2": "Reconocer expresiones cotidianas de saludo y presentación en francés.", "sab": "Fonética y léxico de la vida diaria." }],
-      "religión/valores": [{ "id": "1.1", "t1": "Identificar valores fundamentales de convivencia y respeto en el entorno cercano.", "t2": "Reconocer las principales celebraciones y tradiciones culturales de la comunidad.", "sab": "Cultura, valores y convivencia social." }]
+      "lengua castellana": [
+        { "id": "1.1", "t1": "Reconocer lenguas y variedades lingüísticas del entorno, identificando algunas expresiones sencillas y mostrando respeto y curiosidad por la diversidad.", "t2": "Identificar lenguas y variedades lingüísticas del entorno, reconociendo el origen de algunas expresiones habituales y valorando la diversidad lingüística.", "sab": "LCL.1.A.1: Diversidad lingüística. Variedades del habla andaluza." },
+        { "id": "2.1", "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos.", "t2": "Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales.", "sab": "LCL.1.B.1: Estrategias de escucha activa y comprensión oral." },
+        { "id": "3.1", "t1": "Producir textos orales y multimodales coherentes con planificación acompañada, usando un vocabulario básico.", "t2": "Producir textos orales y multimodales coherentes, con una estructura clara y utilizando recursos verbales y no verbales.", "sab": "LCL.1.B.2: Expresión oral: entonación y dicción." }
+      ],
+      "matemáticas": [
+        { "id": "1.1", "t1": "Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas.", "t2": "Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias, incluidas las tecnológicas.", "sab": "MAT.1.A.1: Conteo, numeración y valor posicional hasta el 999." },
+        { "id": "2.1", "t1": "Resolver problemas de una sola operación con números naturales en situaciones cotidianas, empleando estrategias básicas manipulativas.", "t2": "Resolver problemas de una o dos operaciones con números naturales, utilizando estrategias de cálculo mental y escrito de forma pautada.", "sab": "MAT.1.B.1: Sentido de las operaciones: suma y resta." }
+      ],
+      "conocimiento medio": [
+        { "id": "1.1", "t1": "Identificar las características, funciones y componentes básicos de los dispositivos digitales del entorno.", "t2": "Utilizar recursos digitales de forma guiada para buscar información sencilla y realizar tareas de aprendizaje.", "sab": "CM.1.A.1: Dispositivos digitales básicos. Seguridad y salud digital." }
+      ],
+      "educación física": [
+        { "id": "1.1", "t1": "Participar en juegos motores y actividades físicas respetando las reglas establecidas y a los compañeros.", "t2": "Adaptar los esquemas motores básicos a diferentes situaciones lúdicas y deportivas cooperativas.", "sab": "EF.1.A.1: Habilidades motrices básicas y juego limpio." }
+      ],
+      "ed. artística": [
+        { "id": "1.1", "t1": "Iniciar el descubrimiento de propuestas artísticas de diferentes géneros, rasgos y estilos.", "t2": "Identificar propuestas artísticas de diferentes géneros y épocas, valorando su diversidad cultural.", "sab": "EA.1.A.1: Percepción visual y auditiva. El lenguaje plástico." }
+      ],
+      "francés": [
+        { "id": "1.1", "t1": "Iniciación oral a sonidos propios de la lengua francesa a través de rimas y canciones.", "t2": "Reconocer expresiones cotidianas de saludo, presentación y necesidades básicas en francés.", "sab": "L2.1.A.1: Fonética y léxico básico cotidiano." }
+      ]
     },
     "c2": {
-      "matemáticas": [{ "id": "1.1", "t1": "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas.", "t2": "Reconocer e interpretar problemas de la vida cotidiana, comprendiendo las preguntas planteadas e interpretando mensajes visuales.", "sab": "Fracciones propias y números naturales hasta 9999." }],
-      "lengua castellana": [{ "id": "3.3", "t1": "Conocer y producir textos orales y multimodales sencillos con planificación acompañada, propios de la literatura infantil andaluza.", "t2": "Conocer y producir textos orales y multimodales propios de la literatura infantil andaluza de forma autónoma.", "sab": "Literatura infantil andaluza y folclore." }]
+      "matemáticas": [
+        { "id": "1.1", "t1": "Reconocer e interpretar de forma verbal o gráfica problemas de la vida cotidiana, comprendiendo las preguntas planteadas.", "t2": "Resolver problemas de la vida cotidiana, extrayendo datos, analizando preguntas e interpretando mensajes visuales.", "sab": "MAT.2.A.2: Fracciones propias y números naturales hasta el 9999." }
+      ],
+      "lengua castellana": [
+        { "id": "3.3", "t1": "Conocer y producir textos orales y multimodales sencillos con planificación acompañada, propios de la literatura infantil andaluza.", "t2": "Producir textos orales coherentes propios de la literatura infantil andaluza de forma autónoma.", "sab": "LCL.2.B.3.3: Folclore y literatura infantil de Andalucía." }
+      ]
     },
     "c3": {
-      "matemáticas": [{ "id": "1.1", "t1": "Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones.", "t2": "Resolver situaciones problematizadas reales, interpretando los mensajes y utilizando herramientas matemáticas con rigor.", "sab": "Números decimales, porcentajes y operaciones combinadas." }]
+      "matemáticas": [
+        { "id": "1.1", "t1": "Analizar problemas de la vida cotidiana modelizando situaciones de mayor complejidad a través de diferentes herramientas.", "t2": "Resolver situaciones problematizadas reales, utilizando herramientas matemáticas y valorando el resultado obtenido con rigor.", "sab": "MAT.3.A.1: Números decimales, porcentajes y operaciones combinadas." }
+      ]
     }
   },
   "eso": {
     "c1": {
-      "lengua": [{ "id": "2.1", "t1": "Comprender el sentido global, la estructura y la información relevante de textos orales y multimodales.", "t2": "Analizar textos orales y multimodales complejos, identificando sesgos y estrategias de persuasión.", "sab": "Comprensión oral y análisis crítico en el ámbito social." }],
-      "matemáticas": [{ "id": "1.1", "t1": "Interpretar problemas de la vida cotidiana y retos matemáticos, comprendiendo las preguntas planteadas.", "t2": "Resolver problemas complejos mediante estrategias de modelización y pensamiento computacional.", "sab": "Números enteros, racionales y potencias." }],
-      "biología": [{ "id": "1.1", "t1": "Analizar conceptos y procesos biológicos interpretando información en diferentes formatos.", "t2": "Resolver problemas científicos aplicando el método de investigación y experimentación.", "sab": "El trabajo científico y la célula." }]
+      "biología y geología": [
+        { "id": "1.1", "t1": "Analizar conceptos y procesos biológicos y geológicos interpretando información en diferentes formatos.", "t2": "Resolver problemas y retos sobre ciencias de la naturaleza aplicando el método de investigación.", "sab": "BIO.1.A.1: El trabajo científico y la célula." }
+      ],
+      "matemáticas": [
+        { "id": "1.1", "t1": "Interpretar problemas de la vida cotidiana y retos matemáticos, comprendiendo las preguntas planteadas.", "t2": "Resolver problemas complejos mediante estrategias de modelización y pensamiento computacional.", "sab": "MAT.1.A.1: Números enteros, racionales y potencias." }
+      ]
     },
     "c2": {
-      "geografía e historia": [{ "id": "1.1", "t1": "Analizar la organización del territorio y la influencia de la geografía física en las sociedades.", "t2": "Evaluar los cambios históricos y sociales en el marco de la democracia y los derechos humanos.", "sab": "Geografía e historia de España y Andalucía." }],
-      "tecnología": [{ "id": "2.1", "t1": "Diseñar y fabricar prototipos para dar respuesta a necesidades o problemas planteados.", "t2": "Utilizar herramientas de fabricación digital y robótica para la resolución de retos tecnológicos reales.", "sab": "Sistemas de control y programación." }]
+      "física y química": [
+        { "id": "1.1", "t1": "Aplicar las leyes de la física y la química en el entorno cercano de forma pautada.", "t2": "Resolver retos científicos complejos mediante el análisis crítico y la experimentación.", "sab": "FYQ.4.B: El movimiento y las transformaciones químicas." }
+      ],
+      "tecnología": [
+        { "id": "2.1", "t1": "Diseñar y fabricar prototipos para dar respuesta a necesidades mediante herramientas de fabricación digital.", "t2": "Utilizar herramientas de robótica y programación para la resolución de retos tecnológicos reales.", "sab": "TEC.4.B: Sistemas de control y robótica." }
+      ]
     }
   }
 }
