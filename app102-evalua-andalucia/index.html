@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro | 2026</title>
+    <title>Evalúa Andalucía Pro | Primaria y ESO</title>
     <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
+
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
         .header { text-align: center; margin-bottom: 20px; }
-        h1 { font-weight: 200; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-weight: 800; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
-        .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
-        .selectors { display: flex; gap: 8px; }
-        .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+        .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; font-size: 1rem; }
+        .selectors { display: flex; gap: 8px; flex-wrap: wrap; }
+        .selector-box { flex: 1; min-width: 120px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
         select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; text-transform: uppercase; cursor: pointer; }
         .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); animation: fadeIn 0.3s ease; }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
         .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
-        .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 15px; }
+        .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 12px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; margin-top: 15px; font-size: 0.75rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
-        .share-btn { width: 100%; background: var(--gold); color: #000; border: none; padding: 15px; border-radius: 15px; font-weight: 800; margin-top: 10px; cursor: pointer; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -30,26 +31,23 @@
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DATOS OFICIAL BOJA 2023</div>
+    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DE DATOS INTEGRAL 2026</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. 'fracciones')..." onkeyup="render()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. 'fracciones', 'ecuaciones')..." onkeyup="render()">
     <div class="selectors">
         <div class="selector-box">
-            <select id="ciclo" onchange="render()"><option value="c1">1º Ciclo (1º/2º)</option><option value="c2" selected>2º Ciclo (3º/4º)</option><option value="c3">3º Ciclo (5º/6º)</option></select>
+            <select id="etapa" onchange="updateSubjects(); render();">
+                <option value="primaria">Primaria</option>
+                <option value="eso">E.S.O.</option>
+            </select>
         </div>
         <div class="selector-box">
-            <select id="materia" onchange="render()">
-                <option value="mates">📐 Matemáticas</option>
-                <option value="lengua">📚 Lengua</option>
-                <option value="medio">🌿 Conocimiento Medio</option>
-                <option value="ingles">🇬🇧 Inglés (1ª Lengua)</option>
-                <option value="frances">🇫🇷 Francés (2ª Lengua)</option>
-                <option value="ef">🏃 Educación Física</option>
-                <option value="art">🎨 Educación Artística</option>
-                <option value="reli">⛪ Religión / Valores</option>
-            </select>
+            <select id="ciclo" onchange="render()"></select>
+        </div>
+        <div class="selector-box">
+            <select id="materia" onchange="render()"></select>
         </div>
     </div>
 </div>
@@ -63,53 +61,53 @@
 
 <div id="contentArea"></div>
 
-<button class="share-btn" onclick="shareApp()">COMPARTIR CON COMPAÑEROS</button>
-
 <script>
     let db = {};
-    const names = { c1: ['1º Primaria', '2º Primaria'], c2: ['3º Primaria', '4º Primaria'], c3: ['5º Primaria', '6º Primaria'] };
+    const cicloNames = {
+        primaria: { c1: "1º Ciclo (1º/2º)", c2: "2º Ciclo (3º/4º)", c3: "3º Ciclo (5º/6º)" },
+        eso: { c1: "1º, 2º y 3º ESO", c2: "4º ESO" }
+    };
 
     fetch('./curriculum.json')
         .then(res => res.json())
-        .then(data => { db = data; render(); })
-        .catch(err => console.error("Error cargando base de datos", err));
+        .then(data => { db = data; updateSubjects(); render(); });
+
+    function updateSubjects() {
+        const etapa = document.getElementById('etapa').value;
+        const cicloSelect = document.getElementById('ciclo');
+        const materiaSelect = document.getElementById('materia');
+        
+        cicloSelect.innerHTML = Object.keys(db[etapa]).map(c => `<option value="${c}">${cicloNames[etapa][c]}</option>`).join('');
+        materiaSelect.innerHTML = Object.keys(db[etapa][cicloSelect.value] || {}).map(m => `<option value="${m}">${m.toUpperCase()}</option>`).join('');
+    }
 
     function render() {
         const query = document.getElementById('searchInput').value.toLowerCase();
+        const etapa = document.getElementById('etapa').value;
         const ciclo = document.getElementById('ciclo').value;
         const materia = document.getElementById('materia').value;
         const area = document.getElementById('contentArea');
         area.innerHTML = '';
 
-        if (!db[ciclo] || !db[ciclo][materia]) {
-            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">Cargando información oficial...</div>';
+        if (!db[etapa] || !db[etapa][ciclo] || !db[etapa][ciclo][materia]) {
+            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay datos para esta selección.</div>';
             return;
         }
 
-        const filtered = db[ciclo][materia].filter(i => 
+        const items = db[etapa][ciclo][materia].filter(i => 
             (i.t1 + i.t2 + i.sab).toLowerCase().includes(query)
         );
 
-        area.innerHTML = filtered.map(item => `
+        area.innerHTML = items.map(item => `
             <div class="criterio-card">
                 <span class="badge">CRITERIO ${item.id}</span>
-                <div>
-                    <span class="grade-tag">${names[ciclo][0]}</span>
-                    <div class="criterio-text">${item.t1}</div>
+                <div><span class="grade-tag">CURSO A</span><div class="criterio-text">${item.t1}</div></div>
+                <div style="margin-top:15px; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px;">
+                    <span class="grade-tag">CURSO B</span><div class="criterio-text">${item.t2}</div>
                 </div>
-                <div style="border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; margin-top:15px;">
-                    <span class="grade-tag">${names[ciclo][1]}</span>
-                    <div class="criterio-text">${item.t2}</div>
-                </div>
-                <div class="saberes"><strong>SABERES BÁSICOS LOM LOE:</strong><br>${item.sab}</div>
+                <div class="saberes"><strong>SABERES BÁSICOS:</strong><br>${item.sab}</div>
             </div>
         `).join('');
-    }
-
-    function shareApp() { if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', url: window.location.href }); } }
-
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
     }
 </script>
 </body>
