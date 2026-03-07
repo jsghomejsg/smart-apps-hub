@@ -1,64 +1,28 @@
 {
-  "c1": {
-    "mates": [
-      {
-        "id": "1.1",
-        "t1": "Comprender las preguntas planteadas a través de diferentes estrategias o herramientas y comenzar a percibir mensajes verbales y visuales.",
-        "t2": "Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
-        "sab": "MAT.1.A.1, 1.A.2: Conteo y numeración hasta el 999."
-      }
-    ],
-    "lengua": [
-      {
-        "id": "2.1",
-        "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos, identificando las ideas principales y los mensajes explícitos.",
-        "t2": "Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.",
-        "sab": "LC.1.B.1.1: Estrategias de escucha activa y comprensión oral."
-      }
-    ]
+  "primaria": {
+    "c1": {
+      "matemáticas": [{ "id": "1.1", "t1": "Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", "t2": "Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", "sab": "MAT.1.A.1, 1.A.2. Conteo y numeración hasta el 999." }],
+      "lengua": [{ "id": "2.1", "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos, identificando las ideas principales y los mensajes explícitos.", "t2": "Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.", "sab": "LC.1.B.1. Estrategias de escucha activa." }],
+      "inglés": [{ "id": "1.1", "t1": "Comprender palabras y frases muy breves en mensajes orales sobre temas familiares.", "t2": "Captar la idea global de mensajes sencillos sobre temas cotidianos.", "sab": "LE.1.A.1. Comprensión oral básica." }],
+      "artística": [{ "id": "1.1", "t1": "Descubrir propuestas artísticas de diferentes géneros, rasgos, estilos y épocas, de forma guiada.", "t2": "Identificar propuestas artísticas de diferentes géneros, rasgos, estilos y épocas.", "sab": "EA.1.A.1. Percepción y análisis." }]
+    },
+    "c2": {
+      "matemáticas": [{ "id": "1.1", "t1": "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", "t2": "Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", "sab": "MAT.2.A.2: Fracciones, numeración y valor posicional." }],
+      "lengua": [{ "id": "2.1", "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.", "t2": "Comprender el sentido global, la información relevante y la intención del emisor en textos orales y multimodales sencillos.", "sab": "LC.2.B.1. Comprensión oral." }]
+    },
+    "c3": {
+      "matemáticas": [{ "id": "1.1", "t1": "Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones de mayor complejidad.", "t2": "Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado obtenido.", "sab": "MAT.3.A.1. Números decimales y porcentajes." }]
+    }
   },
-  "c2": {
-    "mates": [
-      {
-        "id": "1.1",
-        "t1": "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.",
-        "t2": "Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
-        "sab": "MAT.2.A.2.1, 2.3, 2.4, 2.5: Lectura, representación, valor posicional, composición y descomposición. Fracciones propias."
-      }
-    ],
-    "medio": [
-      {
-        "id": "1.1",
-        "t1": "Utilizar dispositivos y recursos digitales, de acuerdo con las necesidades del contexto educativo, de forma guiada, buscando información, comunicándose y trabajando de forma individual.",
-        "t2": "Utilizar dispositivos y recursos digitales, de acuerdo con las necesidades del contexto educativo, de forma segura, buscando información, comunicándose y trabajando de forma individual y en equipo.",
-        "sab": "CMN.2.B.1.1: Dispositivos y recursos digitales."
-      }
-    ],
-    "lengua": [
-      {
-        "id": "3.3",
-        "t1": "Conocer y producir textos orales y multimodales sencillos con planificación acompañada, propios de la literatura infantil andaluza, a partir de modelos dados.",
-        "t2": "Conocer y producir textos orales y multimodales con planificación acompañada, propios de la literatura infantil andaluza.",
-        "sab": "LCL.2.B.3.3: Literatura infantil andaluza."
-      }
-    ]
-  },
-  "c3": {
-    "mates": [
-      {
-        "id": "1.1",
-        "t1": "Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones de mayor complejidad.",
-        "t2": "Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado obtenido.",
-        "sab": "MAT.3.A.1: Números decimales y porcentajes."
-      }
-    ],
-    "frances": [
-      {
-        "id": "1.1",
-        "t1": "Comprender e interpretar el sentido global de textos orales breves y sencillos sobre temas personales y cotidianos.",
-        "t2": "Extraer información específica y detalles relevantes en mensajes orales en segunda lengua extranjera sobre temas conocidos.",
-        "sab": "L2.3.A.1: Comprensión y comunicación oral."
-      }
-    ]
+  "eso": {
+    "c1": {
+      "lengua": [{ "id": "2.1", "t1": "Comprender el sentido global, la estructura, la información relevante y la intención del emisor de textos orales y multimodales propios de los ámbitos personal, académico y social.", "t2": "Analizar textos orales y multimodales complejos, identificando sesgos y estrategias de persuasión.", "sab": "LCL.1.B.1. Comprensión oral avanzada." }],
+      "matemáticas": [{ "id": "1.1", "t1": "Interpretar problemas de la vida cotidiana y retos matemáticos, comprendiendo las preguntas planteadas y movilizando las herramientas necesarias.", "t2": "Resolver problemas complejos mediante estrategias de modelización y pensamiento computacional.", "sab": "MAT.1.A.1. Números enteros y racionales." }],
+      "biología": [{ "id": "1.1", "t1": "Analizar conceptos y procesos biológicos y geológicos interpretando información en diferentes formatos.", "t2": "Resolver problemas y retos sobre ciencias de la naturaleza aplicando el método científico.", "sab": "BIO.1.A. El trabajo científico." }]
+    },
+    "c2": {
+      "lengua": [{ "id": "1.1", "t1": "Describir y explicar la realidad lingüística de España y de Andalucía.", "t2": "Valorar la diversidad lingüística como fuente de riqueza cultural.", "sab": "LCL.4.A. Lengua y sociedad." }],
+      "tecnología": [{ "id": "2.1", "t1": "Diseñar y fabricar prototipos para dar respuesta a necesidades o problemas planteados.", "t2": "Utilizar herramientas de fabricación digital y programación para la resolución de retos tecnológicos.", "sab": "TEC.4.B. Sistemas de control y robótica." }]
+    }
   }
 }
