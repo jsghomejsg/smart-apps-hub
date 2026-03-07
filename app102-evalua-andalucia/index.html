@@ -3,166 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro | Primaria</title>
-    
+    <title>Evalúa Andalucía Pro | 2026</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#d4af37">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
-    
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
-
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; }
         .header { text-align: center; margin-bottom: 20px; }
         h1 { font-weight: 200; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
-        .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; font-size: 1rem; }
-        .selectors { display: flex; flex-direction: column; gap: 8px; }
-        .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
-        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.85rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
-        .ad-space { text-align: center; margin: 10px 0; background: rgba(255,255,255,0.03); border-radius: 8px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); animation: fadeIn 0.3s ease; }
+        .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
+        .selectors { display: flex; gap: 8px; }
+        .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
-        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
         .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 12px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; margin-top: 15px; font-size: 0.75rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
-        .share-btn { width: 100%; background: var(--gold); color: #000; border: none; padding: 15px; border-radius: 15px; font-weight: 800; margin-top: 20px; cursor: pointer; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">DOCUMENTACIÓN ÍNTEGRA BOJA 2023</div>
+    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">VERSIÓN DINÁMICA COMPLETA</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Escribe algo (ej. 'fracciones', 'oral', 'salud')..." onkeyup="renderData()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar cualquier palabra..." onkeyup="render()">
     <div class="selectors">
         <div class="selector-box">
-            <select id="cicloSelect" onchange="renderData()">
-                <option value="c1">1º Ciclo (1º y 2º)</option>
-                <option value="c2" selected>2º Ciclo (3º y 4º)</option>
-                <option value="c3">3º Ciclo (5º y 6º)</option>
-            </select>
+            <select id="ciclo" onchange="render()"><option value="c1">1º Ciclo</option><option value="c2">2º Ciclo</option><option value="c3">3º Ciclo</option></select>
         </div>
         <div class="selector-box">
-            <select id="subjectSelect" onchange="renderData()">
-                <option value="mates">📐 Matemáticas</option>
-                <option value="lengua">📚 Lengua Castellana</option>
-                <option value="medio">🌿 Conocimiento del Medio</option>
-                <option value="ingles">🇬🇧 Inglés (1ª Lengua)</option>
-                <option value="frances">🇫🇷 Francés (2ª Lengua)</option>
-                <option value="ef">🏃 Educación Física</option>
-                <option value="art">🎨 Educación Artística</option>
-                <option value="reli">⛪ Religión / Valores</option>
-            </select>
+            <select id="materia" onchange="render()"></select>
         </div>
     </div>
 </div>
 
-<div class="ad-space">
-    <script type="text/javascript">
-        atOptions = { 'key' : '7e43434e34e9755490a010c5b8e4e975', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/7e43434e34e9755490a010c5b8e4e975/invoke.js"></script>
-</div>
-
 <div id="contentArea"></div>
 
-<button class="share-btn" onclick="shareApp()">COMPARTIR CON EL CLAUSTRO</button>
-
 <script>
-    const curriculum = {
-        c1: {
-            mates: [
-                { id: "1.1", tA: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", tB: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.1.A.1, 1.A.2: Estrategias variadas de conteo, recuento sistemático y adaptado a la situación. Lectura, representación, composición, descomposición y redondeo de números naturales hasta el 999." },
-                { id: "2.1", tA: "2.1.a. Resolver problemas de una sola operación con números naturales en situaciones de la vida cotidiana, empleando estrategias básicas manipulativas, de dibujo o gráficas.", tB: "2.1.b. Resolver problemas de una o dos operaciones con números naturales, utilizando estrategias de cálculo mental y escrito de forma pautada.", sab: "MAT.1.B.1: Estrategias de suma y resta. Sentido de las operaciones." }
-            ],
-            lengua: [
-                { id: "2.1", tA: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos, identificando las ideas principales y los mensajes explícitos.", tB: "2.1.b. Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.", sab: "LC.1.B.1: Estrategias de escucha activa y comprensión oral." },
-                { id: "3.2", tA: "3.2.a. Producir textos orales pautados con una organización clara y usando un vocabulario básico.", tB: "3.2.b. Producir textos orales coherentes, con una estructura clara y utilizando recursos verbales y no verbales.", sab: "LC.1.B.2: Expresión oral y comunicación." }
-            ],
-            frances: [{ id: "1.1", tA: "1.1.a. Reconocer y distinguir sonidos, fonemas y ritmos básicos de la lengua francesa.", tB: "1.1.b. Identificar palabras y expresiones cotidianas en textos orales breves, utilizando el contexto.", sab: "L2.1.A.1: Iniciación a la fonética francesa." }],
-            medio: [{ id: "1.1", tA: "1.1.a. Identificar las características y componentes básicos de los dispositivos digitales del entorno.", tB: "1.1.b. Utilizar recursos digitales de forma guiada para buscar información sencilla y realizar tareas.", sab: "CM.1.A.1: Dispositivos digitales." }],
-            ingles: [{ id: "1.1", tA: "1.1.a. Comprender palabras y frases muy breves en mensajes orales sobre temas familiares.", tB: "1.1.b. Captar la idea global de mensajes sencillos sobre temas cotidianos en lengua extranjera.", sab: "LE.1.A.1: Comprensión oral." }],
-            ef: [{ id: "1.1", tA: "1.1.a. Participar en juegos motores respetando las reglas y a los compañeros.", tB: "1.1.b. Adaptar los esquemas motores básicos a diferentes situaciones lúdicas y deportivas.", sab: "EF.1.A.1: Juego y motricidad." }],
-            art: [{ id: "1.1", tA: "1.1.a. Explorar propuestas artísticas plásticas experimentando con diversos materiales.", tB: "1.1.b. Realizar producciones artísticas básicas expresando ideas y sentimientos.", sab: "EA.1.A.1: Expresión visual." }],
-            reli: [{ id: "1.1", tA: "1.1.a. Identificar valores fundamentales de convivencia y respeto.", tB: "1.1.b. Reconocer las principales celebraciones y tradiciones culturales de la comunidad.", sab: "RE.1.A.1: Valores." }]
-        },
-        c2: {
-            mates: [
-                { id: "1.1", tA: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", tB: "1.1.b. Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.2.A.2: Lectura, representación, valor posicional, composición y descomposición. Fracciones propias con denominador hasta 12." },
-                { id: "3.1", tA: "3.1.a. Realizar conjeturas matemáticas sencillas en situaciones de exploración de forma guiada.", tB: "3.1.b. Realizar conjeturas matemáticas y comprobar su validez en situaciones de resolución de problemas.", sab: "MAT.2.A.3: Sentido de las operaciones." }
-            ],
-            lengua: [
-                { id: "2.1", tA: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales sencillos, identificando las ideas principales.", tB: "2.1.b. Comprender el sentido global, la información relevante y la intención del emisor en textos orales y multimodales sencillos.", sab: "LC.2.B.1: Comprensión oral: sentido global, ideas principales." },
-                { id: "5.1", tA: "5.1.a. Leer textos de forma silenciosa y en voz alta con fluidez y entonación adecuada.", tB: "5.1.b. Utilizar la lectura como fuente de placer y conocimiento, seleccionando textos de forma autónoma.", sab: "LC.2.C.1: Fomento de la lectura." }
-            ],
-            frances: [{ id: "1.1", tA: "1.1.a. Comprender el sentido global de mensajes orales muy sencillos en situaciones de comunicación.", tB: "1.1.b. Identificar palabras clave y expresiones cotidianas en francés dentro de contextos pautados.", sab: "L2.2.A.1: Comunicación básica." }],
-            medio: [{ id: "2.1", tA: "2.1.a. Identificar las funciones vitales de los seres vivos y su entorno más cercano.", tB: "2.1.b. Clasificar animales y plantas según sus características físicas y sus adaptaciones.", sab: "CM.2.B.1: Seres vivos." }],
-            ingles: [{ id: "1.1", tA: "1.1.a. Comprender mensajes orales breves sobre temas cotidianos en lengua inglesa.", tB: "1.1.b. Interpretar detalles específicos y relevantes en conversaciones y audios sencillos.", sab: "LE.2.A.1: Comprensión oral." }],
-            ef: [{ id: "3.1", tA: "3.1.a. Respetar las normas establecidas en los juegos colectivos y actividades físicas.", tB: "3.1.b. Resolver conflictos motores y de convivencia de forma pacífica y a través del diálogo.", sab: "EF.2.C.1: Convivencia." }],
-            art: [{ id: "2.1", tA: "2.1.a. Utilizar técnicas básicas de dibujo y pintura con intención expresiva.", tB: "2.1.b. Experimentar con volúmenes, texturas y mezclas de colores en proyectos creativos.", sab: "EA.2.B.1: Creación plástica." }],
-            reli: [{ id: "2.1", tA: "2.1.a. Analizar textos y relatos que transmitan valores humanos universales.", tB: "2.1.b. Valorar la diversidad cultural y religiosa desde el respeto y la tolerancia.", sab: "RE.2.A.1: Ética." }]
-        },
-        c3: {
-            mates: [
-                { id: "1.1", tA: "1.1.a. Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones de mayor complejidad.", tB: "1.1.b. Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado.", sab: "MAT.3.A.1: Números decimales y porcentajes. Operaciones combinadas." }
-            ],
-            lengua: [
-                { id: "3.2", tA: "3.2.a. Producir textos escritos y multimodales coherentes, con una estructura clara y vocabulario adecuado.", tB: "3.2.b. Producir textos con creatividad y juicio crítico, ajustándose a la intención comunicativa y las normas.", sab: "LC.3.B.3: Expresión escrita." }
-            ],
-            frances: [{ id: "1.1", tA: "1.1.a. Comprender e interpretar el sentido global de textos orales breves y sencillos.", tB: "1.1.b. Extraer información específica y detalles relevantes en mensajes orales en lengua francesa.", sab: "L2.3.A.1: Comprensión avanzada." }],
-            medio: [{ id: "4.1", tA: "4.1.a. Analizar la organización territorial y política de España y de la Unión Europea.", tB: "4.1.b. Comprender el funcionamiento de las instituciones democráticas y los derechos ciudadanos.", sab: "CM.3.D.1: Sociedad." }],
-            ingles: [{ id: "3.1", tA: "3.1.a. Comprender el sentido de textos extensos y variados sobre temas actuales.", tB: "3.1.b. Redactar correos electrónicos y relatos cortos con propiedad gramatical.", sab: "LE.3.C.1: Inglés avanzado." }],
-            ef: [{ id: "5.1", tA: "5.1.a. Diseñar y realizar calentamientos físicos de forma autónoma y adaptada.", tB: "5.1.b. Valorar la actividad física habitual como hábito de salud esencial para el bienestar.", sab: "EF.3.E.1: Salud." }],
-            art: [{ id: "3.2", tA: "3.2.a. Crear proyectos artísticos multimedia combinando imagen, sonido y herramientas digitales.", tB: "3.2.b. Valorar y analizar el patrimonio artístico andaluz contemporáneo.", sab: "EA.3.C.1: Arte y cultura." }],
-            reli: [{ id: "3.1", tA: "3.1.a. Debatir sobre dilemas éticos actuales basándose en el respeto y solidaridad.", tB: "3.1.b. Proponer acciones de ayuda y compromiso social para mejorar el entorno.", sab: "RE.3.A.1: Compromiso social." }]
-        }
-    };
+    let db = {};
 
-    function renderData() {
+    // 1. Cargar la base de datos externa
+    fetch('./curriculum.json')
+        .then(response => response.json())
+        .then(data => {
+            db = data;
+            populateSubjects();
+            render();
+        });
+
+    function populateSubjects() {
+        const select = document.getElementById('materia');
+        const subjects = Object.keys(db.c1); // Cogemos las materias del primer ciclo como base
+        select.innerHTML = subjects.map(s => `<option value="${s}">${s.toUpperCase()}</option>`).join('');
+    }
+
+    function render() {
         const query = document.getElementById('searchInput').value.toLowerCase();
-        const ciclo = document.getElementById('cicloSelect').value;
-        const subject = document.getElementById('subjectSelect').value;
+        const ciclo = document.getElementById('ciclo').value;
+        const materia = document.getElementById('materia').value;
         const area = document.getElementById('contentArea');
-        area.innerHTML = '';
-        const names = { c1: ['1º Primaria', '2º Primaria'], c2: ['3º Primaria', '4º Primaria'], c3: ['5º Primaria', '6º Primaria'] };
-        const items = curriculum[ciclo][subject] || [];
-        const filtered = items.filter(i => (i.tA || "").toLowerCase().includes(query) || (i.tB || "").toLowerCase().includes(query) || (i.sab || "").toLowerCase().includes(query));
+        
+        if (!db[ciclo] || !db[ciclo][materia]) return;
 
-        if(filtered.length === 0) { area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No se han encontrado resultados.</div>'; return; }
+        const items = db[ciclo][materia].filter(i => 
+            i.t1.toLowerCase().includes(query) || 
+            i.t2.toLowerCase().includes(query) || 
+            i.sab.toLowerCase().includes(query)
+        );
 
-        filtered.forEach(item => {
-            area.innerHTML += `
-                <div class="criterio-card">
-                    <span class="badge">CRITERIO ${item.id}</span>
-                    <div class="grade-section">
-                        <span class="grade-tag">${names[ciclo][0]}</span>
-                        <div class="criterio-text">${item.tA}</div>
-                    </div>
-                    <div class="grade-section" style="border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; margin-top:15px;">
-                        <span class="grade-tag">${names[ciclo][1]}</span>
-                        <div class="criterio-text">${item.tB || item.tA}</div>
-                    </div>
-                    <div class="saberes"><strong>SABERES BÁSICOS (NORMATIVA):</strong><br>${item.sab}</div>
-                </div>`;
-        });
-    }
-
-    function shareApp() {
-        if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', text: 'Todos los criterios BOJA 2023 íntegros.', url: window.location.href }); }
-    }
-    renderData();
-
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js').then(reg => console.log('Offline ok'));
-        });
+        area.innerHTML = items.map(item => `
+            <div class="criterio-card">
+                <span class="badge">CRITERIO ${item.id}</span>
+                <div style="margin-bottom:15px">
+                    <span style="font-size:0.6rem; background:#fff; color:#000; padding:2px 5px; border-radius:4px">CURSO A</span>
+                    <div class="criterio-text">${item.t1}</div>
+                </div>
+                <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:15px">
+                    <span style="font-size:0.6rem; background:#fff; color:#000; padding:2px 5px; border-radius:4px">CURSO B</span>
+                    <div class="criterio-text">${item.t2}</div>
+                </div>
+                <div class="saberes"><strong>SABERES:</strong><br>${item.sab}</div>
+            </div>
+        `).join('');
     }
 </script>
 </body>
