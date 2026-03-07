@@ -21,24 +21,23 @@
         .selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
         .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
         select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--gold); animation: fadeIn 0.4s ease; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--gold); }
         .badge { background: var(--gold); color: #000; padding: 5px 12px; border-radius: 8px; font-size: 0.7rem; font-weight: 900; margin-bottom: 15px; display: inline-block; }
         .grade-tag { font-size: 0.65rem; font-weight: 900; color: #000; background: #fff; padding: 3px 8px; border-radius: 5px; display: inline-block; margin-bottom: 10px; }
         .criterio-text { font-size: 1rem; color: #f1f5f9; text-align: justify; line-height: 1.6; margin-bottom: 15px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 15px; padding: 20px; font-size: 0.8rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
         .saberes strong { color: var(--gold); display: block; margin-bottom: 5px; text-transform: uppercase; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; margin-top: 5px;">BASE DE DATOS INTEGRAL 2023-2027</div>
+    <div style="color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; margin-top: 5px;">BASE DE DATOS TOTAL BOJA 2023</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término (ej. fracciones, ecosistemas)..." onkeyup="render()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. ecosistema)..." onkeyup="render()">
     <div class="selectors">
         <div class="selector-box">
             <select id="etapa" onchange="initApp()"><option value="primaria">Primaria</option><option value="eso">ESO</option></select>
@@ -65,27 +64,56 @@
     const data = {
         primaria: {
             "c1": {
-                "matemáticas": [{ id: "1.1", t1: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", t2: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.1.A.1, 1.A.2: Estrategias de conteo y numeración hasta el 999. Valor posicional." }],
-                "lengua castellana": [{ id: "2.1", t1: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos.", t2: "2.1.b. Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos.", sab: "LCL.1.B.1.1: Escucha activa y comprensión de mensajes orales." }],
-                "conocimiento medio": [{ id: "1.1", t1: "1.1.a. Identificar las características y componentes básicos de los dispositivos digitales del entorno.", t2: "1.1.b. Utilizar recursos digitales de forma guiada para buscar información sencilla.", sab: "CMN.1.A.1: Dispositivos digitales básicos." }],
-                "inglés": [{ id: "1.1", t1: "1.1.a. Comprender palabras y frases muy breves en mensajes orales sobre temas familiares.", t2: "1.1.b. Captar la idea global de mensajes sencillos sobre temas cotidianos.", sab: "LEA.1.A.1: Comprensión oral básica." }],
-                "ed. física": [{ id: "1.1", t1: "1.1.a. Participar en juegos motores y actividades físicas respetando las reglas.", t2: "1.1.b. Adaptar los esquemas motores básicos a diferentes situaciones lúdicas.", sab: "EF.1.A.1: Habilidades motrices y juego limpio." }],
-                "ed. artística": [{ id: "1.1", t1: "1.1.a. Iniciar el descubrimiento de propuestas artísticas de diferentes géneros.", t2: "1.1.b. Identificar propuestas artísticas de diferentes géneros valorando su diversidad.", sab: "EA.1.A.1: Percepción visual y auditiva." }],
-                "francés": [{ id: "1.1", t1: "1.1.a. Iniciación oral a sonidos propios de la lengua francesa.", t2: "1.1.b. Reconocer expresiones cotidianas de saludo y presentación en francés.", sab: "L2.1.A.1: Fonética y saludos básicos." }],
-                "religión/valores": [{ id: "1.1", t1: "1.1.a. Identificar valores fundamentales de convivencia y respeto.", t2: "1.1.b. Reconocer las principales tradiciones culturales de la comunidad.", sab: "RE.1.A.1: Valores y cultura." }]
+                "matemáticas": [
+                    { id: "1.1", t1: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", t2: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.1.A.1: Conteo y numeración. MAT.1.A.2: Valor posicional." },
+                    { id: "2.1", t1: "2.1.a. Resolver problemas de una sola operación con números naturales en situaciones de la vida cotidiana.", t2: "2.1.b. Resolver problemas de una o dos operaciones con números naturales, utilizando estrategias de cálculo mental.", sab: "MAT.1.B.1: Sentido de las operaciones." }
+                ],
+                "lengua castellana": [
+                    { id: "2.1", t1: "2.1.a. Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos.", t2: "2.1.b. Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos.", sab: "LCL.1.B.1.1: Escucha activa." }
+                ],
+                "c. medio": [
+                    { id: "1.1", t1: "1.1.a. Identificar dispositivos digitales básicos del entorno.", t2: "1.1.b. Utilizar recursos digitales de forma guiada para buscar información.", sab: "CMN.1.A.1: Dispositivos digitales." }
+                ],
+                "inglés": [
+                    { id: "1.1", t1: "1.1.a. Comprender palabras y frases muy breves en mensajes orales.", t2: "1.1.b. Captar la idea global de mensajes sencillos.", sab: "LEA.1.A.1: Comprensión oral." }
+                ],
+                "francés": [
+                    { id: "1.1", t1: "1.1.a. Iniciación oral a sonidos propios de la lengua francesa.", t2: "1.1.b. Reconocer expresiones cotidianas de saludo y presentación.", sab: "L2.1.A.1: Fonética y saludos." }
+                ],
+                "ed. física": [
+                    { id: "1.1", t1: "1.1.a. Participar en juegos motores respetando las reglas.", t2: "1.1.b. Adaptar esquemas motores básicos a diferentes situaciones.", sab: "EF.1.A.1: Habilidades motrices." }
+                ],
+                "ed. artística": [
+                    { id: "1.1", t1: "1.1.a. Descubrir propuestas artísticas de diferentes géneros.", t2: "1.1.b. Identificar propuestas artísticas valorando su diversidad.", sab: "EA.1.A.1: Percepción visual." }
+                ],
+                "religión/valores": [
+                    { id: "1.1", t1: "1.1.a. Identificar valores fundamentales de convivencia.", t2: "1.1.b. Reconocer tradiciones culturales de la comunidad.", sab: "RE.1.A.1: Cultura y valores." }
+                ]
             },
             "c2": {
-                "matemáticas": [{ id: "1.1", t1: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas.", t2: "1.1.b. Reconocer e interpretar problemas de la vida cotidiana resolviéndolos mediante diferentes estrategias.", sab: "MAT.2.A.2: Fracciones y numeración hasta el 9999." }]
+                "matemáticas": [{ id: "1.1", t1: "1.1.a. Reconocer problemas de la vida cotidiana comprendiendo las preguntas planteadas.", t2: "1.1.b. Interpretar problemas extrayendo datos y comprendiendo las preguntas.", sab: "MAT.2.A.2: Fracciones y numeración hasta 9999." }],
+                "lengua castellana": [{ id: "3.3", t1: "3.3.a. Conocer textos orales sencillos con planificación acompañada.", t2: "3.3.b. Producir textos orales coherentes de la literatura infantil andaluza.", sab: "LCL.2.B.3.3: Literatura andaluza." }],
+                "c. medio": [{ id: "2.1", t1: "2.1.a. Identificar las funciones vitales.", t2: "2.1.b. Clasificar seres vivos según sus características.", sab: "CMN.2.B.1.1: Seres vivos." }],
+                "inglés": [{ id: "2.1", t1: "2.1.a. Comprender mensajes orales sobre temas familiares.", t2: "2.1.b. Identificar información específica en textos orales.", sab: "LEA.2.A.1: Comprensión oral." }],
+                "educación física": [{ id: "3.1", t1: "3.1.a. Respetar las normas en juegos colectivos.", t2: "3.1.b. Resolver conflictos motores de forma pacífica.", sab: "EF.2.C.1: Convivencia." }],
+                "ed. artística": [{ id: "2.1", t1: "2.1.a. Aplicar técnicas básicas de dibujo.", t2: "2.1.b. Experimentar con volúmenes y colores.", sab: "EA.2.B.1: Creación plástica." }]
             },
             "c3": {
-                "matemáticas": [{ id: "1.1", t1: "1.1.a. Analizar problemas de la vida cotidiana modelizando situaciones de mayor complejidad.", t2: "1.1.b. Resolver situaciones problematizadas reales valorando el resultado obtenido.", sab: "MAT.3.A.1: Números decimales y porcentajes." }]
+                "matemáticas": [{ id: "1.1", t1: "1.1.a. Analizar problemas modelizando situaciones de mayor complejidad.", t2: "1.1.b. Resolver situaciones problematizadas reales valorando el resultado.", sab: "MAT.3.A.1: Decimales y porcentajes." }],
+                "lengua castellana": [{ id: "3.2", t1: "3.2.a. Producir textos escritos coherentes.", t2: "3.2.b. Escribir textos con creatividad y juicio crítico.", sab: "LCL.3.B.3: Expresión escrita." }],
+                "inglés": [{ id: "3.1", t1: "3.1.a. Comprender textos orales extensos.", t2: "3.1.b. Redactar correos y relatos cortos.", sab: "LEA.3.C.1: Inglés avanzado." }],
+                "ed. física": [{ id: "5.1", t1: "5.1.a. Diseñar calentamientos físicos de forma autónoma.", t2: "5.1.b. Valorar la actividad física como hábito de salud.", sab: "EF.3.E.1: Salud." }]
             }
         },
         eso: {
             "c1": {
-                "biología y geología": [{ id: "3.4", t1: "3.4. Interpretar y analizar los resultados obtenidos en un proyecto de investigación.", t2: "3.4. Consolidar la interpretación de resultados en proyectos científicos mediante el análisis crítico.", sab: "BIO.1.A.1: El método científico." }],
-                "matemáticas": [{ id: "1.1", t1: "1.1. Interpretar problemas de la vida cotidiana y retos matemáticos complejos.", t2: "1.1. Resolver problemas complejos mediante estrategias de modelización y pensamiento computacional.", sab: "MAT.1.A.1: Números enteros, racionales y potencias." }],
-                "tecnología": [{ id: "2.1", t1: "2.1. Diseñar y fabricar prototipos para dar respuesta a necesidades o problemas planteados.", t2: "2.1. Utilizar herramientas de fabricación digital y robótica.", sab: "TEC.4.B: Sistemas de control." }]
+                "biología": [{ id: "1.1", t1: "1.1. Analizar conceptos biológicos interpretando información.", t2: "1.1. Resolver retos sobre ciencias aplicando el método científico.", sab: "BIO.1.A: Trabajo científico." }],
+                "matemáticas": [{ id: "1.1", t1: "1.1. Interpretar problemas de la vida cotidiana complejos.", t2: "1.1. Resolver problemas mediante pensamiento computacional.", sab: "MAT.1.A: Sentido numérico." }],
+                "lengua": [{ id: "2.1", t1: "2.1. Comprender sentido global e intención en textos orales.", t2: "2.1. Analizar textos orales identificando sesgos.", sab: "LCL.1.B: Comprensión oral." }]
+            },
+            "c2": {
+                "tecnología": [{ id: "2.1", t1: "2.1. Diseñar prototipos para responder a necesidades.", t2: "2.1. Utilizar herramientas de fabricación digital.", sab: "TEC.4.B: Robótica." }],
+                "física/química": [{ id: "1.1", t1: "1.1. Aplicar leyes de la física en el entorno cercano.", t2: "1.1. Resolver retos científicos mediante experimentación.", sab: "FYQ.4.B: Movimiento." }]
             }
         }
     };
@@ -93,8 +121,8 @@
     function initApp() {
         const etapa = document.getElementById('etapa').value;
         const cicloSel = document.getElementById('ciclo');
-        const labels = etapa === 'primaria' ? {c1: "1º Ciclo", c2: "2º Ciclo", c3: "3º Ciclo"} : {c1: "1º/2º/3º ESO", c2: "4º ESO"};
-        cicloSel.innerHTML = Object.keys(data[etapa]).map(c => `<option value="${c}">${labels[c] || c}</option>`).join('');
+        const labels = etapa === 'primaria' ? {c1: "1º Ciclo (1º/2º)", c2: "2º Ciclo (3º/4º)", c3: "3º Ciclo (5º/6º)"} : {c1: "1º-3º ESO", c2: "4º ESO"};
+        cicloSel.innerHTML = Object.keys(data[etapa]).map(c => `<option value="${c}">${labels[c]}</option>`).join('');
         updateSubjects();
     }
 
@@ -117,9 +145,9 @@
         area.innerHTML = items.map(item => `
             <div class="criterio-card">
                 <span class="badge">CRITERIO ${item.id}</span>
-                <div><span class="grade-tag">CURSO IMPAR</span><div class="criterio-text">${item.t1}</div></div>
+                <div><span class="grade-tag">NIVEL A</span><div class="criterio-text">${item.t1}</div></div>
                 <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px;">
-                    <span class="grade-tag">CURSO PAR</span><div class="criterio-text">${item.t2}</div>
+                    <span class="grade-tag">NIVEL B</span><div class="criterio-text">${item.t2}</div>
                 </div>
                 <div class="saberes"><strong>SABERES BÁSICOS OFICIALES:</strong>${item.sab}</div>
             </div>`).join('');
