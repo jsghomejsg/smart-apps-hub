@@ -9,87 +9,107 @@
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
         .header { text-align: center; margin-bottom: 20px; }
         h1 { font-weight: 200; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
         .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
         .selectors { display: flex; gap: 8px; }
         .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
-        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; }
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); }
+        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; text-transform: uppercase; cursor: pointer; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); animation: fadeIn 0.3s ease; }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
-        .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 12px; }
+        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+        .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 15px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; margin-top: 15px; font-size: 0.75rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .share-btn { width: 100%; background: var(--gold); color: #000; border: none; padding: 15px; border-radius: 15px; font-weight: 800; margin-top: 10px; cursor: pointer; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">VERSIÓN DINÁMICA COMPLETA</div>
+    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DATOS OFICIAL BOJA 2023</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar cualquier palabra..." onkeyup="render()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. 'fracciones')..." onkeyup="render()">
     <div class="selectors">
         <div class="selector-box">
-            <select id="ciclo" onchange="render()"><option value="c1">1º Ciclo</option><option value="c2">2º Ciclo</option><option value="c3">3º Ciclo</option></select>
+            <select id="ciclo" onchange="render()"><option value="c1">1º Ciclo (1º/2º)</option><option value="c2" selected>2º Ciclo (3º/4º)</option><option value="c3">3º Ciclo (5º/6º)</option></select>
         </div>
         <div class="selector-box">
-            <select id="materia" onchange="render()"></select>
+            <select id="materia" onchange="render()">
+                <option value="mates">📐 Matemáticas</option>
+                <option value="lengua">📚 Lengua</option>
+                <option value="medio">🌿 Conocimiento Medio</option>
+                <option value="ingles">🇬🇧 Inglés (1ª Lengua)</option>
+                <option value="frances">🇫🇷 Francés (2ª Lengua)</option>
+                <option value="ef">🏃 Educación Física</option>
+                <option value="art">🎨 Educación Artística</option>
+                <option value="reli">⛪ Religión / Valores</option>
+            </select>
         </div>
     </div>
 </div>
 
+<div style="text-align:center; margin:10px 0;">
+    <script type="text/javascript">
+        atOptions = { 'key' : '7e43434e34e9755490a010c5b8e4e975', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/7e43434e34e9755490a010c5b8e4e975/invoke.js"></script>
+</div>
+
 <div id="contentArea"></div>
+
+<button class="share-btn" onclick="shareApp()">COMPARTIR CON COMPAÑEROS</button>
 
 <script>
     let db = {};
+    const names = { c1: ['1º Primaria', '2º Primaria'], c2: ['3º Primaria', '4º Primaria'], c3: ['5º Primaria', '6º Primaria'] };
 
-    // 1. Cargar la base de datos externa
     fetch('./curriculum.json')
-        .then(response => response.json())
-        .then(data => {
-            db = data;
-            populateSubjects();
-            render();
-        });
-
-    function populateSubjects() {
-        const select = document.getElementById('materia');
-        const subjects = Object.keys(db.c1); // Cogemos las materias del primer ciclo como base
-        select.innerHTML = subjects.map(s => `<option value="${s}">${s.toUpperCase()}</option>`).join('');
-    }
+        .then(res => res.json())
+        .then(data => { db = data; render(); })
+        .catch(err => console.error("Error cargando base de datos", err));
 
     function render() {
         const query = document.getElementById('searchInput').value.toLowerCase();
         const ciclo = document.getElementById('ciclo').value;
         const materia = document.getElementById('materia').value;
         const area = document.getElementById('contentArea');
-        
-        if (!db[ciclo] || !db[ciclo][materia]) return;
+        area.innerHTML = '';
 
-        const items = db[ciclo][materia].filter(i => 
-            i.t1.toLowerCase().includes(query) || 
-            i.t2.toLowerCase().includes(query) || 
-            i.sab.toLowerCase().includes(query)
+        if (!db[ciclo] || !db[ciclo][materia]) {
+            area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">Cargando información oficial...</div>';
+            return;
+        }
+
+        const filtered = db[ciclo][materia].filter(i => 
+            (i.t1 + i.t2 + i.sab).toLowerCase().includes(query)
         );
 
-        area.innerHTML = items.map(item => `
+        area.innerHTML = filtered.map(item => `
             <div class="criterio-card">
                 <span class="badge">CRITERIO ${item.id}</span>
-                <div style="margin-bottom:15px">
-                    <span style="font-size:0.6rem; background:#fff; color:#000; padding:2px 5px; border-radius:4px">CURSO A</span>
+                <div>
+                    <span class="grade-tag">${names[ciclo][0]}</span>
                     <div class="criterio-text">${item.t1}</div>
                 </div>
-                <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:15px">
-                    <span style="font-size:0.6rem; background:#fff; color:#000; padding:2px 5px; border-radius:4px">CURSO B</span>
+                <div style="border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; margin-top:15px;">
+                    <span class="grade-tag">${names[ciclo][1]}</span>
                     <div class="criterio-text">${item.t2}</div>
                 </div>
-                <div class="saberes"><strong>SABERES:</strong><br>${item.sab}</div>
+                <div class="saberes"><strong>SABERES BÁSICOS LOM LOE:</strong><br>${item.sab}</div>
             </div>
         `).join('');
+    }
+
+    function shareApp() { if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', url: window.location.href }); } }
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
     }
 </script>
 </body>
