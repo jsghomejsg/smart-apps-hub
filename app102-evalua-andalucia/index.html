@@ -3,107 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro</title>
+    <title>Evalúa Andalucía Pro | Currículo Íntegro</title>
+    <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; }
-        .header { text-align: center; margin-bottom: 20px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
+        .header { text-align: center; margin-bottom: 25px; }
         h1 { font-weight: 800; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
-        .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
-        .selectors { display: flex; gap: 8px; flex-wrap: wrap; }
-        .selector-box { flex: 1; min-width: 120px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
-        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; text-transform: uppercase; cursor: pointer; }
-        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); }
-        .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
-        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
-        .criterio-text { font-size: 0.95rem; color: #f1f5f9; text-align: justify; margin-bottom: 12px; }
-        .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; margin-top: 15px; font-size: 0.75rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .search-box { background: var(--surface); border: 2px solid var(--gold); border-radius: 14px; padding: 16px; color: #fff; width: 100%; box-sizing: border-box; outline: none; font-size: 1rem; }
+        .selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; position: relative; }
+        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.75rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
+        .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--gold); }
+        .badge { background: var(--gold); color: #000; padding: 4px 12px; border-radius: 8px; font-size: 0.7rem; font-weight: 900; margin-bottom: 15px; display: inline-block; }
+        .grade-tag { font-size: 0.65rem; font-weight: 900; color: #000; background: #fff; padding: 3px 8px; border-radius: 5px; display: inline-block; margin-bottom: 10px; }
+        .criterio-text { font-size: 1rem; color: #f1f5f9; text-align: justify; line-height: 1.6; margin-bottom: 15px; }
+        .saberes { background: rgba(0,0,0,0.5); border-radius: 15px; padding: 20px; font-size: 0.8rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .saberes strong { color: var(--gold); display: block; margin-bottom: 5px; text-transform: uppercase; }
     </style>
 </head>
 <body>
-
-<div class="header">
-    <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DE DATOS COMPLETA 2023</div>
-</div>
-
-<div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal..." onkeyup="render()">
-    <div class="selectors">
-        <div class="selector-box">
-            <select id="etapa" onchange="updateCycles();"><option value="primaria">Primaria</option><option value="eso">ESO</option></select>
-        </div>
-        <div class="selector-box">
-            <select id="ciclo" onchange="updateSubjects();"></select>
+    <div class="header">
+        <h1>Evalúa Andalucía</h1>
+        <div style="color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; margin-top: 5px;">CURRÍCULO INTEGRAL BOJA 2023</div>
+    </div>
+    <div class="controls">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar cualquier palabra (ej. fracciones)..." onkeyup="render()">
+        <div class="selectors">
+            <div class="selector-box">
+                <select id="etapa" onchange="updateSubjects(); render();">
+                    <option value="primaria">Primaria</option>
+                    <option value="eso">ESO</option>
+                </select>
+            </div>
+            <div class="selector-box">
+                <select id="ciclo" onchange="render()"></select>
+            </div>
         </div>
         <div class="selector-box">
             <select id="materia" onchange="render()"></select>
         </div>
     </div>
-</div>
+    
+    <div style="text-align:center; margin:10px 0;">
+        <script type="text/javascript">
+            atOptions = { 'key' : '7e43434e34e9755490a010c5b8e4e975', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/7e43434e34e9755490a010c5b8e4e975/invoke.js"></script>
+    </div>
 
-<div id="contentArea"></div>
+    <div id="contentArea"></div>
 
-<script>
-    let db = {};
+    <script>
+        let db = {};
+        const labels = {
+            primaria: { c1: "1º Ciclo (1º/2º)", c2: "2º Ciclo (3º/4º)", c3: "3º Ciclo (5º/6º)" },
+            eso: { c1: "1º, 2º y 3º ESO", c2: "4º ESO" }
+        };
 
-    fetch('./curriculum.json')
-        .then(res => res.json())
-        .then(data => { 
+        fetch('./curriculum.json').then(res => res.json()).then(data => { 
             db = data; 
-            updateCycles(); 
-        })
-        .catch(err => {
-            document.getElementById('contentArea').innerHTML = '<div style="color:red; text-align:center; padding:20px;">Error: No se encuentra el archivo curriculum.json en la carpeta.</div>';
+            updateSubjects(); 
+            render(); 
+        }).catch(err => {
+            document.getElementById('contentArea').innerHTML = '<div style="text-align:center; padding:50px;">Cargando base de datos oficial...</div>';
         });
 
-    function updateCycles() {
-        const etapa = document.getElementById('etapa').value;
-        const cicloSelect = document.getElementById('ciclo');
-        const labels = etapa === 'primaria' ? ["1º Ciclo", "2º Ciclo", "3º Ciclo"] : ["1º/2º ESO", "3º/4º ESO"];
-        const keys = Object.keys(db[etapa] || {});
-        cicloSelect.innerHTML = keys.map((k, i) => `<option value="${k}">${labels[i] || k}</option>`).join('');
-        updateSubjects();
-    }
-
-    function updateSubjects() {
-        const etapa = document.getElementById('etapa').value;
-        const ciclo = document.getElementById('ciclo').value;
-        const materiaSelect = document.getElementById('materia');
-        if (db[etapa] && db[etapa][ciclo]) {
-            materiaSelect.innerHTML = Object.keys(db[etapa][ciclo]).map(m => `<option value="${m}">${m.toUpperCase()}</option>`).join('');
+        function updateSubjects() {
+            const etapa = document.getElementById('etapa').value;
+            const cicloSel = document.getElementById('ciclo');
+            const materiaSel = document.getElementById('materia');
+            cicloSel.innerHTML = Object.keys(db[etapa] || {}).map(c => `<option value="${c}">${labels[etapa][c]}</option>`).join('');
+            materiaSel.innerHTML = Object.keys(db[etapa][cicloSel.value] || {}).map(m => `<option value="${m}">${m.toUpperCase()}</option>`).join('');
         }
-        render();
-    }
 
-    function render() {
-        const query = document.getElementById('searchInput').value.toLowerCase();
-        const etapa = document.getElementById('etapa').value;
-        const ciclo = document.getElementById('ciclo').value;
-        const materia = document.getElementById('materia').value;
-        const area = document.getElementById('contentArea');
-        area.innerHTML = '';
-
-        if (!db[etapa] || !db[etapa][ciclo] || !db[etapa][ciclo][materia]) return;
-
-        const items = db[etapa][ciclo][materia].filter(i => 
-            (i.t1 + i.t2 + i.sab).toLowerCase().includes(query)
-        );
-
-        area.innerHTML = items.map(item => `
-            <div class="criterio-card">
-                <span class="badge">CRITERIO ${item.id}</span>
-                <div><span class="grade-tag">CURSO A</span><div class="criterio-text">${item.t1}</div></div>
-                <div style="margin-top:15px; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px;">
-                    <span class="grade-tag">CURSO B</span><div class="criterio-text">${item.t2}</div>
-                </div>
-                <div class="saberes"><strong>SABERES:</strong><br>${item.sab}</div>
-            </div>
-        `).join('');
-    }
-</script>
+        function render() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const etapa = document.getElementById('etapa').value;
+            const ciclo = document.getElementById('ciclo').value;
+            const materia = document.getElementById('materia').value;
+            const area = document.getElementById('contentArea');
+            area.innerHTML = '';
+            if (!db[etapa] || !db[etapa][ciclo] || !db[etapa][ciclo][materia]) return;
+            const items = db[etapa][ciclo][materia].filter(i => (i.t1 + i.t2 + i.sab).toLowerCase().includes(query));
+            area.innerHTML = items.map(item => `
+                <div class="criterio-card">
+                    <span class="badge">CRITERIO ${item.id}</span>
+                    <div><span class="grade-tag">CURSO IMPAR</span><div class="criterio-text">${item.t1}</div></div>
+                    <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px;">
+                        <span class="grade-tag">CURSO PAR</span><div class="criterio-text">${item.t2}</div>
+                    </div>
+                    <div class="saberes"><strong>SABERES BÁSICOS LOM LOE:</strong>${item.sab}</div>
+                </div>`).join('');
+        }
+    </script>
 </body>
 </html>
