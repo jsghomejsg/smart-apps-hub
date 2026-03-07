@@ -1,0 +1,65 @@
+{
+  "primaria": {
+    "c1": {
+      "matemáticas": [{
+        "id": "1.1",
+        "t1": "Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.",
+        "t2": "Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
+        "sab": "MAT.1.A.1, MAT.1.A.2: Estrategias de conteo y numeración hasta el 999. Valor posicional."
+      }],
+      "lengua castellana": [{
+        "id": "2.1",
+        "t1": "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos, identificando las ideas principales y los mensajes explícitos.",
+        "t2": "Comprender el sentido global e interpretar información relevante de textos orales y multimodales sencillos, identificando las ideas principales y los mensajes explícitos.",
+        "sab": "LCL.1.B.1.1: Estrategias de escucha activa y comprensión oral."
+      }],
+      "conocimiento medio": [{
+        "id": "1.1",
+        "t1": "Identificar las características, funciones y componentes básicos de los dispositivos digitales del entorno cercano.",
+        "t2": "Utilizar recursos digitales de forma guiada para buscar información sencilla y realizar tareas de aprendizaje.",
+        "sab": "CMN.1.A.1: Dispositivos digitales básicos y seguridad digital."
+      }],
+      "educación física": [{
+        "id": "1.1",
+        "t1": "Participar en juegos motores y actividades físicas respetando las reglas establecidas y a los compañeros.",
+        "t2": "Adaptar los esquemas motores básicos a diferentes situaciones lúdicas y deportivas cooperativas.",
+        "sab": "EF.1.A.1: Habilidades motrices básicas y juego limpio."
+      }],
+      "artística": [{
+        "id": "1.1",
+        "t1": "Iniciar el descubrimiento de propuestas artísticas de diferentes géneros, rasgos, estilos y épocas.",
+        "t2": "Identificar propuestas artísticas de diferentes géneros, rasgos, estilos y épocas valorando su diversidad.",
+        "sab": "EA.1.A.1: Descubrimiento de propuestas artísticas y lenguajes plásticos."
+      }]
+    },
+    "c2": {
+      "matemáticas": [{
+        "id": "1.1",
+        "t1": "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.",
+        "t2": "Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
+        "sab": "MAT.2.A.2: Fracciones propias y números naturales hasta el 9999. Valor posicional."
+      }],
+      "lengua castellana": [{
+        "id": "3.3",
+        "t1": "Conocer y producir textos orales y multimodales sencillos con planificación acompañada, propios de la literatura infantil andaluza, a partir de modelos dados.",
+        "t2": "Conocer y producir textos orales y multimodales con planificación acompañada, propios de la literatura infantil andaluza.",
+        "sab": "LCL.2.B.3.3: Literatura infantil andaluza y folclore."
+      }]
+    },
+    "c3": {
+      "matemáticas": [{
+        "id": "1.1",
+        "t1": "Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones de mayor complejidad a través de diferentes estrategias o herramientas, incluidas las tecnológicas.",
+        "t2": "Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado obtenido con rigor.",
+        "sab": "MAT.3.A.1: Números decimales, porcentajes y operaciones combinadas."
+      }],
+      "francés": [{
+        "id": "1.1",
+        "t1": "Comprender e interpretar el sentido global de textos orales breves y sencillos sobre temas personales y cotidianos.",
+        "t2": "Extraer información específica y detalles relevantes en mensajes orales en segunda lengua extranjera sobre temas conocidos.",
+        "sab": "L2.3.A.1: Comunicación oral y escucha activa en francés."
+      }]
+    }
+  },
+  "eso": {}
+}
