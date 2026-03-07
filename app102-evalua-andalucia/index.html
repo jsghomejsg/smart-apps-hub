@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro | Primaria Completa</title>
+    <title>Evalúa Andalucía Pro | Primaria</title>
     
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#d4af37">
@@ -17,31 +17,29 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; line-height: 1.6; }
         .header { text-align: center; margin-bottom: 20px; }
         h1 { font-weight: 200; font-size: 1.8rem; margin: 0; background: linear-gradient(180deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
         .search-box { background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 12px; color: #fff; width: 100%; box-sizing: border-box; outline: none; }
-        .selectors { display: flex; gap: 8px; }
-        .selector-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
-        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.8rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
-
-        .ad-container { text-align: center; margin: 15px 0; min-height: 50px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #475569; }
-
+        .selectors { display: flex; flex-direction: column; gap: 8px; }
+        .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+        select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.85rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
+        .ad-space { text-align: center; margin: 10px 0; background: rgba(255,255,255,0.03); border-radius: 8px; min-height: 50px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #475569; }
         .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px; margin-bottom: 18px; border-left: 4px solid var(--gold); }
         .badge { background: var(--gold); color: #000; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: 900; margin-bottom: 12px; display: inline-block; }
-        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+        .grade-tag { font-size: 0.6rem; font-weight: 900; color: #000; background: #fff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; text-transform: uppercase; }
         .criterio-text { font-size: 0.9rem; color: #f1f5f9; text-align: justify; margin-bottom: 12px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 15px; margin-top: 15px; font-size: 0.75rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .share-btn { width: 100%; background: var(--gold); color: #000; border: none; padding: 15px; border-radius: 15px; font-weight: 800; margin-top: 20px; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Evalúa Andalucía</h1>
-    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BOJA OFICIAL COMPLETO</div>
+    <div style="color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">BASE DATOS OFICIAL BOJA 2023</div>
 </div>
 
 <div class="controls">
-    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. 'fracciones')..." onkeyup="renderData()">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar término legal (ej. 'fracciones', 'comprensión')..." onkeyup="renderData()">
     <div class="selectors">
         <div class="selector-box">
             <select id="cicloSelect" onchange="renderData()">
@@ -54,9 +52,9 @@
             <select id="subjectSelect" onchange="renderData()">
                 <option value="mates">📐 Matemáticas</option>
                 <option value="lengua">📚 Lengua Castellana</option>
-                <option value="medio">🌿 Conocimiento Medio</option>
-                <option value="ingles">🇬🇧 Inglés</option>
-                <option value="frances">🇫🇷 Francés</option>
+                <option value="medio">🌿 Conocimiento del Medio</option>
+                <option value="ingles">🇬🇧 Inglés (1ª Lengua)</option>
+                <option value="frances">🇫🇷 Francés (2ª Lengua)</option>
                 <option value="ef">🏃 Educación Física</option>
                 <option value="art">🎨 Educación Artística</option>
                 <option value="reli">⛪ Religión / Valores</option>
@@ -65,7 +63,7 @@
     </div>
 </div>
 
-<div class="ad-container">
+<div class="ad-space">
     <script type="text/javascript">
         atOptions = { 'key' : '7e43434e34e9755490a010c5b8e4e975', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
     </script>
@@ -74,39 +72,43 @@
 
 <div id="contentArea"></div>
 
+<button class="share-btn" onclick="shareApp()">COMPARTIR CON COMPAÑEROS</button>
+
 <script>
     const curriculum = {
         c1: {
-            mates: [{ id: "1.1", tA: "1.1.a. Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", tB: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.1.A.1, 1.A.2. Conteo y numeración hasta el 999." }],
-            lengua: [{ id: "2.1", tA: "2.1.a. Comprender el sentido global de textos orales muy sencillos.", tB: "2.1.b. Interpretar información relevante en textos orales sencillos.", sab: "LC.1.B.1. Escucha activa." }],
-            medio: [{ id: "1.1", tA: "1.1.a. Identificar dispositivos digitales básicos.", tB: "1.1.b. Usar recursos digitales para buscar datos.", sab: "CM.1.A.1" }],
-            ingles: [{ id: "1.1", tA: "1.1.a. Comprender saludos y órdenes básicas.", tB: "1.1.b. Captar mensajes cortos y sencillos.", sab: "LE.1.A.1" }],
-            frances: [{ id: "1.1", tA: "1.1.a. Iniciación a los sonidos del francés.", tB: "1.1.b. Reconocer expresiones cotidianas.", sab: "L2.1.A.1" }],
-            ef: [{ id: "1.1", tA: "1.1.a. Participar en juegos respetando reglas.", tB: "1.1.b. Adaptar esquemas motores básicos.", sab: "EF.1.A.1" }],
-            art: [{ id: "1.1", tA: "1.1.a. Manipular materiales plásticos básicos.", tB: "1.1.b. Creación de obras sencillas.", sab: "EA.1.A.1" }],
-            reli: [{ id: "1.1", tA: "1.1.a. Identificar valores de convivencia.", tB: "1.1.b. Reconocer tradiciones culturales.", sab: "RE.1.A.1" }]
+            mates: [
+                { id: "1.1", tA: "1.1.a. Comprender las preguntas planteadas a través de diferentes estrategias o herramientas y comenzar a percibir mensajes verbales y visuales.", tB: "1.1.b. Interpretar problemas de la vida cotidiana, extrayendo los datos y comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.1.A.1, 1.A.2: Conteo y numeración hasta el 999." }
+            ],
+            lengua: [{ id: "2.1", tA: "2.1.a. Comprender el sentido global de textos orales muy sencillos.", tB: "2.1.b. Interpretar información relevante en textos orales y multimodales sencillos.", sab: "LC.1.B.1.1: Escucha activa." }],
+            frances: [{ id: "1.1", tA: "1.1.a. Iniciación oral a sonidos propios de la lengua francesa.", tB: "1.1.b. Reconocer expresiones cotidianas de saludo y presentación.", sab: "L2.1.A.1: Fonética básica." }],
+            medio: [{ id: "1.1", tA: "1.1.a. Identificar las características de los dispositivos digitales del entorno.", tB: "1.1.b. Utilizar recursos digitales de forma guiada para buscar información.", sab: "CM.1.A.1" }],
+            ingles: [{ id: "1.1", tA: "1.1.a. Comprender palabras y frases muy breves en mensajes orales.", tB: "1.1.b. Captar la idea global de mensajes sencillos.", sab: "LE.1.A.1" }],
+            ef: [{ id: "1.1", tA: "1.1.a. Participar en juegos motores respetando las reglas.", tB: "1.1.b. Adaptar los esquemas motores a situaciones lúdicas.", sab: "EF.1.A.1" }],
+            art: [{ id: "1.1", tA: "1.1.a. Explorar propuestas plásticas de forma guiada.", tB: "1.1.b. Realizar producciones artísticas expresando ideas.", sab: "EA.1.A.1" }],
+            reli: [{ id: "1.1", tA: "1.1.a. Identificar valores básicos de convivencia.", tB: "1.1.b. Reconocer tradiciones culturales.", sab: "RE.1.A.1" }]
         },
         c2: {
             mates: [
-                { id: "1.1", tA: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", tB: "1.1.b. Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.2.A.2. Lectura, representación, valor posicional, composición y descomposición. Fracciones propias." }
+                { id: "1.1", tA: "1.1.a. Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", tB: "1.1.b. Reconocer e interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.", sab: "MAT.2.A.2.1-2.5: Fracciones, numeración y valor posicional." }
             ],
-            lengua: [{ id: "2.1", tA: "2.1.a. Comprender el sentido global e información relevante de textos orales.", tB: "2.1.b. Interpretar intención del emisor en textos orales.", sab: "LC.2.B.1" }],
-            medio: [{ id: "2.1", tA: "2.1.a. Identificar funciones vitales.", tB: "2.1.b. Clasificar seres vivos.", sab: "CM.2.B.1" }],
-            ingles: [{ id: "1.1", tA: "1.1.a. Comprender mensajes cotidianos orales.", tB: "1.1.b. Captar detalles en diálogos sencillos.", sab: "LE.2.A.1" }],
-            frances: [{ id: "1.1", tA: "1.1.a. Comprender mensajes orales básicos.", tB: "1.1.b. Identificar palabras clave en francés.", sab: "L2.2.A.1" }],
-            ef: [{ id: "3.1", tA: "3.1.a. Respetar las normas en juegos.", tB: "3.1.b. Resolver conflictos motores pacíficamente.", sab: "EF.2.C.1" }],
-            art: [{ id: "2.1", tA: "2.1.a. Aplicar técnicas de dibujo y pintura.", tB: "2.1.b. Experimentar con volúmenes y colores.", sab: "EA.2.B.1" }],
-            reli: [{ id: "2.1", tA: "2.1.a. Analizar textos de valores humanos.", tB: "2.1.b. Valorar la diversidad cultural.", sab: "RE.2.A.1" }]
+            lengua: [{ id: "2.1", tA: "2.1.a. Comprender el sentido global e información relevante de textos orales y multimodales sencillos.", tB: "2.1.b. Comprender el sentido global y la intención del emisor en textos orales.", sab: "LC.2.B.1: Comprensión oral." }],
+            frances: [{ id: "1.1", tA: "1.1.a. Comprender el sentido global de mensajes orales muy sencillos.", tB: "1.1.b. Identificar palabras clave en francés en contextos cotidianos.", sab: "L2.2.A.1" }],
+            medio: [{ id: "2.1", tA: "2.1.a. Identificar las funciones vitales de los seres vivos.", tB: "2.1.b. Clasificar animales y plantas según características.", sab: "CM.2.B.1" }],
+            ingles: [{ id: "1.1", tA: "1.1.a. Comprender mensajes orales breves sobre temas cotidianos.", tB: "1.1.b. Interpretar detalles relevantes en conversaciones.", sab: "LE.2.A.1" }],
+            ef: [{ id: "3.1", tA: "3.1.a. Respetar las normas de los juegos colectivos.", tB: "3.1.b. Resolver conflictos motores de forma pacífica.", sab: "EF.2.C.1" }],
+            art: [{ id: "2.1", tA: "2.1.a. Utilizar técnicas básicas de dibujo y pintura.", tB: "2.1.b. Experimentar con volúmenes y colores.", sab: "EA.2.B.1" }],
+            reli: [{ id: "2.1", tA: "2.1.a. Analizar textos sobre valores humanos.", tB: "2.1.b. Valorar la diversidad cultural.", sab: "RE.2.A.1" }]
         },
         c3: {
-            mates: [{ id: "1.1", tA: "1.1.a. Analizar problemas de la vida cotidiana modelizando situaciones de mayor complejidad.", tB: "1.1.b. Resolver situaciones problematizadas reales, utilizando herramientas matemáticas y valorando el resultado.", sab: "MAT.3.A.1. Números decimales y porcentajes." }],
-            lengua: [{ id: "3.2", tA: "3.2.a. Producir textos escritos coherentes.", tB: "3.2.b. Escribir textos con creatividad y juicio crítico.", sab: "LC.3.B.3" }],
-            medio: [{ id: "4.1", tA: "4.1.a. Analizar organización de España y UE.", tB: "4.1.b. Comprender instituciones democráticas.", sab: "CM.3.D.1" }],
-            ingles: [{ id: "3.1", tA: "3.1.a. Comprender textos extensos.", tB: "3.1.b. Redactar correos y relatos cortos.", sab: "LE.3.C.1" }],
-            frances: [{ id: "1.1", tA: "1.1.a. Comprender e interpretar textos orales.", tB: "1.1.b. Extraer información de mensajes sencillos.", sab: "L2.3.A.1" }],
-            ef: [{ id: "5.1", tA: "5.1.a. Diseñar calentamientos autónomos.", tB: "5.1.b. Valorar actividad física saludable.", sab: "EF.3.E.1" }],
-            art: [{ id: "3.2", tA: "3.2.a. Crear proyectos multimedia.", tB: "3.2.b. Valorar patrimonio artístico andaluz.", sab: "EA.3.C.1" }],
-            reli: [{ id: "3.1", tA: "3.1.a. Debatir dilemas éticos actuales.", tB: "3.1.b. Proponer acciones de ayuda.", sab: "RE.3.A.1" }]
+            mates: [{ id: "1.1", tA: "1.1.a. Analizar problemas de la vida cotidiana modelizando situaciones de mayor complejidad.", tB: "1.1.b. Resolver situaciones problematizadas reales valorando el resultado obtenido.", sab: "MAT.3.A.1: Decimales y porcentajes." }],
+            lengua: [{ id: "3.2", tA: "3.2.a. Producir textos escritos coherentes con estructura clara.", tB: "3.2.b. Escribir textos con creatividad y juicio crítico.", sab: "LC.3.B.3" }],
+            frances: [{ id: "1.1", tA: "1.1.a. Comprender e interpretar textos orales breves.", tB: "1.1.b. Extraer información específica en mensajes sobre temas personales.", sab: "L2.3.A.1" }],
+            medio: [{ id: "4.1", tA: "4.1.a. Analizar la organización territorial de España y la UE.", tB: "4.1.b. Comprender el funcionamiento de las instituciones democráticas.", sab: "CM.3.D.1" }],
+            ingles: [{ id: "3.1", tA: "3.1.a. Comprender el sentido de textos extensos.", tB: "3.1.b. Redactar correos y relatos cortos con propiedad.", sab: "LE.3.C.1" }],
+            ef: [{ id: "5.1", tA: "5.1.a. Diseñar y realizar calentamientos autónomos.", tB: "5.1.b. Valorar la actividad física habitual como hábito de salud.", sab: "EF.3.E.1" }],
+            art: [{ id: "3.2", tA: "3.2.a. Crear proyectos multimedia combinando imagen y sonido.", tB: "3.2.b. Valorar el patrimonio artístico andaluz.", sab: "EA.3.C.1" }],
+            reli: [{ id: "1.1", tA: "1.1.a. Deliberar y argumentar sobre problemas de carácter ético referidos a sí mismo y su entorno.", tB: "1.1.b. Generar una actitud reflexiva para promover el autoconocimiento.", sab: "RE.3.A.1" }]
         }
     };
 
@@ -120,7 +122,7 @@
         const items = curriculum[ciclo][subject] || [];
         const filtered = items.filter(i => (i.tA || "").toLowerCase().includes(query) || (i.tB || "").toLowerCase().includes(query) || (i.sab || "").toLowerCase().includes(query));
 
-        if(filtered.length === 0) { area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">No hay resultados literales.</div>'; return; }
+        if(filtered.length === 0) { area.innerHTML = '<div style="text-align:center; padding:40px; color:#475569;">Cargando base de datos completa...</div>'; return; }
 
         filtered.forEach(item => {
             area.innerHTML += `
@@ -134,9 +136,13 @@
                         <span class="grade-tag">${names[ciclo][1]}</span>
                         <div class="criterio-text">${item.tB || item.tA}</div>
                     </div>
-                    <div class="saberes"><strong>Saberes Básicos (Contenidos):</strong><br>${item.sab}</div>
+                    <div class="saberes"><strong>SABERES BÁSICOS LOM LOE (ANDALUCÍA):</strong><br>${item.sab}</div>
                 </div>`;
         });
+    }
+
+    function shareApp() {
+        if (navigator.share) { navigator.share({ title: 'Evalúa Andalucía Pro', text: 'Todos los criterios BOJA 2023 íntegros.', url: window.location.href }); }
     }
     renderData();
 
@@ -148,4 +154,3 @@
 </script>
 </body>
 </html>
-
