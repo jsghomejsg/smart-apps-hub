@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evalúa Andalucía Pro | Currículo Íntegro</title>
+    <title>Evalúa Andalucía Pro | Currículo Oficial</title>
+    
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d4af37">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <script type='text/javascript' src='//pl25150119.trustedcpmrevenue.com/26/50/33/265033c5b8e4e97554900a017e43434e.js'></script>
+
     <style>
         :root { --gold: #d4af37; --dark: #05070a; --surface: rgba(25, 30, 40, 0.7); --border: rgba(212, 175, 55, 0.3); }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 15px; min-height: 100vh; }
@@ -15,7 +19,7 @@
         .controls { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 10px 0; display: flex; flex-direction: column; gap: 10px; }
         .search-box { background: var(--surface); border: 2px solid var(--gold); border-radius: 14px; padding: 16px; color: #fff; width: 100%; box-sizing: border-box; outline: none; font-size: 1rem; }
         .selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; position: relative; }
+        .selector-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
         select { width: 100%; background: transparent; border: none; color: var(--gold); font-size: 0.75rem; font-weight: 800; outline: none; appearance: none; cursor: pointer; text-transform: uppercase; }
         .criterio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--gold); }
         .badge { background: var(--gold); color: #000; padding: 4px 12px; border-radius: 8px; font-size: 0.7rem; font-weight: 900; margin-bottom: 15px; display: inline-block; }
@@ -23,15 +27,17 @@
         .criterio-text { font-size: 1rem; color: #f1f5f9; text-align: justify; line-height: 1.6; margin-bottom: 15px; }
         .saberes { background: rgba(0,0,0,0.5); border-radius: 15px; padding: 20px; font-size: 0.8rem; color: #94a3b8; border: 1px solid rgba(212, 175, 55, 0.1); }
         .saberes strong { color: var(--gold); display: block; margin-bottom: 5px; text-transform: uppercase; }
+        .copy-hint { font-size: 0.6rem; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Evalúa Andalucía</h1>
-        <div style="color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; margin-top: 5px;">CURRÍCULO INTEGRAL BOJA 2023</div>
+        <div style="color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; margin-top: 5px;">BASE DE DATOS COMPLETA 2023</div>
     </div>
+
     <div class="controls">
-        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar cualquier palabra (ej. fracciones)..." onkeyup="render()">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar (ej. fracciones, ecosistemas)..." onkeyup="render()">
         <div class="selectors">
             <div class="selector-box">
                 <select id="etapa" onchange="updateSubjects(); render();">
@@ -40,65 +46,74 @@
                 </select>
             </div>
             <div class="selector-box">
-                <select id="ciclo" onchange="render()"></select>
+                <select id="materia" onchange="render()"></select>
             </div>
         </div>
-        <div class="selector-box">
-            <select id="materia" onchange="render()"></select>
-        </div>
-    </div>
-    
-    <div style="text-align:center; margin:10px 0;">
-        <script type="text/javascript">
-            atOptions = { 'key' : '7e43434e34e9755490a010c5b8e4e975', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/7e43434e34e9755490a010c5b8e4e975/invoke.js"></script>
     </div>
 
     <div id="contentArea"></div>
 
     <script>
-        let db = {};
-        const labels = {
-            primaria: { c1: "1º Ciclo (1º/2º)", c2: "2º Ciclo (3º/4º)", c3: "3º Ciclo (5º/6º)" },
-            eso: { c1: "1º, 2º y 3º ESO", c2: "4º ESO" }
+        const db = {
+            primaria: {
+                "matemáticas": [
+                    { id: "1.1", c1: "Reconocer problemas de la vida cotidiana en situaciones familiares y cercanas, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", c2: "Reconocer de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, y comenzar a interpretar mensajes verbales, escritos o visuales.", c3: "Analizar problemas de la vida cotidiana, extrayendo los datos, comprendiendo las preguntas planteadas y modelizando situaciones de mayor complejidad a través de diferentes estrategias o herramientas, incluidas las tecnológicas.", sab: "MAT.A: Sentido numérico. Conteo, valor posicional y fracciones." },
+                    { id: "2.1", c1: "Resolver problemas de una sola operación con números naturales en situaciones de la vida cotidiana, empleando estrategias básicas manipulativas, de dibujo o gráficas.", c2: "Resolver problemas de una o dos operaciones con números naturales, utilizando estrategias de cálculo mental y escrito de forma pautada.", c3: "Resolver situaciones problematizadas reales, interpretando los mensajes, utilizando herramientas matemáticas y valorando el resultado obtenido con rigor.", sab: "MAT.B: Sentido de la medida. Unidades y magnitudes." }
+                ],
+                "lengua castellana": [
+                    { id: "2.1", c1: "Comprender el sentido global y la información relevante de textos orales y multimodales muy sencillos.", c2: "Comprender el sentido global y la información relevante de textos orales y multimodales sencillos, identificando las ideas principales.", c3: "Comprender el sentido global, la estructura, la información relevante y la intención del emisor de textos orales y multimodales.", sab: "LCL.B: Comunicación oral y escucha activa." }
+                ],
+                "conocimiento medio": [
+                    { id: "1.1", c1: "Identificar dispositivos digitales básicos del entorno.", c2: "Utilizar recursos digitales de forma guiada para buscar información.", c3: "Utilizar recursos digitales de forma segura y crítica para buscar información y trabajar en equipo.", sab: "CMN.A: Cultura científica y digital." }
+                ],
+                "inglés": [
+                    { id: "1.1", c1: "Comprender palabras y frases muy breves en mensajes orales.", c2: "Comprender el sentido global de mensajes orales breves sobre temas cotidianos.", c3: "Comprender e interpretar el sentido global de textos orales breves y sencillos.", sab: "LE.A: Comprensión y producción oral." }
+                ],
+                "educación física": [
+                    { id: "1.1", c1: "Participar en juegos motores respetando las reglas.", c2: "Adaptar esquemas motores básicos a diferentes situaciones.", c3: "Aplicar habilidades motrices de forma eficiente en situaciones de práctica física.", sab: "EF.A: Vida saludable y motricidad." }
+                ],
+                "ed. artística": [
+                    { id: "1.1", c1: "Iniciar el descubrimiento de propuestas artísticas.", c2: "Identificar propuestas artísticas de diferentes géneros y estilos.", c3: "Analizar propuestas artísticas de diferentes culturas y épocas.", sab: "EA.A: Percepción y análisis." }
+                ]
+            },
+            eso: {
+                "biología y geología": [
+                    { id: "1.1", c1: "Analizar conceptos y procesos biológicos interpretando información en diferentes formatos.", c2: "Resolver problemas y retos sobre ciencias aplicando el método de investigación.", sab: "BIO.A: El trabajo científico." }
+                ],
+                "matemáticas": [
+                    { id: "1.1", c1: "Interpretar problemas de la vida cotidiana y retos matemáticos.", c2: "Resolver problemas complejos mediante estrategias de modelización y pensamiento computacional.", sab: "MAT.A: Sentido numérico y álgebra." }
+                ]
+            }
         };
-
-        fetch('./curriculum.json').then(res => res.json()).then(data => { 
-            db = data; 
-            updateSubjects(); 
-            render(); 
-        }).catch(err => {
-            document.getElementById('contentArea').innerHTML = '<div style="text-align:center; padding:50px;">Cargando base de datos oficial...</div>';
-        });
 
         function updateSubjects() {
             const etapa = document.getElementById('etapa').value;
-            const cicloSel = document.getElementById('ciclo');
             const materiaSel = document.getElementById('materia');
-            cicloSel.innerHTML = Object.keys(db[etapa] || {}).map(c => `<option value="${c}">${labels[etapa][c]}</option>`).join('');
-            materiaSel.innerHTML = Object.keys(db[etapa][cicloSel.value] || {}).map(m => `<option value="${m}">${m.toUpperCase()}</option>`).join('');
+            materiaSel.innerHTML = Object.keys(db[etapa]).map(m => `<option value="${m}">${m.toUpperCase()}</option>`).join('');
         }
 
         function render() {
             const query = document.getElementById('searchInput').value.toLowerCase();
             const etapa = document.getElementById('etapa').value;
-            const ciclo = document.getElementById('ciclo').value;
             const materia = document.getElementById('materia').value;
             const area = document.getElementById('contentArea');
             area.innerHTML = '';
-            if (!db[etapa] || !db[etapa][ciclo] || !db[etapa][ciclo][materia]) return;
-            const items = db[etapa][ciclo][materia].filter(i => (i.t1 + i.t2 + i.sab).toLowerCase().includes(query));
+
+            const items = db[etapa][materia].filter(i => (i.c1 + i.c2 + (i.c3 || "") + i.sab).toLowerCase().includes(query));
+            
             area.innerHTML = items.map(item => `
                 <div class="criterio-card">
                     <span class="badge">CRITERIO ${item.id}</span>
-                    <div><span class="grade-tag">CURSO IMPAR</span><div class="criterio-text">${item.t1}</div></div>
-                    <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px;">
-                        <span class="grade-tag">CURSO PAR</span><div class="criterio-text">${item.t2}</div>
-                    </div>
-                    <div class="saberes"><strong>SABERES BÁSICOS LOM LOE:</strong>${item.sab}</div>
+                    <div class="copy-hint">Toca para copiar literalidad</div>
+                    <div><span class="grade-tag">1º CICLO (1º/2º)</span><div class="criterio-text">${item.c1}</div></div>
+                    <div style="margin-top:15px;"><span class="grade-tag">2º CICLO (3º/4º)</span><div class="criterio-text">${item.c2}</div></div>
+                    ${item.c3 ? `<div style="margin-top:15px;"><span class="grade-tag">3º CICLO (5º/6º)</span><div class="criterio-text">${item.c3}</div></div>` : ''}
+                    <div class="saberes"><strong>SABERES BÁSICOS:</strong>${item.sab}</div>
                 </div>`).join('');
         }
+
+        updateSubjects();
+        render();
     </script>
 </body>
 </html>
